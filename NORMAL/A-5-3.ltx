@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-5-3 on page II-690 in "ifthen --- Advanced control structures".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exareport}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+\setcounter{chapter}{1}
+\setcounter{section}{5}
+% provide some values for the example:
+
+%StartShownPreambleCommands
+\usepackage{ifthen}
+\newcommand\toEng[1]{\arabic{#1}\textsuperscript{%
+ \ifthenelse{\value{#1}=1}{st}{%
+  \ifthenelse{\value{#1}=2}{nd}{%
+   \ifthenelse{\value{#1}=3}{rd}{%
+    \ifthenelse{\value{#1}<20}{th}}%
+                              {\typeout{Value too high}}}}}}
+%StopShownPreambleCommands
+
+\begin{document}
+This is the \toEng{section} section in the \toEng{chapter}
+appendix.
+\end{document}

@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-7-16 on page I-486 in "siunitx --- Scientific numbers in tables".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+\setlength\parindent{0pt}
+%StartShownPreambleCommands
+  \usepackage{siunitx}
+%StopShownPreambleCommands
+
+\begin{document}
+  \begin{tabular}{|S|S[table-alignment-mode=none,
+                       table-text-alignment=left]|
+                   S[table-alignment-mode=none,
+                     table-alignment=right]|}
+   {Default} & {Left}    & {Right}  \\
+      12.345 & 12.345      & 12.345   \\
+         6.7 & 6.7         & 6.7      \\
+    -88.8(9) & -88.8(9)    & -88.8(9) \\
+       4.5e3 & 4.5e3       & 4.5e3
+  \end{tabular}
+\end{document}

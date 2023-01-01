@@ -1,0 +1,57 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-4-6 on page I-547 in "Continuing captions across floats".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{103.80106pt}
+
+
+  \tolerance=3000
+  \setlength\textheight{13\baselineskip}
+  \setlength\footskip{16pt}
+
+% make the heading a bit smaller in the examples
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.25ex \@plus-1ex \@minus-.2ex}%
+                                    {.5ex}%
+                                    {\normalfont\large\bfseries}}
+\makeatother
+
+\pagestyle{origplain} % plain is disabled by the class
+
+%StartShownPreambleCommands
+\usepackage{graphicx,caption}
+\DeclareCaptionTextFormat{cont}
+                         {#1 (cont.)}
+\captionsetup[ContinuedFloat]
+             {textformat=cont,list=no}
+%StopShownPreambleCommands
+
+\begin{document}
+\listoffigures  \bigskip
+\begin{figure}[!b]
+  \centering \includegraphics{cat}
+  \caption{Animals}
+\end{figure}
+A figure placed at the page bottom and
+continued at the top of the next page.
+The caption appears only once in the LOF.
+\begin{figure}[!t]     \ContinuedFloat
+ \centering \includegraphics
+              [width=2cm]{elephant}
+ \caption{Animals}
+\end{figure}
+\end{document}

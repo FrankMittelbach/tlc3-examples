@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-3-9 on page I-66 in "Contents entries combined in a paragraph".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exareport}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{177.0pt}
+%StartShownPreambleCommands
+\usepackage{titletoc,xcolor} \contentsmargin{0pt}
+\titlecontents*{chapter}[0pt]
+     {\sffamily}{}{}{, \thecontentspage}
+     [\ \textbullet \ ] [~\P]   % mid, finish
+\titlecontents*{section}[0pt]
+     {\color{blue}\footnotesize\slshape}{}{}{}
+     [ \{] [; ] [\}]     % start, mid, finish
+%StopShownPreambleCommands
+
+\begin{document}
+\setcounter{tocdepth}{1}
+\sloppy \input{partial.toc}
+\end{document}

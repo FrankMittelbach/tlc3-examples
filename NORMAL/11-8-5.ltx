@@ -1,0 +1,40 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-8-5 on page II-214 in "Letters, numerals, and other Ordinary symbols".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+  % Shorten the vertical size of the example ...
+  \AtBeginDocument{%
+    \setlength\abovedisplayskip{.5\abovedisplayskip}%
+    \setlength\belowdisplayskip{.5\belowdisplayskip}%
+  }
+
+%StartShownPreambleCommands
+\usepackage[fleqn]{amsmath}   \usepackage{amssymb}
+\DeclareMathSymbol\bneg   {\mathbin}{symbols}{"3A}
+\DeclareMathSymbol\rsquare{\mathrel}{AMSa}{"03}
+\thickmuskip=10mu plus 5mu
+%StopShownPreambleCommands
+
+\begin{document}
+\noindent Symbols of wrong class (ord):
+\[ a \neg b           \qquad  x \square           y + z \]
+Manual correction:
+\[ a \mathbin{\neg} b \qquad  x \mathrel{\square} y + z \]
+Symbols of correct class:
+\[ a \bneg          b \qquad  x \rsquare          y + z \]
+\end{document}

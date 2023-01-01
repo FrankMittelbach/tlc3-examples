@@ -1,0 +1,68 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-8-2 on page II-573 in "chapterbib --- Bibliographies per included file".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exareport}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{330.59894pt}
+
+\setcounter{page}{4} % thus page 6 will contain biblio
+% Small headings for the example
+\makeatletter
+\renewcommand\@makeschapterhead[1]{%
+    {\setlength\parindent{0pt}%
+     \Large \bfseries #1\par}%
+    \nobreak
+    \vspace{7pt}}
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+  {-1.25ex \@plus-1ex \@minus-.2ex}%
+  {.8ex}%
+  {\normalsize\bfseries}}
+\makeatother
+
+
+% We force rewriting these files, because other examples use
+% the same name:
+
+\begin{filecontents}[force]{article-1.tex}
+ \stepcounter{chapter}
+ \ldots\ see \cite{Knuth-CT-a} \ldots
+ \bibliographystyle{alpha}
+ \bibliography{tlc}
+\end{filecontents}
+\begin{filecontents}[force]{article-2.tex}
+ \stepcounter{chapter}
+ \ldots see \cite{Knuth-CT-a}
+  and \cite{bschur} \ldots
+ \bibliographystyle{plain}
+ \bibliography{tlc}
+\end{filecontents}
+
+%% Do not process top-level aux file with BibTeX
+%% Process article-1 and article-2 with BibTeX
+
+%% show third page in book
+
+\usepackage [gather,sectionbib]{chapterbib}
+\newcommand\FinalBibTitles{References for Article~\thechapter
+                                       ~\mbox{---}~\chaptitle}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\newcommand\chaptitle{Intro}      \include{article-1}
+\renewcommand\chaptitle{Summary}  \include{article-2}  \bibliography{}
+\end{document}

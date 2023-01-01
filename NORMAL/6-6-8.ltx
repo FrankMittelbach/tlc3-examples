@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-6-8 on page I-474 in "bigstrut --- Spreading individual table lines apart".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{87.0pt}
+
+%StartShownPreambleCommands
+\usepackage{bigstrut}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabular}{|ccc|}                                      \hline
+              A & B & C \\ \hline              x & y & z \\ \hline
+\end{tabular}
+
+\bigskip
+
+\begin{tabular}{|ccc|}                                      \hline
+ \bigstrut[t] A & B & C \\ \hline \bigstrut[b] x & y & z \\ \hline
+\end{tabular}
+\end{document}

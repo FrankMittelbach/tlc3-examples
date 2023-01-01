@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-4-7 on page I-619 in "Skins and styles --- altering the look and feel".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{105.0pt}
+
+\IfPackageLoadedTF{colorspace}
+                  {\AtBeginDocument{\footnotesize \tcbset{colframe=spotblue!75!spotblack}}}
+                  {\AtBeginDocument{\footnotesize \tcbset{colframe=blue!75!black}}}
+
+%StartShownPreambleCommands
+\usepackage{tcolorbox}   \tcbuselibrary{skins}
+\tcbset{skin=enhanced,colframe=blue!75!black,fonttitle=\bfseries,
+        interior style={left color=red!20,right color=white}}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tcolorbox}[halign lower=center,title=Interior style change]
+  Here the background \tcblower color changes from red (gray) to white.
+\end{tcolorbox}
+\end{document}

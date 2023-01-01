@@ -1,0 +1,52 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-6-13 on page I-246 in "Customizing the list of changes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{109.80112pt}
+
+  \setlength\parindent{0pt}
+  \setlength\textheight{10.3\baselineskip}
+
+  % small headings for the example
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}%
+    {.5ex}%
+    {\normalfont\large\bfseries}}
+  \makeatother
+
+  \usepackage{microtype} % improve h&j in example
+  \sloppy
+
+%StartShownPreambleCommands
+\usepackage[commentmarkup=footnote]
+           {changes}
+\definechangesauthor[color=red,
+            name=Frank M.]{FMi}
+\setsummarytowidth{Commented\qquad}
+%StopShownPreambleCommands
+
+\begin{document}
+Sample text, something \added{added},
+a \replaced[id=FMi,comment=really?]
+           {word}{blob}
+replaced and \deleted[id=FMi]{some}
+\highlight{stuff}
+removed.\comment[id=FMi]{Mumble!}
+
+\listofchanges[title=Summary of
+             changes,style=summary]
+\end{document}

@@ -1,0 +1,43 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-55 on page I-296 in "typed-checklist --- Developing and maintaining checklists".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{225.0pt}
+\usepackage[tablepkg=tabularx]{typed-checklist}
+  \setcounter{page}{1}
+
+  \CheckListAddType{feature}{{\small\Square}}
+  \CheckListAddStatus{feature}{n}{false}{}
+  \CheckListAddStatus{feature}{d}{true} {\small\XSolid}
+  \CheckListAddStatus{feature}{e}{false}{\raisebox{0.4ex}{\footnotesize e}}
+  \CheckListAddStatus{feature}{s}{false}{\kern 1pt\small\ArrowBoldRightStrobe}
+  \CheckListAddStatus{feature}{f}{true} {\kern 2pt\Checkmark}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{CheckList}[layout=table]{feature}
+  \feature{n}{A new feature request}
+  \feature{e}{Feature evaluated}
+  \feature[label=foo,deadline=1.1.2022]
+          {d}{dropped/declined}
+  \feature[who=Frank,deadline=yesterday]
+          {s}{started}
+  \feature{f}{finished/implemented}
+\end{CheckList}
+\end{document}

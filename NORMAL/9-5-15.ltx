@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 9-5-15 on page I-703 in "Altering the subencoding setup for individual glyphs".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+
+  \renewcommand\rmdefault{cmr}
+
+%StartShownPreambleCommands
+\usepackage{overlock}
+\DeclareTextCommandDefault{\textcurrencysf}
+   {{\fontfamily{Rosario-LF}\fontseries{l}\selectfont
+     \UseTextSymbol{TS1}{\textcurrency}}}
+%StopShownPreambleCommands
+
+\begin{document}
+\sffamily Overlook: \textcurrencysf \\ Close enough?
+\end{document}

@@ -1,0 +1,28 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-4-30 on page I-196 in "microtype \& soul --- Letterspacing or stealing sheep".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+\sloppy
+%StartShownPreambleCommands
+\usepackage{microtype,csquotes}
+\newcommand\caps[1]{\textls{\scshape#1}}
+%StopShownPreambleCommands
+
+\begin{document}
+\textls{\enquote{$2+2$ equals $5$,}} he said.
+\caps{!`For \textbf{Extremely} Large Values of $2$!}
+\end{document}

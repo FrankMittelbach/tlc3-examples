@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-3-2 on page I-603 in "pict2e --- An extension of \LaTeX 's \protect \nxLenv  {picture} environment".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+\setlength\unitlength{.9pt}
+%StartShownPreambleCommands
+\usepackage{pict2e} \renewcommand\maxovalrad{30pt}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{picture}(0,0)
+  \put(0,0) {\circle{80}} \put(0,0) {\circle*{24}}
+  \put(30,0){\circle{40}} \put(30,0){\circle*{16}}
+  \put(15,0){\oval(90,60)}
+  \put(0,12){\line(15,-2){30}}\put(0,-12){\line(15,2){30}}
+\end{picture}
+\end{document}

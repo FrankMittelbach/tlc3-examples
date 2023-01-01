@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 9-6-20 on page I-724 in "Stylistic features".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{87.0pt}
+
+  %!TEX program = lualatex
+
+  \setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage{fontspec} \setmainfont{Cormorant Garamond}
+%StopShownPreambleCommands
+
+\begin{document}
+ a ä g U W w y \ae\ \textdagger\textdaggerdbl                      \\
+{\addfontfeature{RawFeature=ss03}
+ a ä g U W w y \ae\ \textdagger\textdaggerdbl}                     \\
+Ä ä Ü ü Ö ö \\ {\addfontfeature{RawFeature=ss04} Ä ä Ü ü Ö ö}      \\
+Ä ä W w y   \\ {\addfontfeature{RawFeature={ss03,ss04}} Ä ä W w y} \\
+Q{\addfontfeature{RawFeature=cv01} Q}
+ {\addfontfeature{RawFeature=cv02} Q}
+f{\addfontfeature{RawFeature=cv05} f}                              \\
+A B g J K Q R U \\ {\addfontfeature{RawFeature=salt} A B g J K Q R U}
+\end{document}

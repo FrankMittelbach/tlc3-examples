@@ -1,0 +1,41 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-2-40 on page II-153 in "Subordinate numbering sequences".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+\usepackage{amsmath}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{subequations}  \label{eq:1}
+\begin{align}  f  &= g            \label{eq:1A} \\
+               f' &= g'           \label{eq:1B} \\
+    \mathcal{L}f  &= \mathcal{L}g \label{eq:1C}
+\end{align}
+\end{subequations}
+\begin{subequations}  \label{eq:2}
+\renewcommand\theequation
+             {\theparentequation\roman{equation}}
+\begin{align}  f  &= g            \label{eq:2A} \\
+               f' &= g'           \label{eq:2B} \\
+    \mathcal{L}f  &= \mathcal{L}g + K  \label{eq:2C}
+\end{align}
+\end{subequations}
+Note the relationship between~\eqref{eq:1}
+and~\eqref{eq:2}: only~\ref{eq:1C} and~\ref{eq:2C} differ.
+\end{document}

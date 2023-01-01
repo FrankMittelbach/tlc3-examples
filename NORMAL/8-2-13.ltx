@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-2-13 on page I-594 in "overpic --- Graphic annotation made easy".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+%StartShownPreambleCommands
+\usepackage{overpic,xcolor}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{overpic}[width=.7\textwidth,grid,tics=20]
+               {longlife-grayscale.jpg}
+  \color{blue}
+  \put(5,85){My name (Frank)}
+  \put(13,83){\vector(0,-1){22}}
+
+  \put(52,77){\Large Long}
+  \put(60,75){\vector(-2,-1){10}}
+  \put(55,37){\Large Life}
+  \put(54,40){\vector(-2,-1){10}}
+
+  \put(18,12){\vector(-1,2){5}}
+  \put(19,9){Signature block}
+\end{overpic}
+\end{document}

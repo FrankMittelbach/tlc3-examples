@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 10-9-1 on page II-88 in "Monospaced (typewriter) fonts".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+%StartShownPreambleCommands
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.85]{luximono}
+\newcommand\allletters{The dazed brown
+ fox quickly gave 12345--67890 jumps!
+ x-height=\the\fontdimen5\font\ }
+%StopShownPreambleCommands
+
+\begin{document}
+\raggedright
+\texttt{LuxiMono:\\ \allletters}
+\par \renewcommand\ttdefault{cmtt}
+\texttt{CM Typewriter:\\ \allletters}
+\par \renewcommand\ttdefault{qcr}
+\texttt{Adobe Courier:\\ \allletters}
+\end{document}

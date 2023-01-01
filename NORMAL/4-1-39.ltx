@@ -1,0 +1,37 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-39 on page I-285 in "thmtools --- Advanced theorem declarations".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+
+  \usepackage{microtype}  % improve the line breaking in short measure
+
+
+%StartShownPreambleCommands
+\usepackage{amsthm,thmtools,cleveref}
+\declaretheorem[title=Claim,
+      Refname={Postulate,Postulates}]{thm}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{thm}\label{thm1}    Many typographical
+  problems are difficult to solve.          \end{thm}
+\begin{thm}[Main]\label{thm2}
+  But not when using the \LaTeX\ Companion. \end{thm}
+``\Cref{thm1,thm2}'' or ``\cref{thm1} and \cref{thm2}''
+or ``\cref{thm1,thm2}'' see?
+\end{document}

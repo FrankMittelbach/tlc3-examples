@@ -1,0 +1,49 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-42 on page I-232 in "enotez --- Endnotes, an alternative to footnotes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{95.40097pt}
+
+
+  \sloppy
+
+  \setlength\textheight{15\baselineskip}
+
+  % for the book examples we shorten the vertical spaces
+  \makeatletter
+  \renewcommand\section{\@startsection {section}{1}{\z@}%
+    {-2.0ex \@plus -1ex \@minus -.2ex}{.8ex}%
+    {\normalfont\large\bfseries}}
+  \renewcommand\subsection{\@startsection {subsection}{2}{\z@}%
+    {-1.5ex \@plus -.5ex \@minus -.2ex}{.3ex}%
+    {\normalfont\bfseries}}
+  \makeatother
+
+%StartShownPreambleCommands
+\usepackage{enotez}
+\setenotez{reset,split=section}
+%StopShownPreambleCommands
+
+\begin{document}
+\section{A first section}
+This is simple text.\endnote{An endnote.}
+Here is a bit more text.\endnote{The
+  second  endnote with two lines.}
+\section{Second section}
+Some\endnote{A third note.} text
+for this section also with a note.
+\newpage \printendnotes[itemize]
+\end{document}

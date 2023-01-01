@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-1-12 on page II-637 in "Creating document commands and environments".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+\newcounter{Citctr}
+\NewDocumentEnvironment{Citation}{ m }
+   {\stepcounter{Citctr}\begin{description}
+      \item[Citation \arabic{Citctr}]}
+   {\hspace*{\fill}\nolinebreak[1]%
+    \quad\hspace*{\fill}%
+    \finalhyphendemerits=0
+    \emph{#1}\end{description}}
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{Citation}{Protagoras} Man is the
+ measure of all things.     \end{Citation}
+\begin{Citation}{Blaise Pascal}
+ On mourra seul.            \end{Citation}
+\begin{Citation}{William Pitt} Necessity
+ is the plea for every infringement of
+ human freedom.             \end{Citation}
+\end{document}

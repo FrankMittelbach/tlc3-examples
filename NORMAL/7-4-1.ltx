@@ -1,0 +1,52 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-4-1 on page I-539 in "Controlling the float caption".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+% for the book examples we shorten the
+% vertical spaces and use a smaller font for
+% the heading
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.25ex \@plus-1ex \@minus-.2ex}%
+                                    {.5ex}%
+                                    {\normalfont\large\bfseries}}
+\makeatother
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\listoffigures
+
+\section{Caption}
+Figures \ref{Fig1} and \ref{Fig2}
+have captions.
+
+\begin{figure}[ht] \centering
+\fbox{\small A small Figure}
+\caption{Short caption text}\label{Fig1}
+\end{figure}
+\begin{figure}[ht] \centering
+\fbox{\small Another small Figure}
+\caption[Short entry in lof]
+ {Long caption text with some explanation
+   that this figure is important even
+   though it is small.}\label{Fig2}
+\end{figure}
+\end{document}

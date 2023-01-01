@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-2-25 on page I-311 in "Customization keys for typesetting".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+%StartShownPreambleCommands
+\usepackage{fvextra}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{Verbatim}[linenos,stepnumber=3,firstnumber=5]
+First line has number 5 so
+second gets a number because it
+is divisible by 3. No other
+numbers because the step is 3.
+\end{Verbatim}
+\begin{Verbatim}[linenos,stepnumber=2,
+                 numberfirstline,firstnumber=5]
+Here we additionally ask for
+a number on the first line and
+we reduced the step to 2, so
+more lines get numbers.
+\end{Verbatim}
+\end{document}

@@ -1,0 +1,28 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-2-12 on page II-659 in "The L3 programming layer{} --- Computation support".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{123.0pt}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\[ \inteval{5/3} = \inteval{-5/-3} = \inteval{0 - (5/-3)} \]
+\[ \fpeval{floor(5/3)} \leq \fpeval{ceil(-5/-3)}
+                                \approx  \fpeval{-(5/-3)} \]
+\end{document}

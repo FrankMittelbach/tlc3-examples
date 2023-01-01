@@ -1,0 +1,42 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-4-28 on page II-175 in "amsmath, mathtools, empheq --- Boxed formulas".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+  % Shorten the vertical size of the example ...
+  \AtBeginDocument{%
+%    \setlength\abovedisplayskip{.2\abovedisplayskip}%
+%    \setlength\belowdisplayskip{.2\belowdisplayskip}%
+  }
+
+%StartShownPreambleCommands
+\usepackage{empheq,xcolor}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{empheq}[box=\fcolorbox{black}{blue!10},
+  innerbox=\colorbox{white},
+  left=\longrightarrow \empheqlbrace,
+  right=\empheqbigrbrack \Longrightarrow]{align}
+    x_0&=1     &  x_1&=2   \\
+    x_2&=3     &  x_3&=5   \\
+    x_4&=8     &  x_5&=13  \\
+    x_6&=21    &  x_7&=34  \\
+       &\ldots & \sum_{i=1}^n x_i
+                    &=\mathord{??}  \tag{*}
+\end{empheq}
+\end{document}

@@ -1,0 +1,47 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-8-9 on page II-580 in "bibtopic --- Combining references by topic".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+
+% Use a special naming convention for aux files (for the book):
+%
+\AtBeginDocument{\renewcommand\thebtauxfile{\jobname+\arabic{btauxfile}}}
+% Small headings for the example
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.25ex \@plus-1ex \@minus-.2ex}%
+                                    {.8ex}%
+                                    {\normalsize\bfseries}}
+\makeatother
+
+%StartShownPreambleCommands
+\usepackage{bibtopic,jurabib}
+\bibliographystyle{jurabib}
+%StopShownPreambleCommands
+
+\begin{document}
+We saw the citations \cite{Knuth-CT-a},
+\cite{aschur}, and \cite{bschur}.
+\begin{btSect}{tlc-jura}
+  \section*{Juridical literature}
+  \btPrintCited
+\end{btSect}
+\begin{btSect}{tlc-tex}
+  \section*{\TeX{} literature}
+  \btPrintCited
+\end{btSect}
+\end{document}

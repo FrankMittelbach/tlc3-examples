@@ -1,0 +1,47 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-7-7 on page II-547 in "Back references and links".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{171.0pt}
+
+%  Use biber program
+%% show second page in book
+
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}%
+    {.5ex}%
+    {\normalfont\normalsize\bfseries}}
+  \makeatother
+
+  \setlength\parindent{0pt}
+  \setlength\parskip{0pt}
+
+  \usepackage{xcolor}   % needed to get the spotcolors in the book right
+
+%StartShownPreambleCommands
+\usepackage[backref,style=authoryear]{biblatex}
+\addbibresource{tlc-ex.bib}
+\usepackage{hyperref}
+\hypersetup{colorlinks,allcolors=blue}
+%StopShownPreambleCommands
+
+\begin{document}
+\textcite{url:e}  % p.6 (not shown)
+\newpage          % p.7 (shown on the left)
+\textcite{url:e}
+\raggedright \printbibliography
+\end{document}

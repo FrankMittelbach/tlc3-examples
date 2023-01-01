@@ -1,0 +1,40 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-3-27 on page II-500 in "biblatex's approach to author-date references".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+
+% Use biber program
+\setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{tlc.bib}
+%StopShownPreambleCommands
+
+\begin{document}
+The \verb=\textcite= variants: \\[2pt]
+\textcite[chap.~2]{LGC97}      \\
+\textcite[see][chap.~2]{LGC97} \\
+\textcite[see][]{LGC97}        \\[12pt]
+Other commands:                \\[2pt]
+\parencite[see][chap.~2]{LGC97}\\
+\cite[see][chap.~2]{LGC97}     \\
+\cite*[see][chap.~2]{LGC97}    \\
+\citeauthor{LGC97}             \\
+\citeauthor*{LGC97}            \\
+\citeyear{LGC97}
+\end{document}

@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 9-6-15 on page I-720 in "Vertical positioning features".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+  %!TEX program = lualatex
+
+  \setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+ \usepackage{fontspec} \setmainfont{Erewhon}[Fractions=On]
+ \setsansfont{Lato}[Fractions=On]
+ \setmonofont{IBM Plex Mono}[Fractions=On]
+%StopShownPreambleCommands
+
+\begin{document}
+           1/2 2/3 47/11 1/1000  but note: a/b 1/n\par
+ \sffamily 1/2 2/3 47/11 1/1000 okay here: a/b 1/n\par
+ \ttfamily 1/2 2/3 47/11 1/1000     a/b 1/n
+\end{document}

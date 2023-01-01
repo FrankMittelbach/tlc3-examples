@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-8-4 on page II-211 in "Mathematical symbol classes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+  % Shorten the vertical size of the example ...
+  \AtBeginDocument{%
+    \setlength\abovedisplayskip{.2\abovedisplayskip}%
+    \setlength\belowdisplayskip{.1\belowdisplayskip}%
+  }
+
+%StartShownPreambleCommands
+\usepackage{mleftright}
+\thinmuskip=10mu \medmuskip=15mu \thickmuskip=20mu
+%StopShownPreambleCommands
+
+\begin{document}
+\[ a \Bigl( \sum x \Bigr) = a \mleft( \sum x \mright) \]
+\[ \sin(x^2),x       \simeq \sin\mleft(x^2\mright),x  \]
+\end{document}

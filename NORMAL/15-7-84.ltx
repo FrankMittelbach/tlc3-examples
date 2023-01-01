@@ -1,0 +1,55 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 15-7-84 on page II-452 in "\protect \hspace  *{-1em}biblatex-arthistory-bonn".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{328.0pt}
+
+%%  Use biber program
+\usepackage{xcolor}
+\setlength\parindent{0pt}
+\usepackage {csquotes}\usepackage [style=arthistory-bonn]{biblatex}\textheight =10cm\addbibresource {tlc-biblatex-special.bib}
+%StartShownPreambleCommands
+
+
+%  A patch for archeology styles until they are fixed:
+
+\AddToHook{package/biblatex-archaeology/after}
+{\renewbibmacro*{maintitle+title}{%
+    \iffieldsequal{maintitle}{title}
+        {\clearfield{maintitle}%
+         \clearfield{mainsubtitle}%
+         \clearfield{maintitleaddon}}
+        {\iffieldundef{maintitle}
+           {}
+           {\usebibmacro{maintitle}%
+            \iffieldundef{volume}
+                {\newunit\newblock}
+                {\printfield{volume}%
+                 \printfield{part}%
+                 \clearfield{volume}%
+                 \clearfield{part}%
+                 \setunit{\addcolon\space}}}}%
+    \usebibmacro{title}%
+    \newunit}}
+
+
+%StopShownPreambleCommands
+
+\begin{document}
+\let\normalsize\footnotesize \normalsize
+\textcolor{blue}{See \cite{zar2099} and \textcite[4-8]{cole1983} and again \textcite{cole1983,cole1995}}
+\printbibliography[heading=none]
+\end{document}

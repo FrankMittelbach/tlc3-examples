@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-8-2 on page II-210 in "Mathematical symbol classes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+  % Shorten the vertical size of the example ...
+  \AtBeginDocument{%
+    \setlength\abovedisplayskip{.2\abovedisplayskip}%
+    \setlength\belowdisplayskip{.2\belowdisplayskip}%
+  }
+
+%StartShownPreambleCommands
+\thinmuskip=10mu \medmuskip=17mu \thickmuskip=30mu
+%StopShownPreambleCommands
+
+\begin{document}
+\[   a  -  b  =  -\max \{ x , y \}   \]
+\end{document}

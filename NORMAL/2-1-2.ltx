@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-1-2 on page I-31 in "tagging --- Providing variants in the document source".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+%StartShownPreambleCommands
+\usepackage[doc]{tagging}
+%StopShownPreambleCommands
+
+\begin{document}
+\tagged{doc}   {Typeset this if tag doc is used.}
+\untagged{code}{Typeset this if tag code is not used.}
+\iftagged{be}  {To be or}{Not to be!}  Which is it?   \par
+\tagged{doc,code}{Typeset this for either doc or code.}
+Typeset this \untagged{}{always}\tagged{}{never}!     \par
+\usetag{code} \droptag{doc}
+Now neither of the variants are typeset!
+\tagged{doc}   {Typeset this if tag doc is used.}
+\untagged{code}{Typeset this if tag code is not used.}
+\end{document}

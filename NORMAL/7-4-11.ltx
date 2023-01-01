@@ -1,0 +1,37 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-4-11 on page I-553 in "subcaption --- Substructuring floats".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+%StartShownPreambleCommands
+\usepackage{graphicx,subcaption}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{figure}
+  \centering
+  \begin{minipage}{3cm} \centering
+    \includegraphics{cat}
+    \subcaption{Small}
+  \end{minipage}
+  \begin{minipage}{3cm}
+    \includegraphics[width=3cm]{elephant}
+    \subcaption{Large}
+  \end{minipage}
+  \caption{Exercising manual control}
+\end{figure}
+\end{document}

@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-6-2 on page II-192 in "Operator and function names".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{147.0pt}
+
+  % Shorten the vertical size of the example ...
+  \AtBeginDocument{%
+    \setlength\abovedisplayskip{.7\abovedisplayskip}%
+    \setlength\belowdisplayskip{.7\belowdisplayskip}%
+  }
+
+%StartShownPreambleCommands
+\usepackage{amsmath} \newcommand\abs[1]{\lvert#1\rvert}
+%StopShownPreambleCommands
+
+\begin{document}
+ \begin{gather*}
+   \lim_{x \rightarrow 0} \frac{ \sin^2(x) }{ x^2 }=1 \\
+   \varliminf_{n \rightarrow \infty}
+      \abs{a_{n+1}} / \abs{a_n} = 0                   \\
+   \varinjlim (m_i^\lambda \cdot M)^* \le
+      \varprojlim_{A/p\rightarrow\lambda(A)}A_p \le 0
+ \end{gather*}
+\end{document}

@@ -1,0 +1,27 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-5-24 on page I-644 in "Transformations and other operations".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+
+%StartShownPreambleCommands
+\usepackage[T1]{fontenc}  \usepackage{tikz}
+%StopShownPreambleCommands
+
+\begin{document}
+\foreach \x/\y/\z in {apple/red/ok?} { ı ȷ Ą } (fine)      \par
+\foreach \i/\j/\k in {apple/red/ok?} { ı ȷ Ą } (surprise!)
+\end{document}

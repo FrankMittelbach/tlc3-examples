@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-6-1 on page II-538 in "bibentry --- Full bibliographic entries in running text".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+  \usepackage{microtype}
+  \setlength\parindent{12pt}
+
+%StartShownPreambleCommands
+\usepackage{bibentry,natbib}
+\bibliographystyle{agu}
+\AtBeginDocument{\nobibliography{tlc}}
+%StopShownPreambleCommands
+
+\begin{document}
+For details see \bibentry{Knuth:TB10-1-31}.
+General information can be found in
+\bibentry{Knuth-CT-a} and in
+\citet{TLC94,LGC97}.
+
+As shown by \citet{Knuth:TB10-1-31} \ldots
+\end{document}

@@ -1,0 +1,66 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-3-1 on page I-55 in "Table of contents structures".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{109.80112pt}
+
+
+  \setlength\textheight{14.6\baselineskip}
+
+  \setcounter{page}{1}
+
+  \setlength\footskip{24pt}
+  \pagestyle{origplain}
+
+  \sloppy  % narrow columns
+
+  % small headings for the example
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.5ex \@plus-1ex \@minus-.2ex}%
+    {.5ex}%
+    {\normalfont\large\bfseries}}
+  \renewcommand\subsection{\@startsection {subsection}{2}{\z@}%
+    {-1.ex \@plus -.5ex \@minus -.2ex}%
+    {.3ex}%
+    {\normalfont\bfseries}}
+  \makeatother
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\tableofcontents
+\section*{Foreword}
+\addcontentsline{toc}{section}
+   {\protect\numberline{}Foreword}
+A starred heading with the TOC entry
+manually added. Compare this to the
+form used for the  bibliography.
+
+\section{Thoughts}
+We find all in \cite{k1}.
+\subsection{Contact info}
+E-mail Ben at \cite{k2}.
+\begin{thebibliography}{9}
+\addcontentsline{toc}{section}
+   {\refname}
+\bibitem{k1} Ben User, Some day will
+             never come, 2010
+\bibitem{k2} BUser@earth.info
+\end{thebibliography}
+\end{document}

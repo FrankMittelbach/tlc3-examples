@@ -1,0 +1,81 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 13-3-22 on page II-317 in "Numbering".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{351.0pt}
+
+%StartShownPreambleCommands
+\usepackage[T2A,T1]{fontenc}
+
+  % fonts with Cyrillic and Greek (several possibilities)
+
+  %  \usepackage{OldStandard}
+     \usepackage{noto-serif}
+
+\usepackage[esperanto,greek,bulgarian,russian,english]{babel}
+\usepackage{ifthen,booktabs}
+
+%%\renewcommand\rmdefault{cmr} % needed for esperanto (dotless j)
+
+\setlength\parindent{0pt}
+\setlength{\tabcolsep}{3pt}
+\newcommand\GR[1]{{\extrasgreek#1}}
+\newcommand\BU[1]{{\extrasbulgarian#1}}
+\newcommand\RU[1]{{\extrasrussian#1}}
+\newcommand\smskip{\hskip.7pt}
+\makeatletter
+  \gdef\@ctrerr{-} % don't produce counter errors but dash
+\makeatother
+\newcommand\row{\thecount & %
+      \alph{count}       & \Alph{count}       & %
+      \esper{count}      & \Esper{count}      & %
+      \GR{\alph{count}}  & \GR{\Alph{count}}  & %
+      \RU{\asbuk{count}} & \RU{\Asbuk{count}} & %
+      \BU{\alph{count}}  & \BU{\Alph{count}}  & \\}
+%
+\newcounter{count}
+\setcounter{count}{1}
+
+%StopShownPreambleCommands
+
+\begin{document}
+    \centering
+    \small
+    \begin{tabular}{@{}cc@{\smskip}cc@{\smskip}cc@{\smskip}cc@{\smskip}cc@{\smskip}cc@{\smskip}c@{\smskip}c@{}}
+     \toprule
+      & \multicolumn{2}{c}{\textit{default}} & %
+      \multicolumn{2}{c}{\textsf{Esperanto}} & %
+      \multicolumn{2}{c}{\textsf{Greek}} & %
+      \multicolumn{2}{c}{\textsf{Russian}} & %
+      \multicolumn{2}{c}{\textsf{Bulgarian}} \\[2pt]
+%
+      \textit{value} & %
+      \verb|\alph|  & \verb|\Alph|  & %
+      \verb|\esper| & \verb|\Esper| & %
+      \verb|\alph|  & \verb|\Alph|  & %
+      \verb|\asbuk| & \verb|\Asbuk| & %
+      \verb|\alph|  & \verb|\Alph|  & \\%[4pt]
+      \midrule
+%
+      \whiledo{\value{count}<31}{\row\stepcounter{count}}%
+      \setcounter{count}{40}\row
+      \setcounter{count}{50}\row
+      \setcounter{count}{100}\row
+      \setcounter{count}{250}\row
+      \setcounter{count}{500}\row
+      \bottomrule
+    \end{tabular}
+\end{document}

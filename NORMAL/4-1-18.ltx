@@ -1,0 +1,47 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-18 on page I-270 in "The placement of the item label or item text".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{177.0pt}
+
+
+  \addtolength\textwidth{-25pt}  % account for protrusion into left margin
+
+  \usepackage{microtype} % to improve h&j
+
+
+%StartShownPreambleCommands
+\usepackage{enumitem}
+\setlist[itemize]{format=\bfseries}
+\SetLabelAlign{rightextend}{\hfill#1}
+%StopShownPreambleCommands
+
+\begin{document}
+\noindent A sample text showing the outer margins.
+\begin{itemize}
+\item             Label fits the available space.
+\item[Wide label] Label is wider than the available
+ space so protrudes into the left margin.\end{itemize}
+
+\begin{itemize}[align=rightextend]
+\item             No change to the default.
+\item[Wide label] But now wide labels move following
+ text partly to the right.               \end{itemize}
+
+\begin{itemize}[align=parleft]
+\item[Wide label] A rather ugly example for the use of
+ the \texttt{parleft} alignment.         \end{itemize}
+\end{document}

@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-2-46 on page I-325 in "listings --- Pretty-printing program code".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+%StartShownPreambleCommands
+\usepackage{listings,color}
+\lstset{keywordstyle=*\textsf,emph={Sum,N},emph=[2]I,
+        emphstyle=\color{blue},emphstyle=[2]\underbar}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{lstlisting}[language=Ada]
+Sum: Integer;   Sum := 0;
+for I in 1..N loop
+  Sum := Sum + A(I);
+end loop;
+\end{lstlisting}
+\end{document}

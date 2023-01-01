@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-27 on page I-222 in "manyfoot, bigfoot --- Independent footnotes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+\setlength\textheight{7.5\baselineskip}
+
+%StartShownPreambleCommands
+\usepackage[multiple]{footmisc}
+\usepackage[para]{manyfoot}
+\DeclareNewFootnote[para]{B}[alph]
+%StopShownPreambleCommands
+
+\begin{document}
+Some text\footnote{A first.}\footnoteB{B-level.}
+with footnotes. Even more text.\footnoteB{A second.}
+Some text\footnote{Another main note.}%
+\FootnoteB{*}{A manual marker.} with footnotes.
+Even more text.\footnoteB{Another B note.}
+\end{document}

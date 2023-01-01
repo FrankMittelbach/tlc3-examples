@@ -1,0 +1,30 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-2-14 on page I-594 in "overpic --- Graphic annotation made easy".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+\usepackage{overpic,pict2e,color}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{Overpic}[grid,rel=50,tics=10]
+               {$ \displaystyle \sum_{i=1}^n x_i = A + B $}
+  \color{blue} \Vector(40,5)(32,9)
+  \put(42,3){\footnotesize\itshape some explanation}
+\end{Overpic}
+\end{document}

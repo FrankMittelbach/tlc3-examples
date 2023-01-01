@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 13-3-12 on page II-313 in "The grave accent".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{95.40097pt}
+
+  \setlength\textheight{10\baselineskip}
+
+%StartShownPreambleCommands
+\usepackage[hungarian]{babel}
+\newcommand\present[1]
+   {\fbox{\parbox[t]{20mm}{#1}}
+    \fbox{\parbox[t]{8,5mm}{#1}}\par}
+%StopShownPreambleCommands
+
+\begin{document}
+\present{lo`ccsan}
+\present{e`ddzünk}
+\present{po`ggyász}
+\present{Kodá`llya}
+\present{me`nnyei}
+\present{vi`ssza}
+\present{po`ttyan}
+\present{ri`zzsel}
+\end{document}

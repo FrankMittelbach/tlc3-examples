@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-2-8 on page II-136 in "A single equation on several lines: with alignment".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+  % Shorten the vertical size of the example ...
+  \AtBeginDocument{%
+    \setlength\abovedisplayskip{.5\abovedisplayskip}%
+    \setlength\belowdisplayskip{.5\belowdisplayskip}%
+  }
+
+%StartShownPreambleCommands
+\usepackage[tbtags]{amsmath}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{equation}
+  \begin{split}
+  (a + b)^3 &= (a + b) (a + b)^2        \\
+            &= (a + b)(a^2 + 2ab + b^2) \\
+            &= a^3 + 3a^2b + 3ab^2 + b^3
+  \end{split}
+\end{equation}
+\end{document}

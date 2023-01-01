@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 9-6-12 on page I-718 in "Vertical positioning features".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{81.0pt}
+
+  %!TEX program = lualatex
+
+  \setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage{fontspec}
+\setmainfont{Alegreya}
+\newcommand\textsu[1]{{\addfontfeature{VerticalPosition=Superior}#1}}
+\newcommand\textin[1]{{\addfontfeature{VerticalPosition=Inferior}#1}}
+%StopShownPreambleCommands
+
+\begin{document}
+Catch\textsubscript{22} in Room\textsuperscript{13}% inferior quality
+
+Catch\textin{22}        in Room\textsu{13}         % much better!
+\end{document}

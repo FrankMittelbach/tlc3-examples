@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-2-27 on page I-312 in "Customization keys for typesetting".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+  \addtolength\textwidth{-20pt}
+
+%StartShownPreambleCommands
+\usepackage{xcolor,fvextra}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{Verbatim*}[numbers=right,firstnumber=12,
+    highlightcolor=blue!10,highlightlines={13,15-50}]
+  First line is labeled 12
+  Second line
+  Third line
+  Fourth line and further
+  lines are highlighted
+\end{Verbatim*}
+\end{document}

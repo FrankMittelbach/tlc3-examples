@@ -1,0 +1,45 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-5-50 on page II-535 in "biblatex's approach to author-title references".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+
+% Use biber program
+\setlength\parindent{0pt}
+%\setlength\textheight{5cm}
+\usepackage{microtype}
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                       {-2.5ex \@plus -1ex \@minus -.2ex}%
+                       {1.3ex}%
+                       {\normalfont\large\bfseries}}
+\makeatother
+
+%StartShownPreambleCommands
+\usepackage[style=authortitle]{biblatex}
+\usepackage{csquotes}
+\SetCiteCommand{\parencite}
+\addbibresource{tlc.bib}
+\hyphenation{Ur-theils-kraft}
+%StopShownPreambleCommands
+
+\begin{document}
+\textcquote{kant:kpv}[.]{Handle so, daß
+  die Maxime deines Willens jederzeit
+  zugleich als Prinzip einer allgemeinen
+  Gesetzgebung gelten könne}
+\printbiblist{shorthand}
+\end{document}

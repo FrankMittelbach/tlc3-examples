@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 5-1-1 on page I-367 in "Geometrical dimensions of the layout".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+\usepackage[landscape,a5paper,hmarginratio=1:4]{geometry}
+\usepackage{layout,color}
+
+\makeatletter             % put some color into the picture
+\def\Identify#1{%
+  \put(\PositionX,\PositionY){\circle{20}}
+  \put(\PositionX,\PositionY){\makebox(0,0){\color{blue}\tiny\bfseries #1}}
+}
+\makeatother
+
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\makeatletter\@twosidefalse\makeatother %pretend we do not have
+                                        %twoside set
+\layout
+\end{document}

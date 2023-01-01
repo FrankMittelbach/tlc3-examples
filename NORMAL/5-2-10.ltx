@@ -1,0 +1,29 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 5-2-10 on page I-385 in "savetrees --- Options to reduce the document length".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+\setcounter{page}{1}
+%StartShownPreambleCommands
+\usepackage{kantlipsum}
+\usepackage[extreme,margins=normal]
+           {savetrees}
+
+%StopShownPreambleCommands
+
+\begin{document}
+\kant[10][1-2]
+\end{document}

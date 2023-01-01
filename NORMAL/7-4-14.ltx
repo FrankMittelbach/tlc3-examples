@@ -1,0 +1,49 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-4-14 on page I-556 in "Customizing the subcaptions".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{123.0pt}
+
+  \setlength\textheight{20\baselineskip}
+
+%StartShownPreambleCommands
+\usepackage{graphicx}
+\usepackage[font={sl,small}]{subcaption}
+\captionsetup[table]{position=top,skip=3pt}
+\captionsetup[subtable]{singlelinecheck=false,skip=0pt,
+                        format=hang,justification=raggedright}
+\DeclareCaptionSubType*[arabic]{table}
+\newcommand\TAB[2]{\fbox{\parbox{#2\textwidth}{Table #1}}}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{figure}[!t]
+  \subcaptionbox{An image}{\fbox{No elephant around}}\hfill
+  \subcaptionbox{Very lonely cat\label{f2}}
+                [13mm]{\includegraphics{cat}}
+  \caption{Two subfigures}
+\end{figure}
+There is a cat in subfigure \ref{f2} but no elephant.
+\begin{table}[!b]
+  \caption{Three subtables}\label{tbl}
+    \subcaptionbox{First\label{t1}}{\TAB{1}{.4}}\hfill
+    \subcaptionbox{Second}         {\TAB{2}{.4}}
+  \par\medskip
+    \subcaptionbox{Third table with a much longer
+                   caption\label{t3}}{\TAB{3}{.8}}
+\end{table}
+Table~\ref{tbl} contains subtables~\ref{t1} to~\ref{t3}.
+\end{document}

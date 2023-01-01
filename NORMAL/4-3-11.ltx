@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-3-11 on page I-340 in "paracol --- Several text streams aligned".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{165.0pt}
+\sloppy
+  \usepackage{paracol}
+  \setcolumnwidth{/0pt}  % here we cheat and make the first gap zero to
+                         % fit the example into the space in the book
+
+%StartShownPreambleCommands
+\usepackage{paracol}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{paracol}{3} \setlength\parindent{0pt}
+ \bfseries Number \switchcolumn English \switchcolumn
+      German \normalfont \switchcolumn*[\vspace{5pt}]
+100 \switchcolumn One hundred   \switchcolumn
+    Ein\-hun\-dert \switchcolumn*[\dotfill\tiny sync]
+ 42 \switchcolumn Forty two     \switchcolumn
+           Zwei\-und\-vier\-zig \switchcolumn*
+  1 \switchcolumn One \switchcolumn Eins
+\end{paracol}
+\end{document}

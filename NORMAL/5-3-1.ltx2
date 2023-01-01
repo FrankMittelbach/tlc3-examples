@@ -1,0 +1,40 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 5-3-1 on page I-386 in "\LaTeX {} page numbers".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{95.40097pt}
+
+  \setlength\textheight{58pt}  % 4 \baselineskip + \topskip
+  \addtolength\footskip{-12pt} % shortened for the book
+
+  \usepackage{microtype}  % for better line-breaking
+  \tolerance=4000
+
+  \pagestyle{origplain} % plain is disabled by the class
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+We are now on page~\label{p1}\pageref{p1}.
+This type of coding always gives correct
+results while ``page \thepage'', though
+okay here, will be wrong at a later point
+in the paragraph, such as here:  ``page
+\thepage'', because \LaTeX\ decided to
+break the paragraph over two pages.
+\end{document}

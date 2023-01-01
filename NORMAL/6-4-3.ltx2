@@ -1,0 +1,85 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-4-3 on page I-460 in "longtable --- Alternative multipage tabulars".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{348.0pt}
+\setcounter{page}{1}
+\makeatletter
+\def\@oddfoot{\hrulefill\quad Page \thepage\quad \hrulefill}
+\let\@oddhead\@oddfoot
+\let\@evenhead\@oddfoot
+\let\@evenfoot\@oddfoot
+\setlength\textheight{26\baselineskip}
+\makeatother
+
+%StartShownPreambleCommands
+\usepackage{longtable}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{longtable}{lll}
+ \caption{The ISOGRK3 entity set} \\ \textbf{Entity} &
+   \textbf{Unicode Name} & \textbf{Unicode} \\ \hline  \endfirsthead
+ \caption[]{The ISOGRK3 entity set (\emph{cont.})} \\ \textbf{Entity} &
+   \textbf{Unicode Name} & \textbf{Unicode} \\ \hline       \endhead
+ \hline \multicolumn{3}{r}{\emph{Continued on next page}}   \endfoot
+ \hline\endlastfoot
+alpha              & GREEK SMALL LETTER ALPHA            & 03B1\\
+beta               & GREEK SMALL LETTER BETA             & 03B2\\
+chi                & GREEK SMALL LETTER CHI              & 03C7\\
+\empty
+Delta              & GREEK CAPITAL LETTER DELTA          & 0394\\
+delta              & GREEK SMALL LETTER DELTA            & 03B4\\
+epsi               & GREEK SMALL LETTER EPSILON          & 03B5\\
+epsis              & GREEK LUNATE EPSILON SYMBOL         & 03F5\\
+epsiv              & GREEK SMALL LETTER EPSILON          & 03B5\\
+eta                & GREEK SMALL LETTER ETA              & 03B7\\
+Gamma              & GREEK CAPITAL LETTER GAMMA          & 0393\\
+gamma              & GREEK SMALL LETTER GAMMA            & 03B3\\
+gammad             & GREEK SMALL LETTER DIGAMMA          & 03DD\\
+iota               & GREEK SMALL LETTER IOTA             & 03B9\\
+kappa              & GREEK SMALL LETTER KAPPA            & 03BA\\
+kappav             & GREEK KAPPA SYMBOL                  & 03F0\\
+Lambda             & GREEK CAPITAL LETTER LAMDA          & 039B\\
+lambda             & GREEK SMALL LETTER LAMDA            & 03BB\\
+mu                 & GREEK SMALL LETTER MU               & 03BC\\
+nu                 & GREEK SMALL LETTER NU               & 03BD\\
+Omega              & GREEK CAPITAL LETTER OMEGA          & 03A9\\
+omega              & GREEK SMALL LETTER OMEGA            & 03C9\\
+Phi                & GREEK CAPITAL LETTER PHI            & 03A6\\
+phis               & GREEK PHI SYMBOL                    & 03D5\\
+phiv               & GREEK SMALL LETTER PHI              & 03C6\\
+Pi                 & GREEK CAPITAL LETTER PI             & 03A0\\
+pi                 & GREEK SMALL LETTER PI               & 03C0\\
+piv                & GREEK PI SYMBOL                     & 03D6\\
+Psi                & GREEK CAPITAL LETTER PSI            & 03A8\\
+psi                & GREEK SMALL LETTER PSI              & 03C8\\
+rho                & GREEK SMALL LETTER RHO              & 03C1\\
+rhov               & GREEK RHO SYMBOL                    & 03F1\\
+Sigma              & GREEK CAPITAL LETTER SIGMA          & 03A3\\
+sigma              & GREEK SMALL LETTER SIGMA            & 03C3\\
+sigmav             & GREEK SMALL LETTER FINAL SIGMA      & 03C2\\
+tau                & GREEK SMALL LETTER TAU              & 03C4\\
+Theta              & GREEK CAPITAL LETTER THETA          & 0398\\
+thetas             & GREEK SMALL LETTER THETA            & 03B8\\
+thetav             & GREEK THETA SYMBOL                  & 03D1\\
+Upsi               & GREEK UPSILON WITH HOOK SYMBOL      & 03D2\\
+upsi               & GREEK SMALL LETTER UPSILON          & 03C5\\
+Xi                 & GREEK CAPITAL LETTER XI             & 039E\\
+xi                 & GREEK SMALL LETTER XI               & 03BE\\
+zeta               & GREEK SMALL LETTER ZETA             & 03B6\\
+\end{longtable}
+\end{document}

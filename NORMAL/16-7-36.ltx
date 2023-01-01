@@ -1,0 +1,44 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-7-36 on page II-565 in "Adapting localization strings".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{171.0pt}
+%
+  \setlength\parindent{0pt}
+  \setlength\emergencystretch{1em}
+
+  %  Use biber program
+
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}%
+    {.5ex}%
+    {\normalfont\normalsize\bfseries}}
+  \makeatother
+
+%StartShownPreambleCommands
+\usepackage[english]{babel}
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{tlc.bib}
+\DefineBibliographyStrings{english}{ and = /,
+  byeditortr    = revised and adapted by,
+  langgerman    = Teutonic,
+  withafterword = addendum by}
+%StopShownPreambleCommands
+
+\begin{document}
+\nocite{cicero}   \printbibliography
+\end{document}

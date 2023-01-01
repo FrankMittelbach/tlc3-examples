@@ -1,0 +1,53 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-2-37 on page II-151 in "Fine-tuning tag placement".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{279.0pt}
+
+  % Shorten the vertical size of the example ...
+  \AtBeginDocument{%
+    \setlength\abovedisplayskip{.2\abovedisplayskip}%
+    \setlength\belowdisplayskip{.7\belowdisplayskip}%
+  }
+
+%StartShownPreambleCommands
+\usepackage{amsmath}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{align}
+  \lvert I_2 \rvert &=
+    \left\lvert \int_{0}^T \psi(t)
+      \left\lbrace
+        u(a, t) - \int_{\gamma(t)}^a \frac {d\theta} k(\theta, t)
+        \int_{a}^\theta c (\xi) u_t (\xi, t) \,d\xi
+      \right\rbrace dt
+    \right\rvert                                          \notag \\
+        &\le  C_6
+    \Biggl\lvert
+      \left\lvert f \int_\Omega
+        \left\lvert
+          \widetilde{S}^{-1,0}_{a,-} W_2(\Omega, \Gamma_l)
+        \right\rvert \
+      \right\rvert
+      \left\lvert
+        \lvert u \rvert \overset{\circ}{\to} W_2^{\widetilde{A}}
+        (\Omega; \Gamma_r,T)
+      \right\rvert
+    \Biggr\rvert
+\end{align}
+A line of text after the equation \ldots
+\end{document}

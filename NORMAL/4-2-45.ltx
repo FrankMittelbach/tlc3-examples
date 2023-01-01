@@ -1,0 +1,43 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-2-45 on page I-324 in "listings --- Pretty-printing program code".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+%StartShownPreambleCommands
+\usepackage{listings}
+\lstloadlanguages{C,Ada}
+\lstset{language=C,commentstyle=\scriptsize}
+%StopShownPreambleCommands
+
+\begin{document}
+A ``for'' loop in C:
+\begin{lstlisting}[keywordstyle=\underbar]
+int sum;
+int i; /*for loop variable*/
+sum=0;
+for (i=0;i<n;i++) { sum += a[i]; }
+\end{lstlisting}
+Now the same loop in Ada 83:
+\begin{lstlisting}[language={[83]Ada}]
+Sum: Integer;
+-- no decl for `I' necessary
+Sum := 0;
+for I in 1..N loop
+  Sum := Sum + A(I);
+end loop;
+\end{lstlisting}
+\end{document}

@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 9-6-16 on page I-721 in "Ligature features".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+
+  %!TEX program = lualatex
+
+  \setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage{fontspec} \setmainfont{Accanthis Adf Std No3}
+%StopShownPreambleCommands
+
+\begin{document}
+`` -- --- !` ?` ''\hfill  (TeX) \\ ae Ae oe Oe\hfill (required)
+   \\ fi ffi fl ffl fj ffj ft (common)                     \\
+\addfontfeature{Ligatures={TeXOff,RequiredOff,CommonOff}}
+`` -- --- !` ?` '' \\ ae Ae oe Oe  \\ fi ffi fl ffl fj ffj ft
+\end{document}

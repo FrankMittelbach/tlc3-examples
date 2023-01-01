@@ -1,0 +1,44 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-4-7 on page I-87 in "cleveref --- Cleverly formatted references".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{195.0pt}
+
+
+  \usepackage{amsmath,cleveref}
+
+  \AtEndDocument{%     we place the equations at the document end so that
+                 %     they do not show up in the book and take up unnecessary space
+    \newpage
+    \begin{align}
+      a &= b \label{eq:a} \\
+      b &< c \label{eq:b} \\
+      c &< d \label{eq:c} \\
+      d &< e \label{eq:d} \\
+      a &< e \label{eq:e} \\
+    \end{align}
+  }
+
+%StartShownPreambleCommands
+% equations as before + 2 more
+%StopShownPreambleCommands
+
+\begin{document}
+\Cref{eq:c,eq:b,eq:a,eq:d,eq:e} are sorted and
+\cref{eq:c,eq:b,eq:a,eq:e} are sorted with a gap.
+But compare these results with referencing
+\cref{eq:c,,eq:b,eq:a,eq:d,eq:e}! Surprised?
+\end{document}

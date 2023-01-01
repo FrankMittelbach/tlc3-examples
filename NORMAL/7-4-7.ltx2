@@ -1,0 +1,71 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-4-7 on page I-548 in "Continuing captions across floats".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{109.80112pt}
+
+  \setcounter{page}{1}
+
+  % for the book examples we shorten the vertical spaces
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}%
+    {1ex}%
+    {\normalfont\Large\bfseries}}
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.25ex \@plus-1ex \@minus-.2ex}%
+                                    {.5ex}%
+                                    {\normalfont\large\bfseries}}
+  \makeatother
+
+  \setlength\footskip{16pt}
+  \pagestyle{origplain} % plain is disabled by the class
+
+  \setlength\textheight{5.4cm}
+  \setlength\intextsep{8pt}
+
+  \setlength\parindent{8pt}  % shorten this for the example output
+
+  \usepackage{microtype}     % improve line breaking
+
+%StartShownPreambleCommands
+\usepackage[labelfont={bf}]{caption}
+\renewcommand\theContinuedFloat
+             {\alph{ContinuedFloat}}
+%StopShownPreambleCommands
+
+\begin{document}
+\listoffigures \bigskip
+\begin{figure}[!ht]
+ \ContinuedFloat* % <- star form
+ \centering\fbox{Figure I}
+ \caption{First figure}\label{FI}
+\end{figure}
+\begin{figure}[!ht]
+ \ContinuedFloat
+ \centering\fbox{Figure II}
+ \caption{Continuation}\label{FII}
+\end{figure}
+Figures \ref{FI} and \ref{FII} in
+this example are subnumbered, while
+Figure~\ref{FIII} is not. \par Use
+\verb=\ContinuedFloat*= if the first
+float should be labeled 1a already.
+\begin{figure}
+ \centering\fbox{\LARGE Figure III}
+ \caption{Third figure}\label{FIII}
+\end{figure}
+\end{document}

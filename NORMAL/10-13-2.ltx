@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 10-13-2 on page II-114 in "pifont --- Accessing Pi and Symbol fonts".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+%StartShownPreambleCommands
+\usepackage{pifont}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{dingautolist}{"C0}
+ \item The first item in the list.\label{lst:a}
+ \item The second item in the list.\label{lst:b}
+ \item The third item in the list.\label{lst:c}
+\end{dingautolist}
+References to list items work as expected:
+\ref{lst:a}, \ref{lst:b}, \ref{lst:c}
+\end{document}

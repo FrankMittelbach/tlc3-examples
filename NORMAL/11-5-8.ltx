@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-5-8 on page II-184 in "Further horizontal extensions".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+  \usepackage{lmodern}
+
+%StartShownPreambleCommands
+\usepackage{amsmath}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{align*}
+\overrightarrow {\psi_\delta(t) E_t h}
+&\approx \overleftarrow {\psi_\Delta(t) E_t h}
+& &   \text{No style change}             \\[-3pt]
+& & & \text{without \textsf{amsmath}}    \\
+\underrightarrow  {\psi_\delta(t) E_t h}
+&\simeq \underleftarrow  {\psi_\Delta(t) E_t h}
+& & \text{Needs \textsf{amsmath}}         \\
+\overleftrightarrow {\psi_\delta(t) E_t h}
+&\sim \underleftrightarrow{\psi_\Delta(t) E_t h}
+& & \text{Needs \textsf{amsmath}}
+\end{align*}
+\end{document}

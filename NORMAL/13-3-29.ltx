@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 13-3-29 on page II-322 in "Layout considerations".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+\usepackage[french,english]{babel}
+\frenchsetup{AutoSpaceFootnotes,FrenchFootnotes}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{minipage}{70pt} Some text\footnote{with a footnote}.
+\end{minipage}
+\selectlanguage{french}\StandardFootnotes
+\begin{minipage}{70pt} Some text\footnote{with a footnote}.
+\end{minipage}
+\end{document}

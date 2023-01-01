@@ -1,0 +1,41 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-4-8 on page II-506 in "Customizing natbib in numerical mode".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+% small headings for the example
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.25ex \@plus-1ex \@minus-.2ex}%
+                                    {.5ex}%
+                                    {\normalfont\normalsize\bfseries}}
+\makeatother
+%StartShownPreambleCommands
+\usepackage[numbers,round]{natbib}
+\bibliographystyle{abbrvnat}
+\renewcommand\bibfont{\small\raggedright}
+\setlength\bibhang{30pt}       % ignored!
+\setlength\bibsep{1pt plus 1pt}
+\renewcommand\citenumfont[1]{\textbf{#1}}
+\renewcommand\bibnumfmt[1]{\textbf{#1.}}
+%StopShownPreambleCommands
+
+\begin{document}
+Images are discussed elsewhere,
+see \citep{LGC97,Knuth-CT-a}.
+
+\bibliography{tlc}
+\end{document}

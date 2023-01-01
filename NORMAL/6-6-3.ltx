@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-6-3 on page I-469 in "\protect \nxLPack {arydshln} --- Dashed rules".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+%StartShownPreambleCommands
+\usepackage{array,arydshln}
+  \setlength\extrarowheight{4pt}% extra space on row top
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabular}{|c::c|c|}    \hline
+   A    & B  & C          \\ \hdashline\hline
+   a    & b  & c          \\ \hdashline\hdashline
+  1000  & 10 & 1          \\ \hdashline
+   X    & Y  & Z          \\ \hline
+\end{tabular}
+\end{document}

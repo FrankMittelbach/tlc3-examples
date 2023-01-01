@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-4-9 on page I-552 in "subcaption --- Substructuring floats".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{165.0pt}
+
+%StartShownPreambleCommands
+\usepackage{graphicx,subcaption}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{figure} \centering
+  \subcaptionbox
+      {Small, but a large caption\label{sf1}}[2cm]
+      {\includegraphics[width=12mm]{elephant}}
+  \qquad
+  \subcaptionbox{Bigger\label{sf2}}
+      {\includegraphics[width=18mm]{elephant}}
+  \caption{Two elephants}\label{elephants}
+\end{figure}
+Figure~\ref{elephants} contains subfigure~\ref{sf1},
+which is smaller than subfigure~\ref{sf2}.
+\end{document}

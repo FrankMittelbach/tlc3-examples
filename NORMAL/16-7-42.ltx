@@ -1,0 +1,46 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-7-42 on page II-569 in "Changing format directives".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{189.0pt}
+%
+  \setlength\parindent{0pt}
+%  Use biber program
+
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}%
+    {.5ex}%
+    {\normalfont\normalsize\bfseries}}
+  \makeatother
+
+  \usepackage{microtype} % for better line breaking
+
+%StartShownPreambleCommands
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{tlc.bib}
+\DeclareNameAlias{sortname}{family-given}
+\AtBeginBibliography{%
+ \renewcommand\mkbibnamefamily[1]{\textsc{#1}}%
+ \renewcommand\mkbibnamegiven [1]{\textsc{#1}}%
+ \renewcommand\mkbibnameprefix[1]{\textsc{#1}}%
+ \renewcommand\mkbibnamesuffix[1]{\textsc{#1}}}
+%StopShownPreambleCommands
+
+\begin{document}
+\textcite{LGC97}
+\printbibliography
+\end{document}

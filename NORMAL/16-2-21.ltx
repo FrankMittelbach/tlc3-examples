@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-2-21 on page II-485 in "biblatex's approach to number-only references".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+\setlength\parindent{0pt}
+%  Use biber program
+
+%StartShownPreambleCommands
+\usepackage[natbib,minnames=2,maxnames=2]{biblatex}
+\addbibresource{tlc.bib}
+%StopShownPreambleCommands
+
+\begin{document}
+\textcite{Knuth:TB10-1-31}       \\
+\parencite[see also][2-4]{LGC97} \\
+\citet{LGC97}                    \\
+\citet*{LGC97}                   \\
+\citep[see][35-44]{LGC97}        \\
+\citeauthor{LGC97}               \\
+\citeauthor*{LGC97}
+\end{document}

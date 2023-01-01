@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-2-3 on page I-149 in "ellipsis, lips --- Marks of omission".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+%StartShownPreambleCommands
+\usepackage[mla,xspace]{ellipsis}
+%StopShownPreambleCommands
+
+\begin{document}
+Compare the following:\\
+  Du E\dots du! Scher dich zum \dots!\\
+\renewcommand\ellipsisgap{1.0\fontdimen2\font}
+  Du E\dots du! Scher dich zum \dots!\\
+\renewcommand\ellipsisgap{0.05em}
+  Du E\dots du! Scher dich zum T\midwordellipsis el!
+\end{document}

@@ -1,0 +1,47 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 10-9-4 on page II-95 in "Lucida's monospaced families".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{348.0pt}
+
+  % use lualatex
+
+  \typeout{This example requires commercial fonts that are not provided^^J%
+           with a free LaTeX installation but must be obtained separately.}
+
+  \usepackage{fontspec,xcolor}
+  \setmonofont{Lucida Grande Mono DK}
+
+  \newcommand\bl{\color{blue}}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+  \fontsize{9}{12}\ttfamily
+  \begin{quotation}
+    \noindent
+     \linepenalty=500
+     \rightskip=0pt plus 42.5pt
+
+  With a price of \pounds148, \textbf{almost anything} can
+  be found \textsc{\bl Floating In \textbf{Fields}}.  — ¿But aren't Kafka's Schloß \&
+  Æsop's Œuvres often \textsl{naïve} vis-à-vis the dæmonic
+  \textit{phœnix's official rôle} in fluffy soufflés?
+  OIl or 011?
+  \end{quotation}
+\end{document}

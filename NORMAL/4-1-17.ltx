@@ -1,0 +1,41 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-17 on page I-270 in "The placement of the item label or item text".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+
+  \usepackage{microtype} % to improve h&j
+
+
+%StartShownPreambleCommands
+\usepackage{calc,enumitem}
+%StopShownPreambleCommands
+
+\begin{document}
+\noindent A sample text showing the outer margins.
+\begin{description}
+\item[X] Label shorter than the available space so
+  the text moves to the left.
+\item[Wide label] Wider than the space available so
+  the text moves to the right.      \end{description}
+
+\setlist[description]{labelwidth=\leftmargin-\labelsep}
+\begin{description}
+\item[X] Now no text is moved.
+\item[Wide label] Wider than the space available so
+  the text again moves to the right.\end{description}
+\end{document}

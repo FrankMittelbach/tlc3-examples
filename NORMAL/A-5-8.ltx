@@ -1,0 +1,28 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-5-8 on page II-692 in "ifthen --- Advanced control structures".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{171.0pt}
+%StartShownPreambleCommands
+\usepackage{ifthen}  \newcounter{howoften}
+%StopShownPreambleCommands
+
+\begin{document}
+\setcounter{howoften}{1}
+\whiledo{\value{howoften}<5}{I should not talk
+     during seminar (\thehowoften).
+     \stepcounter{howoften}}
+\end{document}

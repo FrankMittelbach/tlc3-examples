@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-5-7 on page II-511 in "Citations with short and full titles".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+\setlength\parindent{0pt}
+
+%% Apply the jurabib defaults we use in the book (documented at the beginning of the section)
+\AddToHook{package/jurabib/after}{\jurabibsetup{titleformat=colonsep,commabeforerest=true}}
+
+%% Do not show the bibliography itself in the example,
+%% so put it on a separate page:
+\AtEndDocument{\newpage\bibliography{tlc}}
+
+%StartShownPreambleCommands
+\usepackage{jurabib} \bibliographystyle{jurabib}
+%StopShownPreambleCommands
+
+\begin{document}
+\cite{aschur}     \\  \cite{bschur}    \\[2pt]
+\cite{Knuth-CT-a} \\  \cite{Knuth:TB10-1-31}
+\end{document}

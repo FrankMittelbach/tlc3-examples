@@ -1,0 +1,42 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-6-18 on page I-249 in "Providing your own editorial commands".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{99.0pt}
+
+  \setlength\parindent{0pt}
+  \setlength\textheight{10\baselineskip}
+
+  \tolerance=3000
+
+%StartShownPreambleCommands
+\usepackage[commentmarkup=footnote]{changes}
+\definechangesauthor[name=Anonymous]{??}
+\definechangesauthor[name=Frank,color=red]{FMi}
+\DeclareDocumentCommand\add{O{??}mo}
+  {\IfValueTF{#3}{\added[id=#1,comment=#3]{#2}}{\added[id=#1]{#2}}}
+\DeclareDocumentCommand\del{O{??}mo}
+  {\IfValueTF{#3}{\deleted[id=#1,comment=#3]{#2}}
+  {\deleted[id=#1]{#2}}}
+\DeclareDocumentCommand\rep{O{??}mmo}
+  {\IfValueTF{#4}{\replaced[id=#1,comment=#4]{#2}{#3}}
+                 {\replaced[id=#1]{#2}{#3}}}
+%StopShownPreambleCommands
+
+\begin{document}
+Sample text, something \add{added}[better], a \rep[FMi]{word}{blob}
+replaced and \del[FMi]{some}[Really?] stuff removed.
+\end{document}

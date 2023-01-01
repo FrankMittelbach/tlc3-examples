@@ -1,0 +1,29 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-2-5 on page II-652 in "Defining and changing space parameters".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+%StartShownPreambleCommands
+\newlength\Mylen
+%StopShownPreambleCommands
+
+\begin{document}
+\setlength  \Mylen{10mm}  Mylen = \the\Mylen
+\addtolength\Mylen{0pt plus 4pt minus 2pt}
+\par Mylen = \the\Mylen
+\addtolength\Mylen{-10mm plus 1fil}
+\par Mylen = \the\Mylen
+\end{document}

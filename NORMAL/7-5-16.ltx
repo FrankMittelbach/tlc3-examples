@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-5-16 on page I-573 in "keyfloat --- Bringing most packages under one roof".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+%StartShownPreambleCommands
+\usepackage{keyfloat}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{keysubfigs}{1}{c=TLC animals}
+  \keyfig{h=1cm,w=3cm,
+          c=stretched elephant}{elephant}
+  \begin{keyfloats}{2}
+    \keyfig{h=1cm,c=hummingbird}{latex-logo}
+    \keyfig{h=1cm,c=cat}{cat}
+  \end{keyfloats}
+\end{keysubfigs}
+\end{document}

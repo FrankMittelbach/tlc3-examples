@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-2-9 on page II-478 in "cite --- Enhanced references by number".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%% Do not show the bibliography itself in the example,
+%% so put it on a separate page:
+\AtEndDocument{\newpage\bibliography{tlc}}
+
+%StartShownPreambleCommands
+\usepackage{cite}    \bibliographystyle{plain}
+%StopShownPreambleCommands
+
+\begin{document}
+Good information about \TeX{} and \LaTeX{} can be found in
+\cite{LGC97,LWC99,Knuth-CT-a,Knuth:ct-b,Knuth:TB10-1-31}.
+\end{document}

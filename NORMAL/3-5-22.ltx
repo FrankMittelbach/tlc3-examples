@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-22 on page I-217 in "fnpct --- Managing footnote markers and punctuation".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+  \setlength\textheight{5\baselineskip}
+
+%StartShownPreambleCommands
+\usepackage[para]{footmisc} \usepackage{fnpct}
+%StopShownPreambleCommands
+
+\begin{document}
+The three little pigs built their houses out of
+straw\footnote{not to be confused with hay},
+sticks\footnote{or lumber according to some sources}
+and bricks\footnote{probably fired clay
+ bricks}\footnote{With kind permission by Clemens.}.
+\end{document}

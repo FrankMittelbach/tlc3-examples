@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-34 on page I-279 in "Styling description-like lists".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+  \usepackage{microtype}  % improve typesetting in small columns
+
+%StartShownPreambleCommands
+\usepackage{enumitem}
+\setlist[description]{style=multiline,leftmargin=7em}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{description}
+\item[A fairly long label --- so what happens now?]
+ Now the label breaks in the margin, but this can still
+ look strange if it is long and the item text is short.
+\end{description}
+\end{document}

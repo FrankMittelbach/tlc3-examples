@@ -1,0 +1,29 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-4-21 on page I-625 in "Hyperlinks to internal and external resources".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+%StartShownPreambleCommands
+\usepackage{hyperref,tcolorbox}  \tcbuselibrary{skins}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tcolorbox}[enhanced,title=View manual section,
+      hyperurl=http://www.ctan.org/pkg/tcolorbox]
+  \S 10.10 Hyper Option Keys
+\end{tcolorbox}
+\end{document}

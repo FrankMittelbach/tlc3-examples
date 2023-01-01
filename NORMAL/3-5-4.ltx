@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-4 on page I-207 in "Using standard footnotes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+\setlength\textheight{11\baselineskip}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\noindent Main text with a
+  footnote\footnote{\label{A}At bottom} \ldots
+\begin{center}
+ \begin{minipage}{.8\linewidth}
+  Footnotes in a minipage are numbered using
+  lowercase letters.\footnote{\label{B}Inside
+    minipage} This text references a footnote
+  at the bottom\footref{A} of the page.
+  And another\footnote{Inside again} note.
+ \end{minipage}
+\end{center}
+\ldots{} main text referencing minipage
+footnote.\footref{B}
+\end{document}

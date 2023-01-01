@@ -1,0 +1,45 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-6-10 on page I-245 in "changes --- A set of typical editorial commands".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+
+
+  \setlength\marginparwidth{40pt}
+  \addtolength\textwidth{-\marginparwidth} % make room on the page
+  \addtolength\textwidth{-\marginparsep}   % in the book example
+
+% small headings for the example
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.25ex \@plus-1ex \@minus-.2ex}%
+                                    {.5ex}%
+                                    {\normalfont\large\bfseries}}
+\makeatother
+
+\setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage{changes}
+%StopShownPreambleCommands
+
+\begin{document}
+Sample text, something \added{added},
+a \replaced{word}{blob} replaced and
+\deleted{some} stuff\comment{Fix!}
+removed. \highlight{Whoa!}
+\listofchanges
+\end{document}

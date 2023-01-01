@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-1-22 on page I-147 in "fancypar --- Fancy layouts for individual paragraphs".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+
+
+  \addtolength\textwidth{-24pt}
+
+  \usepackage{xcolor} % for the book we need to load this explicitly because of
+                      % the spotcolors we use (otherwise the blue will not be in
+                      % the spotcolor but a ``real blue'' and thus gray)
+
+%StartShownPreambleCommands
+  \usepackage{lipsum,fancypar}
+  \fancyparsetup{linecolor=green!20,
+     textcolor=blue,intercolor=black,
+     spiral=true,spiralcolor=red,
+     interheight=0.5pt }
+%StopShownPreambleCommands
+
+\begin{document}
+  \NotebookPar{\lipsum[1][1]\par
+               \lipsum[1][2]}
+\end{document}

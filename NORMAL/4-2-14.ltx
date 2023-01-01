@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-2-14 on page I-306 in "Customization keys for typesetting".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+%StartShownPreambleCommands
+\usepackage{relsize,fancyvrb}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{Verbatim}[fontsize=\relsize{-2}]
+  \sum_{i=1}^n
+\end{Verbatim}
+A line of text to show the body size.
+\begin{Verbatim}[fontshape=sl,fontsize=\Large]
+  \sum_{i=1}^n
+\end{Verbatim}
+\end{document}

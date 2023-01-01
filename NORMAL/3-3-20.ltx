@@ -1,0 +1,26 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-3-20 on page I-168 in "Basic number and unit formatting".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+\setlength\parindent{0pt}
+%StartShownPreambleCommands
+\usepackage{siunitx}
+%StopShownPreambleCommands
+
+\begin{document}
+\num{1e3} or tight as \sisetup{tight-spacing} \num{1e3}
+\end{document}

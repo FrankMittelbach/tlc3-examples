@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 12-1-4 on page II-227 in "The world of (Latin) math alphabets".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{129.0pt}
+
+  \AddToHook{begindocument/end}{%      % save some space in the example
+    \setlength\abovedisplayshortskip{4pt}%
+    \setlength\belowdisplayskip{0pt}%
+    \setlength\belowdisplayshortskip{0pt}}
+
+%StartShownPreambleCommands
+\usepackage[bbsymbols,scale=0.9]{bboldx} \usepackage{amsmath}
+%StopShownPreambleCommands
+
+\begin{document}
+$ \mathbfbb{0} \neq \mathbb{1} \neq \mathbfbb{1} $
+\begin{align*} \mathbb{G} = \bbLbrack \bbLparen \bbLangle
+ & \bbalpha, \bbbeta, \bbgamma, \bbdelta, \dots,\bbomega  \\
+ & \bbGamma, \bbDelta, \bbTheta, \bbLambda, \dots,\bbOmega
+   \bbRangle \bbRparen \bbRbrack < \mathbfbb{G} \end{align*}
+\end{document}

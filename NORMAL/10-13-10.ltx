@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 10-13-10 on page II-119 in "fourier-orns --- GUT\textit {enberg}-Fourier's ornaments".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+\usepackage{color,pifont}
+\newcommand\pilcrow[1]
+   {\textcolor{blue}{\Pisymbol{futs}{"3#1}}\ignorespaces}
+%StopShownPreambleCommands
+
+\begin{document}
+\noindent\pilcrow{5} All the world’s a stage, and all the men
+and women merely players. \pilcrow{7} They have their exits
+and their entrances; \pilcrow{8} And one man in his time
+plays many parts.\\ (\emph{As You Like It, Act 2, Scene 7})
+\end{document}

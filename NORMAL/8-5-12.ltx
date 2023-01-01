@@ -1,0 +1,46 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-5-12 on page I-639 in "Basic objects".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+\setlength\parindent{0pt}
+%the pattern is rgb by default. We force it to cmyk
+\makeatletter
+\AddToHook{begindocument/before}{
+\pgfutil@addpdfresource@colorspaces{ /tlc3pattern [/Pattern /DeviceCMYK] }
+\def\pgfsys@setpatternuncolored#1#2#3#4{%
+  \pgfsysprotocol@literal{/tlc3pattern cs 0 0 0 1 /pgfpat#1\space scn}%
+}}
+\makeatother
+
+%StartShownPreambleCommands
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+%StopShownPreambleCommands
+
+\begin{document}
+\centering
+\tikz\path[draw] (0,0)--(1,1.5)--(1.5,3)--(1,0);
+\tikz\path[fill=blue]
+           (0,0)--(1,1.5)--(1.5,3)--(1,0);
+\tikz\path[fill=blue,draw=black,line width=2pt]
+           (0,0)--(1,1.5)--(1.5,3)--(1,0);
+\par\medskip
+\tikz\path[pattern=fivepointed stars,draw=blue]
+           (0,0)rectangle(1,1.5);\quad
+\tikz\path[shade,left color=lightgray,right color=black,
+            middle color=white](0,0)rectangle(1,1.5);
+\end{document}

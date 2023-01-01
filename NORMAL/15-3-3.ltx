@@ -1,0 +1,47 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 15-3-3 on page II-397 in "The structure of a name".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{263.0pt}
+
+\makeatletter
+\DeclareRobustCommand\BibTeX{B\kern
+                    -.05em{\csname S@\f@size\endcsname
+                               \math@fontsfalse
+                               \fontsize\sf@size\z@\selectfont I\kern-.025emB}\kern-.08em\TeX}
+\renewcommand\@openbib@code{\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}}
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.25ex \@plus-1ex \@minus-.2ex}%
+                                    {.5ex}%
+                                    {\normalfont\normalsize\bfseries}}
+\makeatother
+\setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\nocite{prefix-both,
+  label-bibtex,apostroph-both}
+
+% bad output (entries 3,5 & 6)
+\nocite{prefix-biber,
+  label-biber,apostroph-biber}
+\bibliographystyle{alpha}
+\footnotesize
+\bibliography{tlc-ex}
+\end{document}

@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-3-1 on page II-154 in "amsmath, mathtools --- The matrix environments".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+\usepackage{amsmath}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{gather*}
+  \begin{matrix}  0 &  1 \\ 1 &  0 \end{matrix}  \quad
+  \begin{pmatrix} 0 & -i \\ i &  0 \end{pmatrix}
+\\[10pt]
+  \begin{bmatrix} 0 & -1 \\ 1 &  0 \end{bmatrix} \quad
+  \begin{Bmatrix} 1 &  0 \\ 0 & -1 \end{Bmatrix}
+\\[10pt]
+  \begin{vmatrix} a &  b \\ c &  d \end{vmatrix} \quad
+  \begin{Vmatrix} i &  0 \\ 0 & -i \end{Vmatrix}
+\end{gather*}
+\end{document}

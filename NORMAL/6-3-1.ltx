@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-3-1 on page I-447 in "Calculating column widths".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{348.0pt}
+%StartShownPreambleCommands
+\usepackage{array}
+\newenvironment{tabularc}[2]
+ {\begin{tabular*}{#1}{*{#2}{|>{\centering\hspace{0pt}}%
+      p{\dimeval{#1/(#2)-\tabcolsep*2-\arrayrulewidth*(#2+1)/(#2)}}}|}}
+ {\end{tabular*}}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabularc}{300pt}{3}    \hline
+Material in column one & column two & This is column three \tabularnewline\hline
+\empty
+Column one  again      &
+and column two         &
+This is column three   \tabularnewline\hline
+Once more column one   &
+column two             &
+Last time column three \tabularnewline\hline
+\end{tabularc}
+\end{document}

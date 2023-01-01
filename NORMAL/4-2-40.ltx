@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-2-40 on page I-320 in "Inline verbatim material in dangerous places".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+  \setlength\textheight{4\baselineskip}
+
+  \usepackage{microtype}  % improve h&j in example
+
+%StartShownPreambleCommands
+\usepackage{fancyvrb}
+%StopShownPreambleCommands
+
+\begin{document}
+\VerbatimFootnotes
+A bit of text to give us a reason to use a
+footnote.\footnote{Here is proof: \verb=\danger{%_^}=}
+Was this good enough?
+\end{document}

@@ -1,0 +1,49 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-4-20 on page I-94 in "showkeys, refcheck --- Displaying \& checking reference keys".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+
+
+  % small headings for the example
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}%
+    {.5ex}%
+    {\normalfont\large\bfseries}}
+  \renewcommand\subsection{\@startsection {subsection}{2}{\z@}%
+    {-1.ex \@plus -.5ex \@minus -.2ex}%
+    {.3ex}%
+    {\normalfont\bfseries}}
+  \makeatother
+
+  % to account for the use of the margin
+  \addtolength\textwidth{-80pt}
+
+%StartShownPreambleCommands
+\usepackage{amsmath,showkeys}
+%StopShownPreambleCommands
+
+\begin{document}
+\section{An example}\label{sec}
+\subsection{A subsection}\label{unused}
+Section~\ref{sec} shows the use of the
+\texttt{showkeys} package with a
+reference to equation~(\ref{eq}).
+\begin{align} a &= b \label{eq}  \\
+              a &< b \label{eq2} \\
+              a &> b     \end{align}
+\end{document}

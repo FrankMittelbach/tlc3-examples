@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-3-10 on page II-492 in "The basic syntax".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%% Do not show the bibliography itself in the example,
+%% so put it on a separate page:
+\AtEndDocument{\newpage\bibliographystyle{chicago}
+                        \bibliography{tlc}}
+\setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+ \usepackage{natbib}
+%StopShownPreambleCommands
+
+\begin{document}
+ \citetext{see \citealp{LGC97} or \citealp{Knuth-CT-a}}
+\end{document}

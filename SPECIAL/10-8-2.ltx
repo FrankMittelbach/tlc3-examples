@@ -1,0 +1,48 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 10-8-2 on page II-82 in "Lucida Sans".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{348.0pt}
+
+  \typeout {***^^JThis example requires commercial fonts that are not provided
+    with a free LaTeX installation but must be obtained separately.^^J***}
+  \usepackage [T1]{fontenc}
+  \IfFileExists {lucidabr.sty}
+                {\usepackage [T1,expert]{lucidabr}}
+                {\typeout {The lucidabr package is not available}\stop } 
+ 
+  \usepackage{xcolor}
+  \renewcommand\sfdefault{hls}
+
+  \newcommand\bl{\color{blue}}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+  \begin{quotation}
+    \noindent
+     \linepenalty=500
+     \rightskip=0pt plus 42.5pt
+     \fontsize{9}{12}\sffamily
+
+  With a price of \pounds148, \textbf{almost anything} can
+  be found \textsc{\bl Floating In \textbf{Fields}}.  — ¿But aren't Kafka's Schloß \&
+  Æsop's Œuvres often \textsl{\bl naïve} vis-à-vis the dæmonic
+  \textit{phœnix's official rôle} in fluffy soufflés?
+  \end{quotation}
+\end{document}

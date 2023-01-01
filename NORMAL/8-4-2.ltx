@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-4-2 on page I-615 in "tcolorbox --- The basic usage".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+%StartShownPreambleCommands
+\usepackage{tcolorbox}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tcolorbox}[nobeforeafter,
+                  width=.45\linewidth]
+   top part \tcblower bottom part
+\end{tcolorbox}
+\begin{tcolorbox}[nobeforeafter,sidebyside,
+                  width=.45\linewidth]
+   left part \tcblower right part
+\end{tcolorbox}
+\end{document}

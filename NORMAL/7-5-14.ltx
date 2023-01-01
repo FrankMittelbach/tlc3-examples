@@ -1,0 +1,43 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-5-14 on page I-571 in "keyfloat --- Bringing most packages under one roof".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+
+
+  \tolerance=1000            % help with h&j
+  \usepackage{microtype}     % in small measure
+
+  \addtolength\textwidth{-1cm} % correction for overhang
+
+
+%StartShownPreambleCommands
+\usepackage{kantlipsum,keyfloat}
+%StopShownPreambleCommands
+
+\begin{document}
+Some text before the wrapped figure
+to show its placement in context of
+paragraphs.
+
+\begin{keyfigure}[W]{w=2cm,wn=6,
+           wo=1cm,cstar=The letter I}
+ \vspace*{-15pt}\centering
+ \fbox{\fbox{\includegraphics
+            [width=7mm,angle=15]{I}}}
+\end{keyfigure}
+\kant[1][2] \kant[1][4-5]
+\end{document}

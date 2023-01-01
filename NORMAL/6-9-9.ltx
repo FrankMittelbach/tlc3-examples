@@ -1,0 +1,40 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-9-9 on page I-504 in "Complex table headers".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+\usepackage{keyvaltable}
+\NewKeyValTable[headformat=\bfseries, norowbg]{complexheader}
+  { precolumn: align=c, format=\textbf ; colA: ; colB: ; colC: ;colD: }
+  [ headers={ colA+colB+colC+colD : head=\textsf{From A to D} \\
+              colA+colB : head= A \& B;
+                       colC+colD : align=r, head=$\to$ C \& D \\ :: }
+   ,colgroups={BtoE: span=colA+colB+colC+colD, format=\textit}        ]
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{KeyValTable}{complexheader}
+  \Row{ precolumn=1, colA=1.a, colB=1.b,
+                           colC=---, colD=1.d }
+  \Row{ precolumn=2, colA=2.a, colB=2.b,
+                           colC=2.c, colD=2.d }
+\Row[around=3pt]{BtoE=Centered subtitle}
+  \Row{ precolumn=3, colA=3.a, colB=---,
+                           colC=3.c, colD=3.d }
+\end{KeyValTable}
+\end{document}

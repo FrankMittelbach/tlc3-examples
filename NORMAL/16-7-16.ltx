@@ -1,0 +1,46 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-7-16 on page II-552 in "Printing the bibliography".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{261.0pt}
+
+%  Use biber program
+
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}%
+    {.5ex}%
+    {\normalfont\normalsize\bfseries}}
+  \makeatother
+  \setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage{biblatex}
+\addbibresource{tlc-ex.bib}
+\setlength\bibitemsep{0pt}
+%StopShownPreambleCommands
+
+\begin{document}
+\textcite{article1},
+\textcite{article2},
+\textcite{book1},
+\textcite{book2}
+\printbibliography
+  [type=book,title=Books]
+
+\printbibliography
+  [nottype=book,title=Other]
+\end{document}

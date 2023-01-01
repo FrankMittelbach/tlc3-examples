@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-4-17 on page I-622 in "Adding Shadows".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+\usepackage[skins]{tcolorbox}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tcolorbox}[enhanced,drop fuzzy shadow,halign=right,
+                  boxrule=0.4pt,title=A fuzzy shadow]
+  This is a righ-aligned tcolorbox with a shadow.
+\end{tcolorbox}
+\begin{tcolorbox}[enhanced,drop lifted shadow=blue,
+                  boxrule=0.4pt,sharp corners=south,
+                  halign=left,title=A lifted shadow]
+  This is another tcolorbox with an unusual shadow
+  and three lines of text.
+\end{tcolorbox}
+\end{document}

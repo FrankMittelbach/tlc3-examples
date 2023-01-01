@@ -1,0 +1,59 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-4-2 on page I-76 in "Managing references".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+
+  \setcounter{section}{2}
+
+  \makeatletter
+  \renewcommand\section{\@startsection {section}{1}{\z@}%
+    {-2.5ex \@plus -1ex \@minus -.2ex}%
+    {1.3ex \@plus.2ex}%
+    {\normalfont\Large\bfseries}}
+  \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+    {-2.25ex\@plus -1ex \@minus -.2ex}%
+    {0.5ex \@plus .2ex}%
+    {\normalfont\large\bfseries}}
+  \makeatother
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\section{A section}
+\subsection{A subsection}\label{sec:before}
+Text before is referenced as `\ref{sec:before}'.
+
+\begin{figure}[ht]           \label{fig:in1}   % bad
+ \begin{center}
+   \fbox{\ldots{} figure body \ldots}
+   \caption{First caption}   \label{fig:in2}   % ok
+   \bigskip
+   \fbox{\ldots{} figure body \ldots}
+   \caption{Second caption}  \label{fig:in3}   % ok
+ \end{center}                \label{fig:in4}   % bad
+\end{figure}
+\label{sec:after} % bad, unless you want the page reference
+
+\raggedright
+The labels are: `before' (\ref{sec:before}),
+`fig:in1' (\ref{fig:in1}) -- bad, `fig:in2' (\ref{fig:in2}),
+`fig:in3' (\ref{fig:in3}), `fig:in4' (\ref{fig:in4}) -- bad
+and `after' (\ref{sec:after})  -- probably bad!
+\end{document}

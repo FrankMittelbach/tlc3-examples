@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-7-8 on page I-480 in "diagbox --- Making table cells with diagonal lines".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{171.0pt}
+
+%StartShownPreambleCommands
+\usepackage{diagbox}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabular}{|c|c|c|}                    \hline
+ \diagbox{column}{table}{row info} & H2  \\ \hline
+  R1 & a wide cell C1,2                  \\ \hline
+  R2 & \diagbox{C}{2,2}                  \\ \hline
+  R3 & \diagbox[height=18pt]{C}{3,2}     \\ \hline
+  R4 & \diagbox[height=15pt, width=\widthof{a
+                wide cell C1,2}]{C}{4,2} \\ \hline
+\end{tabular}
+\end{document}

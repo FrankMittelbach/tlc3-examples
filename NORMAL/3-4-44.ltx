@@ -1,0 +1,42 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-4-44 on page I-203 in "uri --- Typesetting various types of \acsp {uri}".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{348.0pt}
+
+
+  % lazy way to make the itemize list run a bit tighter
+  % in the book (not relevant for the example ...
+
+  \AddToHookNext{cmd/item/before}{\setlength\itemsep{1pt}}
+
+
+%StartShownPreambleCommands
+\usepackage{hyperref,uri}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{itemize}
+\item Amazon Catalogue:             \hfill \asin{0201362996}
+\item Cornell University Library:   \hfill \arxiv{math/9201303}
+\item Global library cooperative (OCLC):   \hfill \oclc{935889548}
+\item Handle System (CNRI):         \hfill \hdl{10338.dmlcz/702604}
+\item International DOI Foundation: \hfill \doi{10.1111/coin.12165}
+\item National Bibliography Number: \hfill \nbn{urn:nbn:de:bsz:mit1-opus-3145}
+\item PubMed Central (PMC):         \hfill \pubmed{24925405}
+\item WebCite:                      \hfill \wc{71lh2xily}
+\end{itemize}
+\end{document}

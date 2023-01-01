@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-5-18 on page I-642 in "Basic objects".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+\usepackage{tikz}
+%StopShownPreambleCommands
+
+\begin{document}
+\tikz{\draw[line width=3pt] (0,0) node (A) at (1,1.7)  {a}
+            node (B) at (1,-0.7) {b}   edge[blue,->] (A)
+            --(2,0) rectangle (0,1);}
+
+\tikz{\node[draw,circle,inner sep=3pt](A) {};
+      \path[line width=1pt,->] (A) edge[dashed] (1,0)
+                  edge[blue] (0,1) edge[dotted] (-1,0);}
+\end{document}

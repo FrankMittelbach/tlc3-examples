@@ -1,0 +1,51 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-4-26 on page I-629 in "Turning the boxes into floats".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+% small headings for the example
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                          {-1.25ex \@plus-1ex \@minus-.2ex}%
+                          {.5ex}%
+                          {\normalfont\normalfont\bfseries}}
+\makeatother
+
+  \setlength\textfloatsep{.3\textfloatsep}
+
+  \setcounter{section}{6}
+
+  \setlength\textheight{13.4\baselineskip}
+
+%StartShownPreambleCommands
+\usepackage{tcolorbox}
+\tcbset{every float=\centering, % center floats
+        floatplacement=tp}      % default top and page
+\newtcbox[auto counter,list inside=logos]
+         \tcbfig[2][]{float,size=small,list text=#2,
+                      title=\thetcbcounter: #2,#1}
+%StopShownPreambleCommands
+
+\begin{document}
+\tcblistof[\section*]{logos}{List of Logos}
+\section{The \LaTeX\ logo}
+A while back \LaTeX{} moved away from a lion
+to a hummingbird designed by Paulo Cereda.
+
+\tcbfig[float=!b]{A new logo}
+       {\includegraphics[width=.4\textwidth]
+                        {latex-logo.pdf}}
+\end{document}

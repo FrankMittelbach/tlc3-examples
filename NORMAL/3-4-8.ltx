@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-4-8 on page I-181 in "csquotes --- Context-sensitive quotation marks".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+  \setlength\leftmargini{1.5em} % -- shorten quote indentation for example
+
+%StartShownPreambleCommands
+\usepackage{csquotes}
+\SetBlockEnvironment{quotation}
+%StopShownPreambleCommands
+
+\begin{document}
+He started his talk with the quotes
+\blockquote[Umberto Eco][.]{Our life is
+ full of empty  space}  and
+\blockquote[Douglas Adams]{Space is big.
+ You just won't believe how vastly, hugely,
+ mind-bogglingly big it is. I mean, you
+ may think it's a long way down the road to
+ the chemist, but that's just peanuts to
+ space \ldots}.  Later on he finished with
+\blockquote[Albert Einstein]{God does not
+  play \ldots}.
+\end{document}

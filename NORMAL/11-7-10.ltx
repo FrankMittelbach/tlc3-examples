@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-7-10 on page II-201 in "Ghostbusters\texttrademark ".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{147.0pt}
+
+%StartShownPreambleCommands
+\usepackage{amsmath}
+%StopShownPreambleCommands
+
+\begin{document}
+\[  f_p (x) =
+ \begin{cases}
+   \frac{1}{p}                           & x = p  \\
+   \frac{\frac{(1 - x)^{\frac{1}{2}}}
+              { x - \sin (x - p)}    }
+        {\sqrt{1 - p} \, \cos (x - p)}   & x \neq p
+ \end{cases}  \]
+\end{document}

@@ -1,0 +1,43 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-2-15 on page II-139 in "Multiple alignments: \protect \nxLenv  {align} and \protect \nxLenv  {flalign}".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+
+%StartShownPreambleCommands
+\usepackage{amsmath}
+%StopShownPreambleCommands
+
+\begin{document}
+This example has two column-pairs.
+\renewcommand\minalignsep{0pt}
+\begin{align}    \text{Compare }
+  x^2 + y^2 &= 1               &
+  x^3 + y^3 &= 1              \\
+  x         &= \sqrt   {1-y^2} &
+  x         &= \sqrt[3]{1-y^3}
+\end{align}
+This example has three column-pairs.
+\renewcommand\minalignsep{15pt}
+\begin{flalign}
+    x    &= y      & X  &= Y  &
+      a  &= b+c              \\
+    x'   &= y'     & X' &= Y' &
+      a' &= b                \\
+  x + x' &= y + y'            &
+  X + X' &= Y + Y' & a'b &= c'b
+\end{flalign}
+\end{document}

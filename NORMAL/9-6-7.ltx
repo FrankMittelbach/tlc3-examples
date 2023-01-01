@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 9-6-7 on page I-713 in "Interfacing with core {\protect \sffamily  NFSS}{} commands".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+
+  %!TEX program = lualatex
+
+  \setlength\parindent{0pt}
+
+  \sloppy
+
+%StartShownPreambleCommands
+\usepackage{fontspec}
+\setmainfont{EB Garamond}
+  [ FontFace={m}{sw}  {Font=EBGaramond-Italic.otf,Style=Swash},
+    FontFace={m}{scsw}{Font=EBGaramond-Italic.otf,
+                                Letters=SmallCaps,Style=Swash} ]
+%StopShownPreambleCommands
+
+\begin{document}
+\textit{Show A Few EB Garamond Italic Letters: \textsc{Spqr}}.
+
+\textsw{Show A Few EB Garamond Swash Letters: \textsc{Spqr}}.
+\end{document}

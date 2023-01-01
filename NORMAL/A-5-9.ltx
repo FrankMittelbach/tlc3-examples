@@ -1,0 +1,30 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-5-9 on page II-693 in "ifthen --- Advanced control structures".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+%StartShownPreambleCommands
+\usepackage{ifthen}
+\newcommand{\QU}[2]{%
+ \ifthenelse{\(\equal{#1}{ENG}\and\equal{#2}{yes}\)
+    \or      \(\equal{#1}{FRE}\and\equal{#2}{oui}\)}%
+            {``OK''}{``not OK''}}
+%StopShownPreambleCommands
+
+\begin{document}
+You agree \QU{ENG}{yes} or don't \QU{ENG}{no}. \par
+D'accord  \QU{FRE}{oui} ou pas   \QU{FRE}{non}?
+\end{document}

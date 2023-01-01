@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-3-8 on page I-606 in "Extended or changed commands".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+
+%StartShownPreambleCommands
+\usepackage{xcolor,pict2e}
+\NewDocumentCommand\ShowControls{r()d()}
+   {\put(#1){\circle*{3}}\IfNoValueF{#2}{\put(#2){\circle{3}}}}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{picture}(110,90)
+ \put(0,0){\framebox(110,90){}}
+ \qbezier[150](5,5)(20,80)(35,5)     \ShowControls(20,80)
+ \qbezier[50](5,5)(70,85)(105,85)    \ShowControls(70,85)
+\color{blue}
+ \qbezier[0](5,5)(40,80)(35,5)       \ShowControls(40,80)
+ \cbezier(70,5)(60,40)(90,40)(105,85)\ShowControls(60,40)(90,40)
+\end{picture}
+\end{document}

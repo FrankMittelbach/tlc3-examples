@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 15-7-121 on page II-462 in "\protect \hspace  *{-1em}biblatex-cv".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{328.0pt}
+
+%%  Use biber program
+\setlength\parindent{0pt}
+\setlength\textheight{6\baselineskip}
+\usepackage[american]{babel}
+\usepackage{biblatex-cv}
+\addbibresource{tlc-biblatex-special.bib}
+\highlightname{Doe}{Jon}{}{}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\let\normalsize\footnotesize \normalsize
+\nocite{Funding:IndividualOngoing,Funding:InstitutionalCompleted}
+\nocite{Abstract:TalkInternalSolo,Abstract:TalkInvitedOther}
+\printbibliography[check = Funding]
+\printbibliography[check = Abstract]
+\end{document}

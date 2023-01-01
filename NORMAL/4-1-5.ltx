@@ -1,0 +1,30 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-5 on page I-257 in "Customizing the \protect \nxLenv  {description} list environment".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{147.0pt}
+%StartShownPreambleCommands
+ \renewcommand\descriptionlabel[1]%
+   {\hspace{\labelsep}\textsf{\bfseries #1}}
+%StopShownPreambleCommands
+
+\begin{document}
+ \begin{description}
+ \item[An item] Its description with enough text
+        to fill more than one line in the example.
+ \item[Another item]  Now just two lines of text.
+ \end{description}
+\end{document}

@@ -1,0 +1,41 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-2-34 on page I-317 in "Defining your own variants".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+%StartShownPreambleCommands
+\usepackage{fancyvrb}
+\fvset{gobble=2}
+%StopShownPreambleCommands
+
+\begin{document}
+\noindent A line of text to show the left margin.
+\begin{Verbatim}
+  The new `normal' case.
+\end{Verbatim}
+With this default we need to watch out for
+unindented verbatims to avoid results like this:
+\begin{Verbatim}
+Not good now for verbatims
+without indentation!
+\end{Verbatim}
+In that case do this:
+\begin{Verbatim}[gobble=0]
+We now need to explicitly
+cancel the gobble occasionally!
+\end{Verbatim}
+\end{document}

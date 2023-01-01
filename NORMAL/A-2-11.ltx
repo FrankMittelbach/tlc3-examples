@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-2-11 on page II-659 in "The L3 programming layer{} --- Computation support".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+%StartShownPreambleCommands
+\usepackage{color}
+\newcommand\dice{\fpeval{randint(1,6)}}
+%StopShownPreambleCommands
+
+\begin{document}
+\LaTeX{} can now compute:
+\[ \frac{\sin (3.5)}{2} + 2\cdot 10^{-3} =
+   \mathcolor{blue}{\fpeval{sin(3.5)/2 + 2e-3}}
+\]
+
+A random number: $\fpeval{rand()}$ and six dice
+rolls: \dice,\dice,\dice,\dice,\dice,\dice.
+\end{document}

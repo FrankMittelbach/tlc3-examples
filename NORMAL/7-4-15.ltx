@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-4-15 on page I-557 in "Customizing the subcaptions".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+\usepackage{graphicx}
+\newcommand\FIG[1]{\includegraphics[#1]{cat}}
+\usepackage[font={scriptsize,sl},skip=3pt]{subcaption}
+\captionsetup{subrefformat=parens}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{figure}   \centering
+ \subcaptionbox{\label{1}}{\FIG{width=3pc}}           \quad
+ \subcaptionbox{\label{2}}{\FIG{angle=20,width=3pc}}  \quad
+ \subcaptionbox{\label{3}}{\FIG{height=1pc,width=3pc}}
+\caption[A group of cats]{A group of cats: \subref{1}
+         the first cat, \subref{2} a climbing one,
+         and \subref{3} one that is stretched.}
+\end{figure}
+\end{document}

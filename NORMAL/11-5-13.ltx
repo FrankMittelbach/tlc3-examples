@@ -1,0 +1,46 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-5-13 on page II-187 in "abraces --- Customizable over and under braces".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+
+  % Shorten the vertical size of the example ...
+  \AtBeginDocument{%
+    \setlength\abovedisplayskip{0.1\abovedisplayskip}%
+    \setlength\belowdisplayskip{0.1\belowdisplayskip}%
+  }
+  % Using too many &s in _{...} generates an error message
+  % but for the book production that would stop the process (for good reason)
+  % so we redefine \PackageError to become a warning only:
+
+  \renewcommand\PackageError[3]{\PackageWarning{#1}{#2.\MessageBreak
+      This is normally an error}}
+
+
+%StartShownPreambleCommands
+\usepackage{abraces,amsmath}
+\newbracespec{s}{L1U1A1U1R}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{gather*}
+  \aoverbrace[s]{\text{a braced formula}}^{x \& y}         \\
+  \aoverbrace[s]{\text{a braced formula}}^{x & y}          \\
+  \aoverbrace[s]{\text{a braced formula}}^{x & & z}        \\
+  \aoverbrace[s]{\text{a braced formula}}^{ & & z}
+    _{{\begin{smallmatrix}a&b\\c&d\end{smallmatrix}} & dropped}
+\end{gather*}
+\end{document}

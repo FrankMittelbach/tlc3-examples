@@ -1,0 +1,46 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-2-28 on page II-147 in "breqn --- Automatic line breaking in math displays".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{330.59894pt}
+
+  % Shorten the vertical size of the example ...
+  \AtBeginDocument{%
+    \setlength\abovedisplayskip{.2\abovedisplayskip}%
+    \setlength\belowdisplayskip{.2\belowdisplayskip}%
+  }
+
+%StartShownPreambleCommands
+\usepackage{breqn}
+\newcommand\ve{\varepsilon}  \newcommand\tve{t_{\varepsilon}}
+\newcommand\vf{\varphi}      \newcommand\yvf{y_{\varphi}}
+\newcommand\bfE{\mathbf{E}}
+%StopShownPreambleCommands
+
+\begin{document}
+  \begin{dmath}
+    f_{h, \ve}(x, y)
+    = \ve \bfE_{x, y} \int_0^{\tve} L_{x, \yvf(\ve u)} \vf(x) \,du
+    = h \int L_{x, z} \vf(x) \rho_x(dz) + h
+    \biggl[ \frac{1}{\tve}
+      \biggl( \bfE_{y} \int_0^{\tve}  L_{x, y^x(s)} \vf(x) \,ds
+      - \tve \int L_{x, z} \vf(x) \rho_x(dz)      \biggr)
+      + \frac{1}{\tve}
+      \biggl( \bfE_{y} \int_0^{\tve}  L_{x, y^x(s)} \vf(x) \,ds
+      - \bfE_{x, y} \int_0^{\tve} L_{x, \yvf(\ve s)}
+      \vf(x) \,ds    \biggr) \biggr]
+  \end{dmath}
+\end{document}

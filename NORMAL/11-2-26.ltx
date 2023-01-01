@@ -1,0 +1,40 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-2-26 on page II-145 in "Vertical space in and around displays".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+  % Overwrite the value in \normalsize to better visualize the problem.
+  % As that is executed at begin of document we need to make the setting there
+  % of course that will only last until the next font size change
+  \AtBeginDocument{\setlength\abovedisplayshortskip{0pt}
+                   \setlength\belowdisplayshortskip{0pt}}
+
+%StartShownPreambleCommands
+% The behavior without amsmath
+%StopShownPreambleCommands
+
+\begin{document}
+Empty line before display:
+
+\[  a \neq b   \]
+
+Enough space now, but do not rely on it!
+
+\begin{equation} a \neq b \end{equation}
+
+Less space after in this case!
+\end{document}

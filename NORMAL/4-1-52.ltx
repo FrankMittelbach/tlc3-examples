@@ -1,0 +1,68 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-52 on page I-294 in "typed-checklist --- Developing and maintaining checklists".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{351.0pt}
+
+  \setcounter{page}{1}
+
+  \usepackage{multicol,enumitem}
+  \setlist{noitemsep}
+  \raggedbottom
+
+%StartShownPreambleCommands
+\usepackage{typed-checklist}
+%StopShownPreambleCommands
+
+\begin{document}
+\addtolength\baselineskip{2pt}  % open up the list a bit
+\begin{multicols}{4}
+  \paragraph{Goals}
+  \begin{CheckList}{Goal}
+    \Goal{open}{\texttt{open}}
+    \Goal{unclear}{\texttt{unclear}}
+    \Goal{dropped}{\texttt{dropped}}
+    \Goal{achieved}{\texttt{achieved}}
+  \end{CheckList}
+  \vspace*{\fill}
+  \columnbreak
+  \paragraph{Tasks}
+  \begin{CheckList}{Task}
+    \Task{open}{\texttt{open}}
+    \Task{unclear}{\texttt{unclear}}
+    \Task{dropped}{\texttt{dropped}}
+    \Task{started}{\texttt{started}}
+    \Task{done}{\texttt{done}}
+  \end{CheckList}
+  \vspace*{\fill}
+  \columnbreak
+  \paragraph{Milestones}
+  \begin{CheckList}{Milestone}
+    \Milestone{open}{\texttt{open}}
+    \Milestone{achieved}{\texttt{achieved}}
+  \end{CheckList}
+  \vspace*{\fill}
+  \columnbreak
+  \paragraph{Artifacts}
+  \begin{CheckList}{Artifact}
+    \Artifact{missing}{\texttt{missing}}
+    \Artifact{unclear}{\texttt{unclear}}
+    \Artifact{dropped}{\texttt{dropped}}
+    \Artifact{incomplete}{\texttt{incomplete}}
+    \Artifact{available}{\texttt{available}}
+  \end{CheckList}
+\end{multicols}
+\end{document}

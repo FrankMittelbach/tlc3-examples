@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-4 on page I-257 in "Customizing the \protect \nxLenv  {enumerate} list environment".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+%StartShownPreambleCommands
+\usepackage{pifont}
+\renewcommand\labelenumi{\theenumi}
+\renewcommand\theenumi
+             {\protect\ding{\inteval{171+\value{enumi}}}}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{enumerate}
+\item item of list \label{l1} \item item of list \label{l2}
+\item item of list \label{l3} \item item of list \label{l4}
+\end{enumerate}
+l1=\ref{l1} l2=\ref{l2} l3=\ref{l3} l4=\ref{l4}
+\end{document}

@@ -1,0 +1,42 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-5-8 on page I-566 in "Subfloat and multifloat pages".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{79.2008pt}
+
+
+  \addtolength\textwidth{3pt}
+  \setlength\textheight{11\baselineskip}
+  \setlength\textfloatsep{8pt plus 3pt}
+  \setlength\floatsep{4pt}
+  \sloppy
+
+%StartShownPreambleCommands
+\usepackage{lipsum,hvfloat}
+%StopShownPreambleCommands
+
+\begin{document}
+\hvFloat[multiFloat,
+         capFormat={singlelinecheck=false}]
+ +{figure}{\includegraphics[scale=.5]{cat}}
+        {Cat}{fig:cat}
+ +{figure}{\includegraphics[width=2cm]{elephant}}
+     {Elephant}{fig:elephant}
+ +{figure}{\includegraphics[]{cat}
+           \includegraphics[scale=1.1]{cat}}
+     {Two cats}{fig:2cats}
+\lipsum[1][1-2]
+\end{document}

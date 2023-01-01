@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-7-6 on page I-478 in "multirow --- Vertical alignment in tables".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+%StartShownPreambleCommands
+\usepackage{multirow}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabular}{|l|l|}
+\hline
+\multirow{4}{25mm}{Text in column 1 (default)}
+  & Cell 1a \\\cline{2-2} & Cell 1b \\\cline{2-2}
+  & Cell 1c \\\cline{2-2} & Cell 1d \\\hline
+\multirow{4}{25mm}[-3mm]{Text in column 1 (lowered)}
+  & Cell 2a \\\cline{2-2} & Cell 2b \\\cline{2-2}
+  & Cell 2c \\\cline{2-2} & Cell 2d \\\hline
+\multirow{4}{25mm}[3mm]{Text in column 1 (lifted)}
+  & Cell 3a \\\cline{2-2} & Cell 3b \\\cline{2-2}
+  & Cell 3c \\\cline{2-2} & Cell 3d \\\hline
+\end{tabular}
+\end{document}

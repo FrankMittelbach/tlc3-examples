@@ -1,0 +1,55 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-4-5 on page II-680 in "Hooks provided for \protect \nxLcs  {shipout} operations".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{106.20108pt}
+
+
+  %--------------------------------------
+  % For the book example we have to do some special paper dimensions here.
+
+  \setlength\textheight{106pt}
+
+
+  \usepackage[%
+    textheight=\textheight,
+    paperheight=\dimexpr\textheight+4pt,
+    textwidth=\textwidth,
+    paperwidth=\dimexpr\textwidth+2pt,
+    ]
+    {geometry}
+
+
+  % So the above should not be copied into your own document preamble.
+  %--------------------------------------
+
+  \usepackage{microtype} % improve justification in small columns
+
+%StartShownPreambleCommands
+\usepackage{kantlipsum,graphicx,color}
+\AddToHook{shipout/background}
+  {\put(.5\paperwidth,-.5\paperheight)
+    {\makebox(0,0){\includegraphics
+             [scale=.7]{latex-logo}}}}
+%StopShownPreambleCommands
+
+\begin{document}
+\kant[1][1-2] % text by the author ...
+ \AddToHookNext{shipout/foreground}
+   {\put(0,-\paperheight)
+      {\colorbox{red}{Censor this!}}}
+\kant[1][3]   % ... more text ...
+\end{document}

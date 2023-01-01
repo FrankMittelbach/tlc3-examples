@@ -1,0 +1,29 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-4-23 on page I-627 in "Defining new tcolorbox environments and commands".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{87.0pt}
+
+%StartShownPreambleCommands
+  \usepackage[vignette]{tcolorbox}
+  \newtcbox\key[1][white]{enhanced,sharp corners,on line,
+    size=small,left=0pt,right=0pt,boxsep=1pt,fontupper=\footnotesize,
+    colback=#1!10,colframe=#1!50!black,boxrule=3pt,underlay vignette}
+%StopShownPreambleCommands
+
+\begin{document}
+  Use \key{Cntrl-X} followed by \key[black]{f} to open a file.
+\end{document}

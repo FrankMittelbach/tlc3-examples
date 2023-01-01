@@ -1,0 +1,43 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 5-6-3 on page I-417 in "addlines --- Adjusting whole double spreads".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{138.60141pt}
+
+  \setlength\textheight{86pt}
+  \addtolength\footskip{-2pt}
+
+  \tolerance=4000
+
+  \pagestyle{origplain}
+  \flushbottom
+
+%StartShownPreambleCommands
+\usepackage{lipsum,
+            addlines}
+\flushbottom
+%StopShownPreambleCommands
+
+\begin{document}
+\twocolumn \raggedright
+A) \lipsum[1][1]  \par
+B) \lipsum[1][2-3]\par
+\addline*
+C) \lipsum[1][4-5]\par
+\removeline*
+D) \lipsum[2][1]  \par
+E) \lipsum[3]
+\end{document}

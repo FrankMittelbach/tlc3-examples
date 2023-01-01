@@ -1,0 +1,44 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-4-16 on page I-557 in "Customizing the subcaptions".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{219.0pt}
+
+\newcommand\samplefigs[1]{%
+  \begin{subfigure}[#1]{14mm}  \centering
+     \includegraphics[width=6mm]{cat}
+     \caption{Small, but a large caption}
+   \end{subfigure}\dots
+   \begin{subfigure}[#1]{14mm}
+     \includegraphics[width=14mm]{elephant}
+     \caption{Bigger}
+   \end{subfigure}}
+
+%StartShownPreambleCommands
+\usepackage{graphicx,subcaption}
+% \samplefigs as defined before
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{figure}  \centering
+ \captionsetup[sub]{skip=3pt} % for sub
+ \captionsetup     {skip=5pt} % for main
+  \subcaptionbox{top}   {\samplefigs{t}}
+  \quad
+  \subcaptionbox{bottom}{\samplefigs{b}}
+  \caption{Different alignment options}
+\end{figure}
+\end{document}

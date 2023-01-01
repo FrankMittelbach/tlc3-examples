@@ -1,0 +1,43 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-21 on page I-272 in "The placement of the item label or item text".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+
+\usepackage{enumitem}
+\SetLabelAlign{right}{\hss\setlength\fboxsep{0pt}\framebox[\labelwidth][r]{\strut\llap{#1}}}
+
+%StartShownPreambleCommands
+ \usepackage{enumitem}
+ \setlist[enumerate]{label=--\arabic*--}
+%StopShownPreambleCommands
+
+\begin{document}
+ \noindent Some text to show the left margin.
+ \begin{enumerate}
+   \item The default.
+ \end{enumerate}
+ \begin{enumerate}[leftmargin=*,start=2]
+   \item One digit labels are set flushleft on the margin.
+ \end{enumerate}
+ \begin{enumerate}[leftmargin=*,start=33]
+   \item But labels with 2 digits protrude.
+ \end{enumerate}
+ \begin{enumerate}[leftmargin=*,widest=99,start=42]
+   \item  Here we tell to leave space for 2 digits.
+ \end{enumerate}
+\end{document}

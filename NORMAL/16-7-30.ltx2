@@ -1,0 +1,110 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-7-30 on page II-560 in "Language support".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{112.20114pt}
+
+  \setlength\textheight{13\baselineskip}
+  \addtolength\textwidth{-4pt}
+  % Use biber program
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}%
+    {.5ex}%
+    {\normalfont\normalsize\bfseries}}
+  \makeatother
+  \AtBeginDocument{%
+    \DeclareSortingTemplate[locale=swedish]{swe-nyt}{
+      \sort{
+        \field{presort}
+      }
+      \sort[final]{
+        \field{sortkey}
+      }
+      \sort{
+        \field{sortname}
+        \field{author}
+        \field{editor}
+        \field{translator}
+        \field{sorttitle}
+        \field{title}
+      }
+      \sort{
+        \field{sortyear}
+        \field{year}
+      }
+      \sort{
+        \field{sorttitle}
+        \field{title}
+      }
+      \sort{
+        \field{volume}
+        \literal{0}
+      }
+    }
+  }
+
+\begin{filecontents*}[overwrite,noheader]{locale.bib}
+    @book{aa,
+      author = {Aachen, Georgina},
+      title = {Title AA},
+    }
+    @book{vn,
+      author = {Vn, A},
+      title = {Title VN},
+    }
+    @book{vr,
+      author = {Vr, A},
+      title = {Title VR},
+    }
+    @book{wolf,
+      author={Wolf, Ceasar},
+      title={Title B},
+    }
+    @book{ringa,
+      author = {Ånten, Georgina},
+      title = {Title Å},
+    }
+    @book{ua,
+      author = {Änten, Georgina},
+      title = {Title Ä},
+    }
+    @book{uo,
+      author = {Önten, Georgina},
+      title = {Title Ö},
+    }
+\end{filecontents*}
+
+%StartShownPreambleCommands
+
+\usepackage[swedish,english]
+           {babel}
+\usepackage[style=authoryear]
+           {biblatex}
+\addbibresource{locale.bib}
+\AtBeginBibliography{\small}
+% declaration for swe-nyt not shown
+%StopShownPreambleCommands
+
+\begin{document}
+\nocite{*}
+\printbibliography
+  [title=English Sorting]
+\newpage
+\newrefcontext[sorting=swe-nyt]
+\printbibliography
+  [title=Swedish Sorting]
+\end{document}

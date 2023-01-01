@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-3-19 on page II-669 in "Rule boxes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+%StartShownPreambleCommands
+\usepackage{dashrule}
+%StopShownPreambleCommands
+
+\begin{document}
+A\rule{5cm}{2pt}Z                        \par
+A\hdashrule{5cm}{2pt}{}Z                 \par
+A\hdashrule[.6ex]{5cm}{1pt}{10pt}Z       \par
+A\hdashrule[.6ex]{5cm}{1pt}{5pt 5pt}Z    \par
+A\hdashrule[-1pt]{5cm}{2pt}{5mm 1mm}Z    \par
+A\hdashrule[-1pt][c]{5cm}{2pt}{5mm 1mm}Z \par
+A\hdashrule[-1pt][x]{5cm}{2pt}{5mm 1mm}Z \par
+A\hdashrule{5cm}{1pt}{2pt 4pt 6pt 4pt}Z  \par
+\end{document}

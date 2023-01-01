@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-4-4 on page I-462 in "longtable --- Alternative multipage tabulars".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+%StartShownPreambleCommands
+\usepackage{longtable,supertabular}
+\usepackage[font=it,labelfont=bf]{caption}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{table}[t]\centering
+ \caption{A standard table}
+ \begin{tabular}{ccc} 1 & 2 & 3 \end{tabular}
+\end{table}
+
+\begin{longtable}{ccc}\caption{A longtable}\\
+ 1 & 2 & 3 \end{longtable}
+
+\centering
+\tablecaption{A supertabular}
+\begin{supertabular}{ccc} 1 & 2 & 3 \\ \end{supertabular}
+\end{document}

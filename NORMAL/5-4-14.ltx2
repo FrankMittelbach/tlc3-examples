@@ -1,0 +1,50 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 5-4-14 on page I-406 in "truncate --- Truncate text to a given length".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{109.80112pt}
+
+  \setlength\textheight{82pt} %  6 \baselineskip + \topskip
+
+% for the book examples we shorten the vertical spaces
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}%
+    {.5ex}%
+    {\normalfont\large\bfseries\raggedright}}
+  \makeatother
+
+  \addtolength\headsep{-12pt}  % shortened for the book
+  \addtolength\footskip{-6pt} % shortened for the book
+
+  \usepackage{microtype}
+  \tolerance=3000
+
+%StartShownPreambleCommands
+\usepackage[fit,breakwords]{truncate}
+\usepackage{kantlipsum,fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % --- clear all fields
+\fancyhead[RO,LE]{\truncate
+     {\headwidth}{\leftmark}}
+\fancyfoot[C]{\thepage}
+%StopShownPreambleCommands
+
+\begin{document}
+\section{Kant on the
+         Meaning of Life}
+\kant[42]
+\end{document}

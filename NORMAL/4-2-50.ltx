@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-2-50 on page I-326 in "listings --- Pretty-printing program code".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+\begin{filecontents*}{pascal.src}
+for i:=1 to maxint do
+begin
+  WrItE('This is stupid');
+end.
+\end{filecontents*}
+%StartShownPreambleCommands
+\usepackage{listings}
+% pascal.src as defined before
+%StopShownPreambleCommands
+
+\begin{document}
+\lstset{numberstyle=\tiny,numbers=left,
+   numbersep=5pt,
+   firstnumber=9,stepnumber=2,numberfirstline,
+   xleftmargin=12pt,showstringspaces=false}
+\noindent Some text before \ldots
+\lstinputlisting[language=Pascal]{pascal.src}
+\end{document}

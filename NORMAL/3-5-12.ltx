@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-12 on page I-213 in "footmisc --- Various footnotes styles".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+\setlength\textheight{7\baselineskip}
+\addtolength\textwidth{-10pt} %account for marginal space in example
+%StartShownPreambleCommands
+\usepackage[marginal]{footmisc}
+\newcommand\sampletext{Some text\footnote{A first.}
+ with a footnote. More text.\footnote{A second
+  footnote with a few lines of text to show
+  variations in the footnote line-breaking behavior.}
+ Even more text.\footnote{A third note.}
+ Some final text.}
+%StopShownPreambleCommands
+
+\begin{document}
+\sampletext
+\end{document}

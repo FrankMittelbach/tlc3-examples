@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 12-4-2 on page II-256 in "Math alphabets revisited".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{75.0pt}
+% typeset with lualatex
+%StartShownPreambleCommands
+\usepackage{amsmath,unicode-math}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{gather*}       a,b,X,Y,Z,\pi,\Gamma \\ % default
+ \symrm{a},\symbf{b},\symsf{Y},X,\symtt{Z},\symrm{\pi},\symit{\Gamma} \\
+ \symbfsfit{a},\symbfit{b},X,\symbfsfit{Y},\symbfsfup{Z},
+                                       \symbfup{\pi},\symbfit{\Gamma} \\
+ \symfrak{a},\symbffrak{b},\symbb{X},\symscr{Y},\symbfscr{Z},
+                                       \symbfit{\pi},\symbfsf{\Gamma} \\
+ \symbb{0},\symbb{1},\symbb{2},\symbb{3},\dots,
+              \symbfsfup{7},\symbfsfup{8},\symbfsfup{9}   \end{gather*}
+\end{document}

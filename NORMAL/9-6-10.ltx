@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 9-6-10 on page I-716 in "Figure style features".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{87.0pt}
+
+%!TEX program = lualatex
+
+%StartShownPreambleCommands
+\usepackage{fontspec}
+\setmainfont{Cochineal}[Numbers = {OldStyle,Proportional}]
+%StopShownPreambleCommands
+
+\begin{document}
+\noindent                                        Digits: 0123456789\\
+\addfontfeature{Numbers={Monospaced,SlashedZero}}Digits: 0123456789\\
+\addfontfeature{Numbers=Lining}                  Digits: 0123456789\\
+\addfontfeature{Numbers=Proportional}            Digits: 0123456789\\
+\addfontfeature{Numbers=ResetAll}                Digits: 0123456789
+\end{document}

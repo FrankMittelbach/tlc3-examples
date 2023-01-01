@@ -1,0 +1,42 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-5-22 on page I-644 in "Transformations and other operations".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+  \usepackage{microtype} % for better line breaking
+
+%StartShownPreambleCommands
+\usepackage{tikz,lipsum}  \usetikzlibrary{tikzmark}
+%StopShownPreambleCommands
+
+\begin{document}
+\tikzset{myarrow/.style={->,blue} }
+\begin{center}\begin{tikzpicture}[remember picture]
+ \draw (0,0)--(3,0) node[midway,below](b){b}
+            --(0,2) node[midway,above](c){c}
+            --cycle node[midway,left] (a){a};
+ \begin{scope}[overlay]
+  \node[fill=gray,anchor=text](B) at (pic cs:b)
+       {\phantom{$b^2$}};
+  \draw[myarrow](b) to [bend right] (B);
+  \draw[myarrow](c) -- ([yshift=0.2cm]pic cs:c);
+  \draw[myarrow](a) |- ([shift={(-0.1cm,0.1cm)}]pic cs:a);
+ \end{scope}
+\end{tikzpicture}\end{center}
+\lipsum[1][2-4]
+\[ \tikzmark{a}a^2 + \tikzmark{b}b^2= \tikzmark{c}c^2 \]
+\end{document}

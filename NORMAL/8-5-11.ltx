@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-5-11 on page I-638 in "Basic objects".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+%StartShownPreambleCommands
+\usepackage{tikz}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tikzpicture}
+\tikzset{my loop/.style=
+  {to path={.. controls +(80:1) and +(100:1)
+            .. (\tikztotarget) \tikztonodes}}}
+
+\draw[dotted,thick](0,2) to (2,2);
+\draw[blue,thick](0,1) to[out=60,in=60] (2,1);
+\node[circle,draw](a) at (1,0) {T};
+\draw [->](a) to[my loop] (a);
+\end{tikzpicture}
+\end{document}

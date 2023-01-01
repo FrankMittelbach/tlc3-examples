@@ -1,0 +1,45 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 5-4-5 on page I-400 in "fancyhdr --- Customizing page styles".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{124.20126pt}
+\setlength\textheight{58pt} % 4\baselineskip + \topskip
+% for the book examples we shorten the vertical spaces
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}%
+    {.5ex}%
+    {\normalfont\large\bfseries}}
+  \makeatother
+
+  \addtolength\headsep{-12pt}  % shortened for the book
+  \addtolength\footskip{-12pt} % shortened for the book
+  \sloppy                      % as these examples are so small
+
+%StartShownPreambleCommands
+\usepackage{kantlipsum}
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{} % --- clear all fields
+\fancyhead[RO,LE]{\leftmark}
+\fancyfoot[C]{Page \thepage\ of
+              \pageref{LastPage}}
+%StopShownPreambleCommands
+
+\begin{document}
+\section{A test}
+\kant[9]
+\end{document}

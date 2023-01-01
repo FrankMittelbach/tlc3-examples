@@ -1,0 +1,53 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 5-3-5 on page I-395 in "\LaTeX {}'s new mark mechanism".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{201.0pt}
+
+  \setlength\textheight{11\baselineskip}
+  \addtolength\textheight{\topskip}
+
+  % for the book examples we shorten the vertical spaces
+  \addtolength\headsep{-12pt} % shortened for the book
+  \addtolength\footskip{-12pt} % shortened for the book
+  \raggedright % as these examples are so small
+
+%% show second page
+
+%StartShownPreambleCommands
+\NewMarkClass{pmark}
+\usepackage{lipsum,fancyhdr}
+\pagestyle{fancy} \fancyhf{}
+\newcommand\sample[1]{S-#1:%
+  \InsertMark{pmark}{S-#1} \lipsum[1][#1]}
+\chead{first: | \TopMark[first-column]{pmark}
+      | \FirstMark[first-column]{pmark}
+      | \LastMark[first-column]{pmark} |
+     --- last: | \TopMark[last-column]{pmark}
+      | \FirstMark[last-column]{pmark}
+      | \LastMark[last-column]{pmark} |}
+\cfoot{page: | \TopMark{pmark}
+      | \FirstMark{pmark} | \LastMark{pmark} |
+    ---  previous:
+        \FirstMark[previous-page]{pmark}}
+%StopShownPreambleCommands
+
+\begin{document}
+\sample{1}  % first page not shown!
+\twocolumn \sample{2} \sample{3} \sample{4}
+\sample{5} \sample{6} \sample{7} \sample{8}
+\sample{9} \sample{10} \ldots
+\end{document}

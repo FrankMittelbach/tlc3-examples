@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 12-4-5 on page II-259 in "Setting up Unicode math fonts".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{177.0pt}
+% typeset with lualatex
+%StartShownPreambleCommands
+\usepackage{fontspec}     \setmainfont{Fira Sans}
+\usepackage{unicode-math} \setmathfont{Fira Math}
+%StopShownPreambleCommands
+
+\begin{document}
+An example showing a trigonometric function:
+\[ \sin \frac{\alpha}{2} =
+      \pm \sqrt{\frac{1-\cos\alpha}{2}} \]
+Scripts: $A \neq \symbb{A} $; no other math
+alphabets are available in Fira Sans.
+\end{document}

@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-3-30 on page I-173 in "Customizing numerical data representation".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+\setlength\parindent{0pt}
+%StartShownPreambleCommands
+\usepackage{siunitx}
+\newcommand\sample[1]{#1:
+  \num{18.276(1)}\hfill \num{18.276}\hfill
+  \num{124.5}\hfill \num{1.245e2}\\[8pt]}
+%StopShownPreambleCommands
+
+\begin{document}
+                             \sample{A}
+\sisetup{round-mode=places}  \sample{B}
+\sisetup{round-precision=1}  \sample{C}
+\sisetup{round-precision=3}  \sample{D}
+\sisetup{round-mode=figures} \sample{E}
+\sisetup{round-half=even}    \sample{F}
+\end{document}

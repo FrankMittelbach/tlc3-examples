@@ -1,0 +1,46 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-1-9 on page II-630 in "Defining simple environments".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+\newcounter{Citctr} \newsavebox{\Citname}
+\newenvironment{Citation}[1]
+   {\sbox\Citname{\emph{#1}}%
+    \stepcounter{Citctr}\begin{description}
+      \item[Citation \arabic{Citctr}]}
+   {\hspace*{\fill}\nolinebreak[1]%
+    \quad\hspace*{\fill}%
+    %% \finalhyphendemerits=0     %% see explanation below
+    \usebox{\Citname}\end{description}}
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{Citation}{Protagoras}
+  Man is the  measure of all things.
+\end{Citation}
+This is some regular text in between two
+Citation environments.
+\begin{Citation}{Blaise Pascal}
+  On mourra seul.
+\end{Citation}
+More regular text \ldots
+\begin{Citation}{William Pitt}
+  Necessity is the plea for every
+  infringement of human freedom.
+\end{Citation}
+\end{document}

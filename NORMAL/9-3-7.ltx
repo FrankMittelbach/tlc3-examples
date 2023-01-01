@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 9-3-7 on page I-667 in "Font commands versus declarations".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\emph{When using the \LaTeX{} high-level font
+commands, the \emph{proper} use of italic
+corrections is \emph{automatically} taken
+care of}. Only \emph{very seldom} one has to
+help \LaTeX{} by adding \verb=\nocorr=; e.g.,
+to avoid \textit{f}\textsubscript{1} and
+instead get \textit{f\nocorr}\textsubscript{1}.
+\end{document}

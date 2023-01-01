@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-4-6 on page II-683 in "Setting up additional generic hooks".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+
+  \setlength\parindent{0pt}
+
+
+%StartShownPreambleCommands
+\AddToHook{babel/ngerman/afterextras}{\color{blue}}
+\ActivateGenericHook{babel/ngerman/afterextras}
+
+\usepackage{color} \usepackage[ngerman,english]{babel}
+%StopShownPreambleCommands
+
+\begin{document}
+Text with \foreignlanguage{ngerman}{deutschen Worten} in
+the middle of \foreignlanguage{ngerman}{englischem Text}.
+\end{document}

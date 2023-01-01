@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-3-6 on page I-534 in "rotating, rotfloat --- Rotating floats".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{95.40097pt}
+\setlength\textheight{2cm}
+%StartShownPreambleCommands
+\usepackage{rotating}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[RO,LE]{Turned floats}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{sidewaysfigure}
+  \centering  \fbox{Figure Body}
+  \caption{Caption}
+\end{sidewaysfigure}
+\begin{sidewaystable}
+  \centering  \fbox{Table Body}
+  \caption{Caption}
+\end{sidewaystable}
+\end{document}

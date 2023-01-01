@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-2-49 on page I-326 in "listings --- Pretty-printing program code".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+%StartShownPreambleCommands
+\usepackage{listings}
+\lstset{language=bash}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{lstlisting}
+cp `kpsewhich listings.cfg` './$$'
+\end{lstlisting}
+\begin{lstlisting}[upquote]
+cp `kpsewhich listings.cfg` './$$'
+\end{lstlisting}
+\end{document}

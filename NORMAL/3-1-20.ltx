@@ -1,0 +1,30 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-1-20 on page I-145 in "Alphabets for initials".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+%StartShownPreambleCommands
+\usepackage{Typocaps,Kramer,Starburst,Rothdn,lettrine}
+\renewcommand\LettrineFontHook{\Typocapsfamily}
+%StopShownPreambleCommands
+
+\begin{document}
+\lettrine{A}{s} a well-spent day brings happy sleep, so
+life well used brings happy death. (Leonardo da Vinci)
+\par {\Rothdnfamily A B C  a b c} \hfill
+{\Kramerfamily A B C  a b c} \par \starburst{STARBURST}
+\end{document}

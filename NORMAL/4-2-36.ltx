@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-2-36 on page I-318 in "Defining your own variants".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+\usepackage{fancyvrb}
+\CustomVerbatimEnvironment{comment}{BVerbatim}{lastline=0}
+%StopShownPreambleCommands
+
+\begin{document}
+A  simple way to implement a comment
+\begin{comment}
+  anything can go in here \begin{itemize} ...
+\end{comment}
+environment is shown in this example.
+\end{document}

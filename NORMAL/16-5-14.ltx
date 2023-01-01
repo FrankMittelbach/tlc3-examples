@@ -1,0 +1,51 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-5-14 on page II-514 in "This work was cited as \protect \ldots  ".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+
+
+%% Apply the jurabib defaults we use in the book (documented at the beginning of the section)
+\AddToHook{package/jurabib/after}{\jurabibsetup{titleformat=colonsep,commabeforerest=true}}
+
+% for the book examples we shorten the vertical spaces
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                       {-2.5ex \@plus -1ex \@minus -.2ex}%
+                       {1.3ex}%
+                       {\normalfont\large\bfseries}}
+\makeatother
+%
+\usepackage[ngerman,english]{babel}
+
+%StartShownPreambleCommands
+\usepackage{jurabib}
+\bibliographystyle{jurabib}
+\jurabibsetup{howcited=all}
+\AddTo\bibsall{%
+   \renewcommand\howcitedprefix
+                      { (cited as }%
+   \renewcommand\howcitedsuffix{).}%
+   \renewcommand\bibnotcited
+                    { (not cited).}}
+%StopShownPreambleCommands
+
+\begin{document}
+\nocite{aschur}
+\ldots \cite{bschur} \ldots
+\cite{Knuth:TB10-1-31} \ldots
+\bibliography{tlc}
+\end{document}

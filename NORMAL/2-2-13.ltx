@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-2-13 on page I-45 in "The extended interface".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+
+%StartShownPreambleCommands
+\usepackage{titlesec}
+\titleformat {\paragraph}[runin]{\normalfont\scshape}{}{0pt}{}
+\titlespacing{\paragraph}{\parindent}{\medskipamount}{\wordsep}
+%StopShownPreambleCommands
+
+\begin{document}
+\noindent \ldots\ some text above.
+\paragraph{The man} started to run away from the truck.
+He saw that he was followed by the \ldots
+\end{document}

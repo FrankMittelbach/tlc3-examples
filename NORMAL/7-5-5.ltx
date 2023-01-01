@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-5-5 on page I-564 in "hvfloat --- Sophisticated caption placement control and more".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+\usepackage{hvfloat}
+\hvFloatSet{capPos=right,capAngle=90,capWidth=h,
+            objectAngle=20}
+%StopShownPreambleCommands
+
+\begin{document}
+\hvFloat[onlyText]{figure}{\frame{\includegraphics{cat}}}
+        {A cat as a graphic}{fig:cat}
+A paragraph of text in the main galley to show the
+text margins.
+\end{document}

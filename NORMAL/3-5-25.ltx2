@@ -1,0 +1,40 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-25 on page I-219 in "perpage --- Resetting counters on a \enquote {per-page} basis".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{124.20126pt}
+\setlength\textheight{5\baselineskip}
+\newcounter{mnote} \renewcommand\themnote{\alph{mnote}}
+\newcommand\mnote[1]{{\refstepcounter{mnote}%
+  \marginpar[\small\raggedleft\textsuperscript{(\themnote)}\itshape #1]%
+            {\small\raggedright\textsuperscript{(\themnote)}\itshape #1}}}
+\usepackage{perpage} \MakePerPage{mnote}
+\addtolength\textwidth{-38pt}
+\setlength\marginparwidth{36pt}
+\setlength\marginparsep{5pt}
+\sloppy % because the examples are so small ...
+%StartShownPreambleCommands
+% code as above
+%StopShownPreambleCommands
+
+\begin{document}
+Some text\mnote{First.} with a
+footnote. More\footnote{Second
+as footnote.} text. Even more
+text.\mnote{Third!} And even
+more\mnote {Fourth.} text.
+Final text.\footnote{Fifth!}
+\end{document}

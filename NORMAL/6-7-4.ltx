@@ -1,0 +1,29 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-7-4 on page I-477 in "multirow --- Vertical alignment in tables".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+%StartShownPreambleCommands
+\usepackage{multirow}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabular}{|c|c|c|}             \hline
+ \multirow{2}{*}{\bfseries 100}
+      & \multicolumn{2}{c|}{qqq}  \\ \cline{2-3}
+              & A       & B       \\ \hline
+  20000000    & 10      & 10      \\ \hline  \end{tabular}
+\end{document}

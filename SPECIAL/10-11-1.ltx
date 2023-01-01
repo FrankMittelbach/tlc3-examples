@@ -1,0 +1,46 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 10-11-1 on page II-107 in "Serif designs".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{348.0pt}
+
+  % use lualatex
+
+  \typeout{This example requires commercial fonts that are not provided^^J%
+           with a free LaTeX installation but must be obtained separately.}
+
+  \usepackage{fontspec,xcolor}
+  \setmainfont{Cambria}
+
+  \newcommand\bl{\color{blue}}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+  \begin{quote}
+    \noindent
+     \linepenalty=500
+     \rightskip0pt plus2em
+     \fontsize{10}{12}\rmfamily
+
+   Once said the great poet Constantin \textsc{Cavafy}:
+   Σὰ βγεῖς στὸν πηγαιμὸ γιὰ τὴν \textbf{Ἰθάκη}, νὰ εὔχεσαι νἆναι \textit{μακρὺς} ὁ δρόμος,
+   γεμᾶτος περιπέτειες, γεμᾶτος \textsc{γνώσει\bl ς}.
+   \textemdash{}~See page~49 for font family details.
+  \end{quote}
+\end{document}

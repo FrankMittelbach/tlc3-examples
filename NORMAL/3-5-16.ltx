@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-16 on page I-214 in "footmisc --- Various footnotes styles".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+\setlength\textheight{4.3\baselineskip}
+\newcommand\sampletext{Some
+  text\footnote{A first.} with a footnote.
+  More text.\footnote{A second footnote with
+    a few lines of text to show variations
+    in the footnote line-breaking behavior.}
+  Even more text.\footnote{A third note.}
+  Some final text.}
+
+%StartShownPreambleCommands
+  \usepackage[norule,para]{footmisc}
+%StopShownPreambleCommands
+
+\begin{document}
+
+  \sampletext   % as defined previously
+\end{document}

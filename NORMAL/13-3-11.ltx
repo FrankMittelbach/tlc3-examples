@@ -1,0 +1,30 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 13-3-11 on page II-313 in "The colon, semicolon, exclamation mark, and question mark".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+%StartShownPreambleCommands
+\usepackage[english,french]{babel}
+\frenchsetup{og=«, fg=»}
+%StopShownPreambleCommands
+
+\begin{document}
+En français on doit mettre un «petit espace»
+devant la ponctuation double: comme cela!
+\selectlanguage{english}
+For English this is not done: as shown here!
+\end{document}

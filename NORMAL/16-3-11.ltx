@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-3-11 on page II-492 in "The basic syntax".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+\setlength\parindent{0pt}
+%% Do not show the bibliography itself in the example,
+%% so put it on a separate page:
+\AtEndDocument{\newpage\bibliographystyle{chicago}
+                        \bibliography{tlc}}
+
+%StartShownPreambleCommands
+\usepackage{natbib}
+%StopShownPreambleCommands
+
+\begin{document}
+Normal citation: \citet{vLeunen:92}         \\
+\Citet{vLeunen:92} or \Citealt{vLeunen:92}  \\
+\Citep{vLeunen:92} or \Citealp{vLeunen:92}  \\
+\Citeauthor{vLeunen:92}
+\end{document}

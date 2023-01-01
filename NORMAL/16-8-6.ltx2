@@ -1,0 +1,47 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-8-6 on page II-577 in "bibunits --- Bibliographies for arbitrary units".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{124.20126pt}
+
+\setlength\textheight{11.5\baselineskip}
+% Small headings for the example
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.25ex \@plus-1ex \@minus-.2ex}%
+                                    {.8ex}%
+                                    {\large\bfseries}}
+\makeatother
+% Do not process top-level aux file with BibTeX
+
+%StartShownPreambleCommands
+\usepackage{bibunits}
+%StopShownPreambleCommands
+
+\begin{document}
+\bibliographyunit[\section]
+\bibliographystyle*{plain}
+\bibliography*{tlc}
+\section{First one}
+  \cite{GNUMake} was
+  used  to produce
+  \cite{Knuth:TB10-1-31}.
+  \putbib
+\section{Another one}
+  As described by
+  \cite{aschur} \ldots
+  \putbib
+\end{document}

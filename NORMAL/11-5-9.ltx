@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-5-9 on page II-184 in "Further horizontal extensions".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+
+  \usepackage{lmodern}
+
+%StartShownPreambleCommands
+\usepackage{mathtools}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{gather*}
+  \overbracket{a+\underbracket{b+\overbrace{c+d\,}\!+e}+f} \\
+     \overbracket[1.5pt][3pt]{a+
+         \underbracket[3pt][4pt]{b+
+            \overbracket[.7pt][2pt]{c+d\,}\!+e}+f}
+\end{gather*}
+\end{document}

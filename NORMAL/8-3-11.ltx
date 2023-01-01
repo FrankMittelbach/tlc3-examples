@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-3-11 on page I-609 in "High-level line commands (originating from epic or eepic)".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+%StartShownPreambleCommands
+\usepackage{bxeepic}  \setlength{\unitlength}{1pt}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{picture}(150,100)(0,0)
+  \dottedline{1}(0,00)(50,20)(100,100)(150,0)
+\thicklines
+  \dottedline{2}(0,0)(30,50)(70,50)(90,30)(150,20)
+\linethickness{2pt}
+  \dottedline{3}(0,40)(40,0)(60,25)(110,25)(150,60)
+\end{picture}
+\end{document}

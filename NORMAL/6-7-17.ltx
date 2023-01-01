@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-7-17 on page I-486 in "siunitx --- Scientific numbers in tables".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{123.0pt}
+\setlength\parindent{0pt}
+%StartShownPreambleCommands
+\usepackage{siunitx}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabular}{|S[table-format=2.2e1]|
+    S[exponent-mode=fixed,drop-exponent,fixed-exponent=3,
+      table-format=2.4]|}
+ {Data} & {Data (\num[drop-exponent=false,
+                      print-unity-mantissa=false]{e3})} \\
+ 1.2e3 & 1.2e3 \\ 17.5 & 17.5 \\ 3e2 & 3e2 \\ 1.03e4 & 1.03e4
+\end{tabular}
+\end{document}

@@ -1,0 +1,40 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 5-6-6 on page I-419 in "nextpage --- Extensions to \protect \nxLcs  {clearpage}".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{95.40097pt}
+
+  \setlength\textheight{6\baselineskip}
+  \addtolength\headsep{-12pt}
+
+  \setcounter{page}{7}     % right-hand page
+  \setcounter{section}{3}  % and a section level other than 1
+
+%StartShownPreambleCommands
+\usepackage{nextpage}\pagestyle{headings}
+\newcommand\myclearpage{\cleartooddpage
+  [\vspace*{\stretch{1}} \centering
+   BLANK PAGE \vspace*{\stretch{2}}]}
+%StopShownPreambleCommands
+
+\begin{document}
+\section{A Test}
+\subsection{A subsection}
+Some text for our page. Then a blank page.
+\myclearpage
+\section{Another Section}
+This would appear on page 9 (not shown).
+\end{document}

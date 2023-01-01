@@ -1,0 +1,86 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 12-24-fig on page II-278 in "Transitional serif fonts with math support".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{351.0pt}
+
+ \setlength \textheight {.44\textheight }
+ \renewcommand \rmdefault {cmr} % because examples are normally in Times Roman in the book
+ 
+%StartShownPreambleCommands
+
+ 
+ % Typeset with pdflatex
+ 
+ \usepackage {amsmath,amssymb,bm}
+ 
+  \typeout {***^^JThis example requires commercial fonts that are not provided
+    with a free LaTeX installation but must be obtained separately.^^J***}
+  \usepackage [T1]{fontenc}
+  \IfFileExists {lucidabr.sty}
+                {\usepackage [T1,expert]{lucidabr}}
+                {\typeout {The lucidabr package is not available}\stop } 
+ 
+ \providecommand \sampletitle {Mathematical typesetting with Lucida Bright}
+ 
+%StopShownPreambleCommands
+
+\begin{document}
+
+\tracinglostchars=3
+
+\newcommand\ibinom[2]{\genfrac\lbrace\rbrace{0pt}{}{#1}{#2}} % used below
+
+\section*{\sampletitle}
+
+First some large operators both in text:
+\smash{$ \iiint\limits_{\mathcal{Q}} f(x,y,z)\,dx\,dy\,dz $}
+and
+$\prod_{\gamma\in\Gamma_{\widetilde{C}}} \partial(\widetilde{X}_\gamma)$;
+and also on display:
+
+\begin{equation}
+\begin{split}
+%%     This line is deliberately long so as to show
+%%     differences in widths; it is a little over the measure
+%%     in article/cmr.
+\iiiint\limits_{\mathbf{Q}} f(w,x,y,z)\,dw\,dx\,dy\,dz  &\leq
+\oint_{\bm{\partial Q}} f' \left( \max \left\lbrace
+\frac{\lVert w \rVert}{\lvert w^2 + x^2 \rvert} ;
+\frac{\lVert z \rVert}{\lvert y^2 + z^2 \rvert} ;
+\frac{\lVert w \oplus z \rVert}{\lVert x \oplus y \rVert}
+\right\rbrace\right)
+\\
+&\precapprox \biguplus_{\mathbb{Q} \Subset \bar{\mathbf{Q}}}
+  \left[ f^{\ast} \left(
+    \frac{\left\lmoustache\mathbb{Q}(t)\right\rmoustache}
+         {\sqrt {1 - t^2}}
+  \right)\right]_{t=\alpha}^{t=\vartheta}
+  - ( \Delta + \nu - v )^3
+\end{split}
+\end{equation}
+
+For $x$ in the open interval $ \left] -1, 1 \right[ $
+the infinite sum in Equation~\eqref{eq:binom1} is convergent;
+however, this does not hold
+throughout the closed interval $ \left[ -1, 1 \right] $.
+\begin{align}
+  (1 - x)^{-k} &=
+    1 + \sum_{j=1}^{\infty} (-1)^j \ibinom{k}{j} x^j
+    \text{\quad for $k \in \mathbb{N}$; $k \neq 0$.}
+    \label{eq:binom1}
+\end{align}
+\end{document}

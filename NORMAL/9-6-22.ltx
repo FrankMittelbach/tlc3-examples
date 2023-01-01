@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 9-6-22 on page I-724 in "Stylistic features".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{87.0pt}
+
+  %!TEX program = lualatex
+
+  \setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage{fontspec} \setmainfont{Libertinus Serif}
+%StopShownPreambleCommands
+
+\begin{document}
+Ä Ü Ö     \quad   {\addfontfeature{StylisticSet=1}Ä Ü Ö}          \\
+J K R     \quad   {\addfontfeature{StylisticSet=2}J K R}          \\
+Gruß \textsc{Gruß} GRU\SS                                         \\
+    {\addfontfeature{StylisticSet=3}Gruß \textsc{Gruß} GRU\SS}    \\
+    {\addfontfeature{StylisticSet=4}Gruß \textsc{Gruß} GRU\SS}    \\
+ W        \quad   {\addfontfeature{StylisticSet=5}W}          \qquad
+\&        \quad   {\addfontfeature{StylisticSet=6}\&}             \\
+JKQRW hy ß \& \\  {\addfontfeature{Style=Alternate}JKQRW hy ß \&} \\
+         {\addfontfeature{StylisticSet={1,2,4,5,6}}JKQRW hy ß \&}
+\end{document}

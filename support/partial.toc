@@ -1,0 +1,163 @@
+\contentsline {chapter}{\numberline {2}The Structure of a \LaTeX {} Document}{21}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The overall structure of a source file}{22}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Spoiler alert\Dash The \nxLcs {DocumentMetadata} command}{23}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Processing of options of the document class and packages}{24}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Front, main, and back matter}{26}{subsection.2.1.3}%
+\contentsline {subsubsection}{Front matter elements}{26}{section*.1}%
+\contentsline {subsubsection}{Main matter elements}{28}{section*.2}%
+\contentsline {subsubsection}{Back matter elements}{28}{section*.3}%
+\contentsline {subsection}{\numberline {2.1.4}Splitting the source document into several files}{28}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}\nxLPack {askinclude}\Dash Managing your inclusions}{30}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}\nxLPack {tagging}\Dash Providing variants in the document source}{30}{subsection.2.1.6}%
+\contentsline {section}{\numberline {2.2}Sectioning commands}{32}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Numbering headings}{34}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Changing fixed heading texts}{36}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Introduction to heading design}{37}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}\nxLPack {quotchap}, \nxLPack {epigraph}\Dash Mottos on chapters and sections}{38}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}\nxLPack {indentfirst}\Dash Indent the first paragraph after a heading}{39}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}\nxLPack {nonumonpart}\Dash No page numbers on parts}{40}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.7}\nxLPack {titlesec}\Dash A package approach to heading design}{40}{subsection.2.2.7}%
+\contentsline {subsubsection}{The basic interface}{40}{section*.6}%
+\contentsline {subsubsection}{The extended interface}{42}{section*.7}%
+\contentsline {subsubsection}{Conditional heading layouts}{48}{section*.10}%
+\contentsline {subsubsection}{Changing the heading hierarchy}{50}{section*.12}%
+\contentsline {subsection}{\numberline {2.2.8}Formatting headings\Dash \LaTeX 's internal low-level methods}{51}{subsection.2.2.8}%
+\contentsline {section}{\numberline {2.3}Table of contents structures}{54}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}\nxLPack {tocdata}\Dash Providing extra data for the TOC}{56}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}\nxLPack {titletoc}\Dash A high-level approach to contents list design}{59}{subsection.2.3.2}%
+\contentsline {subsubsection}{Designing the layout for a single contents list entry}{59}{section*.18}%
+\contentsline {subsubsection}{Standard (dotted) layouts}{60}{section*.19}%
+\contentsline {subsubsection}{More complicated layouts}{61}{section*.20}%
+\contentsline {subsubsection}{A few design examples}{63}{section*.23}%
+\contentsline {subsubsection}{Contents entries combined in a paragraph}{65}{section*.25}%
+\contentsline {subsubsection}{Generating partial table of contents lists}{67}{section*.26}%
+\contentsline {subsection}{\numberline {2.3.3}\nxLPack {multitoc}\Dash Setting contents lists in multiple columns}{70}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}\LaTeX 's low-level interfaces}{70}{subsection.2.3.4}%
+\contentsline {subsubsection}{Entering information into the contents files}{70}{section*.27}%
+\contentsline {subsubsection}{Typesetting a contents list}{71}{section*.29}%
+\contentsline {subsubsection}{Providing additional contents files}{74}{section*.34}%
+\contentsline {section}{\numberline {2.4}Managing references}{75}{section.2.4}%
+\contentsline {subsubsection}{Fancier labels}{77}{section*.35}%
+\contentsline {subsection}{\numberline {2.4.1}\nxLPack {varioref}\Dash More flexible cross-references}{79}{subsection.2.4.1}%
+\contentsline {subsubsection}{Providing your own reference commands}{81}{section*.38}%
+\contentsline {subsubsection}{Language options}{82}{section*.39}%
+\contentsline {subsubsection}{Individual customizations}{82}{section*.40}%
+\contentsline {subsubsection}{Customization for several languages with \nxLPack {babel}}{84}{section*.41}%
+\contentsline {subsubsection}{A few things to watch out for}{85}{section*.43}%
+\contentsline {subsubsection}{Package behavior without the \nxLenv {nospace} option}{85}{section*.44}%
+\contentsline {subsection}{\numberline {2.4.2}\nxLPack {cleveref}\Dash Cleverly formatted references}{86}{subsection.2.4.2}%
+\contentsline {subsubsection}{Customizing the references}{89}{section*.45}%
+\contentsline {subsubsection}{Support for multiple languages}{91}{section*.46}%
+\contentsline {subsubsection}{Handling theorem-like environments}{91}{section*.47}%
+\contentsline {subsubsection}{Other special considerations}{92}{section*.49}%
+\contentsline {subsection}{\numberline {2.4.3}\nxLPack {nameref}\Dash Non-numerical references}{93}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}\nxLPack {showkeys}, \nxLPack {refcheck}\Dash Displaying \& checking reference keys}{93}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}\nxLPack {xr}\Dash References to external documents}{95}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.6}\nxLPack {hyperref}\Dash Active references}{96}{subsection.2.4.6}%
+\contentsline {subsubsection}{Manually and automatically provided links}{96}{section*.50}%
+\contentsline {subsubsection}{Links to external resources}{99}{section*.51}%
+\contentsline {subsubsection}{Highlighting links}{102}{section*.52}%
+\contentsline {subsubsection}{Bookmarks a.k.a.\ outline view}{103}{section*.53}%
+\contentsline {subsubsection}{Document properties}{106}{section*.56}%
+\contentsline {subsubsection}{\MakeUppercase {pdf} presentation possibilities (available with some viewers)}{107}{section*.57}%
+\contentsline {subsubsection}{Other miscellaneous features}{108}{section*.58}%
+\contentsline {section}{\numberline {2.5}Document source management}{108}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Combining several files}{109}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Document archival information}{110}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}\nxLPack {snapshot}, \nxLPack {bundledoc}\Dash Document archival and verification}{111}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}\nxLPack {mkjobtexmf}\Dash Providing a minimal \TeX {} file tree}{113}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}The rollback concept for \LaTeX {} and individual packages}{114}{subsection.2.5.5}%
+\contentsline {subsubsection}{Typical scenarios}{116}{section*.60}%
+\contentsline {subsubsection}{The document-level interface}{116}{section*.61}%
+\contentsline {subsubsection}{The package writer interface}{118}{section*.62}%
+\contentsline {chapter}{\numberline {3}Basic Formatting Tools}{119}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Shaping your paragraphs}{120}{section.3.1}%
+\contentsline {subsubsection}{Interword spacing}{121}{section*.72}%
+\contentsline {subsubsection}{Unjustified text}{121}{section*.74}%
+\contentsline {subsection}{\numberline {3.1.1}\nxLPack {ragged2e}\Dash Improving unjustified text}{123}{subsection.3.1.1}%
+\contentsline {subsubsection}{Spurious underfull box warnings}{125}{section*.76}%
+\contentsline {subsection}{\numberline {3.1.2}\nxLPack {nolbreaks}\Dash Preventing line breaks in text fragments}{125}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}\nxLPack {microtype}\Dash Enhancing justified text}{126}{subsection.3.1.3}%
+\contentsline {subsubsection}{Package options}{127}{section*.77}%
+\contentsline {subsubsection}{Configuring the machinery}{130}{section*.79}%
+\contentsline {subsubsection}{Providing context}{133}{section*.80}%
+\contentsline {subsubsection}{Specifying tracking, extra kerning, and adjusted spacing}{133}{section*.81}%
+\contentsline {subsubsection}{Disabling selected ligatures}{135}{section*.83}%
+\contentsline {subsubsection}{Some special considerations when using \nxLPack {microtype}}{135}{section*.84}%
+\contentsline {subsection}{\numberline {3.1.4}\nxLPack {parskip}\Dash Adjusting the look and feel of paragraphs}{137}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}\nxLPack {setspace}\Dash Changing interline spacing}{139}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}\nxLPack {lettrine}\Dash Dropping your capital}{141}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Alphabets for initials}{145}{subsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.1.8}\nxLPack {magaz}\Dash Special handling of the first line}{146}{subsection.3.1.8}%
+\contentsline {subsection}{\numberline {3.1.9}\nxLPack {fancypar}\Dash Fancy layouts for individual paragraphs}{147}{subsection.3.1.9}%
+\contentsline {section}{\numberline {3.2}Dealing with special characters}{147}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}\nxLPack {ellipsis}, \nxLPack {lips}\Dash Marks of omission}{148}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}\nxLPack {extdash} and \nxLPack {amsmath}\Dash Dashes in text}{149}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}\nxLPack {underscore}\Dash Making that character more usable}{151}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}\nxLPack {xspace}\Dash Gentle spacing after a macro}{152}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Generated or specially formatted text}{154}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}\nxLPack {fmtcount}\Dash Ordinals and cardinals}{154}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}\nxLPack {acro}\Dash Managing your abbreviations and acronyms}{156}{subsection.3.3.2}%
+\contentsline {subsubsection}{Plural forms}{157}{section*.87}%
+\contentsline {subsubsection}{Indefinite forms}{158}{section*.88}%
+\contentsline {subsubsection}{One-time usage of acronyms}{158}{section*.89}%
+\contentsline {subsubsection}{Citations for acronyms}{159}{section*.90}%
+\contentsline {subsubsection}{Foreign acronyms}{160}{section*.91}%
+\contentsline {subsubsection}{Formatting acronym texts}{160}{section*.92}%
+\contentsline {subsubsection}{Using \nxLPack {acro} for abbreviations}{161}{section*.93}%
+\contentsline {subsubsection}{Listing your acronyms and abbreviations}{162}{section*.94}%
+\contentsline {subsubsection}{Further possibilities not covered}{163}{section*.95}%
+\contentsline {subsection}{\numberline {3.3.3}\nxLPack {xfrac}\Dash Customizable \sfrac [hls-bf]{text}{fractions}}{164}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}\nxLPack {siunitx}\Dash Scientific notation of units and quantities}{167}{subsection.3.3.4}%
+\contentsline {subsubsection}{Basic number and unit formatting}{168}{section*.96}%
+\contentsline {subsubsection}{Quantities}{169}{section*.100}%
+\contentsline {subsubsection}{Complex values as numbers or in quantities}{171}{section*.101}%
+\contentsline {subsubsection}{Tabulating numbers}{172}{section*.102}%
+\contentsline {subsubsection}{Customizing numerical data representation}{172}{section*.103}%
+\contentsline {subsubsection}{Customizing units and quantities}{175}{section*.105}%
+\contentsline {subsubsection}{Controlling printing}{177}{section*.106}%
+\contentsline {section}{\numberline {3.4}Various ways of highlighting and quoting text}{177}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}\nxLPack {textcase}\Dash Change case of text intelligently}{178}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}\nxLPack {csquotes}\Dash Context-sensitive quotation marks}{179}{subsection.3.4.2}%
+\contentsline {subsubsection}{Quotations with formal citations}{182}{section*.107}%
+\contentsline {subsubsection}{Changes, insertions, and deletions}{182}{section*.108}%
+\contentsline {subsubsection}{Language support}{183}{section*.109}%
+\contentsline {subsubsection}{Managing quotes in foreign languages}{184}{section*.110}%
+\contentsline {subsubsection}{Further configuration possibilities}{185}{section*.111}%
+\contentsline {subsubsection}{Additional helper commands}{188}{section*.112}%
+\contentsline {subsection}{\numberline {3.4.3}\nxLPack {embrac}\Dash Upright brackets and parentheses}{188}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}\nxLPack {ulem}\Dash Emphasize and copy-edit via underline}{189}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}\nxLPack {dashundergaps}\Dash Produce fill-in forms}{190}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}\nxLPack {microtype} \& \nxLPack {soul}\Dash Letterspacing or stealing sheep}{191}{subsection.3.4.6}%
+\contentsline {subsection}{\numberline {3.4.7}\nxLPack {url}\Dash Typesetting \acsp {url}, path names, and the like}{198}{subsection.3.4.7}%
+\contentsline {subsubsection}{Linking \acsp {url} to external resources}{201}{section*.115}%
+\contentsline {subsection}{\numberline {3.4.8}\nxLPack {uri}\Dash Typesetting various types of \acsp {uri}}{202}{subsection.3.4.8}%
+\contentsline {section}{\numberline {3.5}Footnotes, endnotes, and marginals}{204}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Using standard footnotes}{205}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Customizing standard footnotes}{208}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}\nxLPack {footmisc}\Dash Various footnotes styles}{210}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}\nxLPack {footnoterange}\Dash Referencing footnote ranges}{216}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}\nxLPack {fnpct}\Dash Managing footnote markers and punctuation}{216}{subsection.3.5.5}%
+\contentsline {subsection}{\numberline {3.5.6}\nxLPack {perpage}\Dash Resetting counters on a \enquote {per-page} basis}{218}{subsection.3.5.6}%
+\contentsline {subsection}{\numberline {3.5.7}\nxLPack {manyfoot}, \nxLPack {bigfoot}\Dash Independent footnotes}{220}{subsection.3.5.7}%
+\contentsline {subsection}{\numberline {3.5.8}\nxLPack {parnotes}\Dash Present the notes inside the galley}{226}{subsection.3.5.8}%
+\contentsline {subsection}{\numberline {3.5.9}\nxLPack {ftnright}\Dash Right footnotes in a two-column environment}{228}{subsection.3.5.9}%
+\contentsline {subsection}{\numberline {3.5.10}\nxLPack {enotez}\Dash Endnotes, an alternative to footnotes}{228}{subsection.3.5.10}%
+\contentsline {subsection}{\numberline {3.5.11}Marginal notes}{232}{subsection.3.5.11}%
+\contentsline {subsection}{\numberline {3.5.12}\nxLPack {marginnote}\Dash An alternative to \nxLcs {marginpar}}{234}{subsection.3.5.12}%
+\contentsline {subsection}{\numberline {3.5.13}\nxLPack {snotez}\Dash Numbered or otherwise marked side notes}{235}{subsection.3.5.13}%
+%\contentsline {section}{\numberline {3.6}Support for document development}{237}{section.3.6}%
+%\contentsline {subsection}{\numberline {3.6.1}\nxLPack {todonotes}\Dash Adding todos to your document}{237}{subsection.3.6.1}%
+%\contentsline {subsubsection}{Customizing todos}{239}{section*.121}%
+%\contentsline {subsubsection}{Defining your own todo commands}{241}{section*.122}%
+%\contentsline {subsubsection}{Package options}{242}{section*.123}%
+%\contentsline {subsection}{\numberline {3.6.2}\nxLPack {fixme}\Dash A slightly different approach to todos}{242}{subsection.3.6.2}%
+%\contentsline {subsection}{\numberline {3.6.3}\nxLPack {changes}\Dash A set of typical editorial commands}{245}{subsection.3.6.3}%
+%\contentsline {subsubsection}{Customizing the list of changes}{246}{section*.124}%
+%\contentsline {subsubsection}{Customizing the editorial markup commands}{248}{section*.125}%
+%\contentsline {subsubsection}{Providing your own editorial commands}{249}{section*.126}%
+%\contentsline {subsubsection}{Managing package option conflicts}{250}{section*.127}%
+%\contentsline {subsubsection}{Managing command name conflicts}{250}{section*.128}%
+%\contentsline {subsection}{\numberline {3.6.4}\nxLPack {pdfcomment}\Dash Using PDF annotations and tool tips}{250}{subsection.3.6.4}%
+%\contentsline {subsection}{\numberline {3.6.5}\nxLPack {vertbars}\Dash Adding bars to paragraphs}{251}{subsection.3.6.5}%
+\contentsfinish 

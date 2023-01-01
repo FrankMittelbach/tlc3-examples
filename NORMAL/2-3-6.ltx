@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-3-6 on page I-64 in "A few design examples".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exareport}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{243.0pt}
+%StartShownPreambleCommands
+\usepackage[dotinlabels]{titletoc}
+\titlecontents{chapter} [5pc]
+   {\addvspace{1pc}\bfseries
+    \titlerule[2pt]\filright}
+   {\contentslabel
+      [\textsc{\chaptername}\
+       \thecontentslabel]{5pc}}
+   {}{\hfill\contentspage}
+   [\addvspace{2pt}]
+% Show only chapter/section entries:
+\setcounter{tocdepth}{1}
+%StopShownPreambleCommands
+
+\begin{document}
+\input{partial.toc}
+\end{document}

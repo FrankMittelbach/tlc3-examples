@@ -1,0 +1,29 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-3-8 on page II-158 in "delarray --- Delimiters surrounding an array".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+%StartShownPreambleCommands
+\usepackage{delarray}
+%StopShownPreambleCommands
+
+\begin{document}
+\[ \mathcal{Q} =
+\begin{array}[t] ( {cc} ) X & Y \end{array}
+\begin{array}[t] [ {cc} ] A & B \\ C & D  \end{array}
+\begin{array}[b] \lgroup{c}\rgroup L \\ M \end{array}
+\]
+\end{document}

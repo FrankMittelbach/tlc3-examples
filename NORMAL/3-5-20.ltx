@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-20 on page I-216 in "footnoterange --- Referencing footnote ranges".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{129.0pt}
+\setlength\textheight{7.5\baselineskip}
+\setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage[multiple]{footmisc} \usepackage{footnoterange}
+%StopShownPreambleCommands
+
+\begin{document}
+\fbox{\begin{minipage}{.95\textwidth}
+ Some text\begin{footnoterange}
+             \footnote{A first.}\footnote{Second.} with
+             three footnotes.\footnote{Third (moved).}
+          \end{footnoterange}
+ Even more text.\footnote{One more.}\footnotemark
+\end{minipage}}\footnotetext{An external one.}
+\end{document}

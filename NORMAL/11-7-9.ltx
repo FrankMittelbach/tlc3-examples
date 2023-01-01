@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-7-9 on page II-200 in "Ghostbusters\texttrademark ".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+
+  \setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage{amsmath}
+%StopShownPreambleCommands
+
+\begin{document}
+$\sqrt{x} + \sqrt{y}            + \sqrt{z}$ \\
+$\sqrt{x} + \sqrt{\mathstrut y} + \sqrt{z}$ \\
+$\sqrt{x} + \sqrt{\smash{y}}    + \sqrt{z}$ \\
+$\sqrt{x} + \sqrt{\smash[b]{y}} + \sqrt{z}$
+\end{document}

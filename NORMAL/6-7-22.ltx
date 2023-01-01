@@ -1,0 +1,47 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-7-22 on page I-490 in "fcolumn --- Managing financial tables".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{348.0pt}
+
+
+%StartShownPreambleCommands
+\usepackage{xcolor,booktabs,fcolumn}
+\newcolumntype{f}{F{\,}{.}{3.2}{\mathsf}}
+\newcolumntype{A}{F{\,}{.}{3.2}{\color{blue}\mathsf,\mathsf}}
+\newcommand\fheader[1]{\multicolumn{6}{c}{\bfseries #1}  \\ \toprule
+                expense & \leeg{budget}   & \leeg{actual} &
+                income  & \leeg{expected} & \leeg{actual}\\ \midrule}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabular}{@{}lfAlfA@{}}
+\fheader{Booklet 113}
+printing   & 8200 &        8000   & sales & 10000    &  7863    \\
+binding    &  600 &         550                                 \\
+shipping   &  800 &         496.8                               \\
+profit     &  400 &               & loss  &          & 1183.8   \\
+\sumline[2pt][30pt]   \resetsumline
+\fheader{Booklet 114}
+printing   & 6000 &        6200   & sales &  8000    &  8610    \\
+binding    &  600 &         650                                 \\
+\empty
+shipping   &  640 &         737.6                               \\
+profit     &  760 &        1022.4 & loss  &         &    0      \\
+\sumline
+\bottomrule
+\end{tabular}
+\end{document}

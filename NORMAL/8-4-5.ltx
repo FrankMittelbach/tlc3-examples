@@ -1,0 +1,37 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-4-5 on page I-617 in "Text alignment".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+
+%StartShownPreambleCommands
+\usepackage{kantlipsum,tcolorbox}
+\tcbset{top=0pt,middle=1mm,bottom=0pt}
+%StopShownPreambleCommands
+
+\begin{document}
+\scriptsize
+\begin{tcolorbox}[halign=right]
+   top part \tcblower bottom part
+\end{tcolorbox}
+\begin{tcolorbox}[parbox=false,
+     halign title=center,
+     halign lower=right,title=My title]
+ \kant[1][2] \par \kant[2][1]
+ \tcblower
+ \kant[3][1] \par \kant[6][1]
+\end{tcolorbox}
+\end{document}

@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-47 on page I-236 in "snotez --- Numbered or otherwise marked side notes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+\setcounter{page}{1}  % marginnote does not like documents starting on even numbered pages!
+
+\addtolength\textwidth{-50pt}
+\setlength\marginparwidth{40pt}
+
+
+%StartShownPreambleCommands
+\usepackage[marginnote]{snotez}
+%StopShownPreambleCommands
+
+\begin{document}
+Some text with a side note.\sidenote{A first.}
+A lot of additional text here with a
+note.\sidenote{A second.} Even more text
+and then two side
+notes.\sidenote{A third.}% next one moved down
+      \sidenote(12pt)[\textdagger]{A fourth.}
+A lot of additional lines of text here to
+fill up the space on the left.
+\end{document}

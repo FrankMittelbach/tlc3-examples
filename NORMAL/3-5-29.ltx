@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-29 on page I-223 in "manyfoot, bigfoot --- Independent footnotes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{165.0pt}
+\setlength\textheight{8.5\baselineskip}
+\addtolength\textwidth{-4pt}
+
+%StartShownPreambleCommands
+\usepackage[marginal,multiple]{footmisc}
+\usepackage[ruled]{manyfoot}      % or bigfoot
+\DeclareNewFootnote{B}[fnsymbol]
+\DeclareNewFootnote{C}[Alph]
+\renewcommand\extrafootnoterule{\vspace*{-3pt}%
+     \hrule width 4em height 0.4pt \vspace*{2.6pt}}
+\setlength{\skip\footinsC}{5pt minus 1pt}
+%StopShownPreambleCommands
+
+\begin{document}
+Some text\footnote{A first.}\footnoteB{A second.}
+with a footnote. Even more text.\footnoteC{A third.}
+Some text\footnoteB{A sample.} with a
+footnote.\footnoteC{Another sample.} Some more
+text for the example.
+\end{document}

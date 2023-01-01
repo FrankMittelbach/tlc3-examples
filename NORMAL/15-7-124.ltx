@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 15-7-124 on page II-463 in "\protect \hspace  *{-1em}biblatex-morenames".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{328.0pt}
+
+%%  Use biber program
+\usepackage{xcolor}
+\setlength\parindent{0pt}
+\setlength\textheight{7.8\baselineskip}
+\usepackage[citestyle=verbose,bibstyle=morenames]{biblatex}
+\addbibresource{tlc-biblatex-special.bib}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\let\normalsize\footnotesize \normalsize
+\textcolor{blue}{See \textcite{Maraval1998}}
+\printbibliography[heading=none]
+\end{document}

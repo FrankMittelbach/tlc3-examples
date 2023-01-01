@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-4-13 on page I-186 in "Further configuration possibilities".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+  \setlength\leftmargini{1.5em} % -- shorten quote indentation for example
+
+%StartShownPreambleCommands
+\usepackage[threshold=1]{csquotes}
+\renewcommand\mktextquote[6]
+    {#1#2\ifblank{#4}{ \textelp{}}{#4}#5#3#6}
+\renewcommand\mkblockquote[4]
+    {\enquote{#1\ifblank{#2}{ \textelp{}}{#2}#3}#4}
+%StopShownPreambleCommands
+
+\begin{document}
+He started with the quotes
+\blockquote[Umberto Eco][.]{Our life is full of empty
+                            space}  and
+\blockquote[Douglas Adams]{Space is big. You just
+  won't believe how vastly, hugely, mind-bogglingly
+  big}.
+Later he finished with
+\blockquote[Albert Einstein]{God does not play}.
+\end{document}

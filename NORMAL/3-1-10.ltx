@@ -1,0 +1,30 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-1-10 on page I-134 in "Specifying tracking, extra kerning, and adjusted spacing".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+%StartShownPreambleCommands
+\usepackage[english,french]{babel}
+\usepackage[kerning]{microtype}
+% \SetExtraKerning ... as above
+\DeclareMicrotypeBabelHook{french}{kerning=french}
+%StopShownPreambleCommands
+
+\begin{document}
+FRENCH: Je ne parle pas français! \par
+\selectlanguage{english} ENGLISH: I speak English!
+\end{document}

@@ -1,0 +1,37 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 12-1-9 on page II-229 in "The world of (Latin) math alphabets".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+  \AddToHook{begindocument/end}{%      % save some space in the example
+    \setlength\abovedisplayshortskip{4pt}%
+    \setlength\belowdisplayskip{0pt}%
+    \setlength\belowdisplayshortskip{0pt}}
+
+  \typeout{This example requires commercial fonts that are not provided^^J%
+           with a free LaTeX installation but must be obtained separately.}
+%%
+%StartShownPreambleCommands
+\DeclareMathAlphabet\mathcal{T1}{hlcw}{m}{it}
+\DeclareMathAlphabet\mathscr{T1}{Almndr-OsF}{m}{it}
+%StopShownPreambleCommands
+
+\begin{document}
+\[ A_B \neq \mathscr{A}_\mathscr{B}
+             \neq \mathcal{A}_\mathcal{B}          \]
+\[ \mathcal{ABCDEFGHI} \dots \mathscr{PQRSTUVWXYZ} \]
+\end{document}

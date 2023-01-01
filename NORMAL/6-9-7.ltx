@@ -1,0 +1,44 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-9-7 on page I-503 in "Spanning cells".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+  \setlength\tabcolsep{6pt}
+
+  \usepackage{keyvaltable}
+  \kvtSet{ColGroup/format=\itshape,ColGroup/align=r}
+  \NewKeyValTable{spantest}{ colA: align=l|; colB: align=l||;
+                             colC: align=l|; colD:}
+        [ colgroups={ all: span=colA+colB+colC+colD, format=\textbf;
+                    AuBuC: span=colA+colB+colC, align=c|;
+                      AuB: span=colA+colB, align=l||;  CuD: span=colC+colD } ]
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{KeyValTable}{spantest}
+ \Row{all=The Start}  \Row{colA=1, colB=2, colC=3, colD=4}
+ \Row{all=--- right aligned text ---}
+ \Row{AuB=1 \& 2,       colC=3,  colD=4}
+ \Row{colA=1, colB=2,   colC=3,  colD=4}
+ \Row{colA=1, colB=2,    CuD=3 \& 4}
+ \Row{AuBuC=--- 3 out of 4 ---,    colD=4}
+ \Row{AuB=1 \& 2, CuD=3 \& 4} \Row{all=The End}
+\end{KeyValTable}
+\end{document}

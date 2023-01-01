@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-6-7 on page I-473 in "\protect \LmPack {booktabs} --- Formal ruled tables".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+%StartShownPreambleCommands
+\usepackage{booktabs}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabular}{@{}llr@{}}
+\toprule
+  \multicolumn{2}{c}{Items} &\multicolumn{1}{c}{Price/lb} \\
+\cmidrule(r){1-2}             \cmidrule(l){3-3}
+   a & b & c                                              \\
+\cmidrule(l{10pt}r{10pt}){1-2}\cmidrule(l{10pt}r{10pt}){3-3}
+\morecmidrules                \cmidrule(l{5pt}r{5pt})  {2-3}
+\addlinespace[5pt]
+  Food& Category & \multicolumn{1}{c}{\$}\\
+\midrule
+  Apples & Fruit  & 1.50 \\        Oranges & Fruit & 2.00 \\
+\addlinespace                      Beef & Meat     & 4.50 \\
+\specialrule{.5pt}{10pt}{20pt}     x    & y        & z    \\
+\bottomrule
+\end{tabular}
+\end{document}

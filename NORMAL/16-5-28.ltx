@@ -1,0 +1,52 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-5-28 on page II-521 in "Ibidem --- In the same place".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+
+  \setcounter{page}{5}
+  \setlength\textheight{9.7\baselineskip}
+
+
+%% Apply the jurabib defaults we use in the book (documented at the beginning of the section)
+\AddToHook{package/jurabib/after}{\jurabibsetup{titleformat=colonsep,commabeforerest=true}}
+
+%% Do not show the bibliography itself in the example,
+%% so put it on a separate page:
+  \AtEndDocument{\newpage\bibliography{tlc}}
+
+%% show second page in the book
+
+
+%StartShownPreambleCommands
+\usepackage[marginal,ragged,multiple]{footmisc}
+\usepackage{jurabib}
+\bibliographystyle{jurabib}
+\jurabibsetup{super,ibidem=name&title&auto}
+%StopShownPreambleCommands
+
+\begin{document}
+  Full citations for \cite{aschur} and
+  \cite{bschur} are put on an earlier
+  page and therefore not displayed
+  on the left!
+\newpage
+  A \cite[\S\,7]{aschur} different
+  \cite[\S\,8]{aschur} \cite[\S\,16]{zpo}
+  legal \cite[\S\,7]{bschur} \cite{aschur}
+  text. \cite[\S\,3]{zpo}
+\end{document}

@@ -1,0 +1,42 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-3-4 on page I-532 in "float --- Creating new float types".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{95.40097pt}
+
+  \setlength\textheight{10\baselineskip}
+  \pagestyle{origplain}
+  \tolerance=3000
+
+%StartShownPreambleCommands
+\usepackage{float,array}
+%StopShownPreambleCommands
+
+\begin{document}
+All float placement specifiers are
+shown together in the following table.
+\begin{table}[H]
+ \begin{tabular}{>{\ttfamily}cl}
+  t & Top of page \\ b & Bottom of page\\
+  p & Page of floats\\
+  h & Here, if possible\\ H & Here, always
+ \end{tabular}
+ \caption{Specifiers}
+\end{table}
+With ``h'' instead of the ``H'' specifier
+this text would have appeared before the
+table in the current example.
+\end{document}

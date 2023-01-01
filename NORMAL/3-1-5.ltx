@@ -1,0 +1,54 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-1-5 on page I-126 in "microtype --- Enhancing justified text".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{348.0pt}
+\usepackage{multicol}
+\setlength\columnsep{1pc}
+%StartShownPreambleCommands
+
+  \usepackage{lmodern}
+  \usepackage[expansion=false,verbose]{microtype}
+  \LoadMicrotypeFile{cmr}
+  \SetProtrusion
+      [ name     = lmr-hangingp ]
+      { encoding = {T1,OT1},
+        family   = lmr      }
+      {
+        . = { ,1000},
+        : = { ,1000},
+        ; = { ,1000},
+        {,} = { ,1000},
+        \textquotedblleft  = {1000,    },
+        \textquotedblright = {    ,1000},
+        \textquoteleft     = {1000,    },
+        \textquoteright    = {    ,1000},
+      }
+
+%StopShownPreambleCommands
+
+\begin{document}
+  \begin{multicols}{2}
+    \fontsize{8}{9}\selectfont\noindent ``What is
+    hanging punctuation?'' asked Alice, with a puzzled frown.  `Well,
+    y'know, \mbox{actually},' answered Bill, `I'd rather demonstrate
+    it than explain it.' ``Oh, now I see.  Commas, periods, and quotes
+    are allowed to stick out into the margins, if they occur next to a
+    line break.'' `Yeah, I guess.' ``Really! But why do all your
+    remarks have single quotes, while mine are double?'' `I haven't
+    the foggiest; it's weird. Ask the author of this crazy book.'
+  \end{multicols}
+\end{document}

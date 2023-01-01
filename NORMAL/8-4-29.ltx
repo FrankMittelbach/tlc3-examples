@@ -1,0 +1,56 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-4-29 on page I-631 in "Poster applications".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+
+\usepackage[poster]{tcolorbox}
+
+\tcbset{placeholder/.style={enhanced jigsaw,
+  size=small,sharp corners,colframe=red!50!black,
+  interior style={bottom color=red!15!white,top color=yellow!15},
+  opacityback=0.5,
+  underlay={\draw[red!50!black,line cap=round] (interior.south west)--(interior.north east);
+    \draw[red!50!black,line cap=round] (interior.south east)--(interior.north west);},
+}}%
+
+\AddToHook{begindocument/end}{%
+\begin{tcbposter}[
+    poster = {columns=5,rows=4, % set up raster
+      spacing=1mm,              % spacing between elements
+      width=140pt,height=120pt, %  - normally not needed
+      showframe},               % and show it
+    boxes = {sharp corners=downhill,colframe=blue} ]}
+\AddToHook{enddocument}{\end{tcbposter}}
+
+%StartShownPreambleCommands
+% Set up as in previous example
+%StopShownPreambleCommands
+
+\begin{document}
+ \posterbox[colback=blue!10]
+           {name=title,column=1,span=3,row=1}{}
+ \posterbox{name=graphic,column=4,span=2,
+            row=1,rowspan=1.5}{}
+ \posterbox{name=credits,column=3,span=3,above=bottom}{}
+ \posterbox{name=table,column=4,span=2,
+            between=graphic and credits}{}
+ \posterbox{name=T,
+   sequence=1 between title and bottom then
+            2 between title and bottom then
+            3 between title and credits}{}
+\end{document}

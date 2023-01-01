@@ -1,0 +1,47 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-2-22 on page I-54 in "Formatting headings --- \LaTeX 's internal low-level methods".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+\makeatletter
+\renewcommand\appendix{%
+   \renewcommand\section{%                     Redefinition of \section...
+        \newpage\thispagestyle{plain}%           new page, folio bottom
+        \suppressfloats[t]\@afterindentfalse%    no top floats, no indent
+        \secdef\Appendix\sAppendix}%
+   \setcounter{section}{0}\renewcommand\thesection{\Alph{section}}}
+\newcommand\Appendix[2][?]{%   Complex form
+   \refstepcounter{section}%
+   \addcontentsline{toc}{appendix}{\protect\numberline{\appendixname~\thesection}#1}%
+   {\raggedleft\large\bfseries\appendixname\ \thesection\par \centering#2\par}%
+   \@afterheading\sectionmark{#1}\addvspace{\baselineskip}}
+\newcommand\sAppendix[1]{%           Simplified (starred) form
+  {\raggedleft\large\bfseries\appendixname\par \centering#1\par}%
+  \@afterheading\addvspace{\baselineskip}}
+\makeatother
+
+%StartShownPreambleCommands
+% Example needs commands introduced above!
+%StopShownPreambleCommands
+
+\begin{document}
+\appendix
+\section{The list of all commands}
+
+Then follows the text of the first section in
+the appendix. Some more text in the appendix.
+\end{document}

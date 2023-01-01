@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-33 on page I-279 in "Styling description-like lists".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{147.0pt}
+%StartShownPreambleCommands
+ \usepackage{enumitem}
+%StopShownPreambleCommands
+
+\begin{document}
+ \begin{description}[style=sameline]
+ \item[X]  Compare this text with that from the
+           previous example.
+ \end{description}
+ \begin{description}[style=nextline]
+ \item[Medium]          This text starts on a new line.
+ \item[A fairly long label --- so what happens now?]
+     It breaks and the item text starts on a new line.
+ \end{description}
+\end{document}

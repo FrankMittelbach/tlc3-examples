@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 10-13-15 on page II-126 in "tipa --- International Phonetic Alphabet symbols".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+
+\setlength\parskip{3pt}        % nicer display in book
+\renewcommand\rmdefault{cmr}   % book uses Times and Helvetica
+\renewcommand\sfdefault{cmss}
+\renewcommand\ttdefault{cmtt}
+
+%StartShownPreambleCommands
+\usepackage{tipa}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{IPA} \textrm{N\!o\`{\~*o}\~o \r*N\!o\^aP\~a} \par
+   \textsf{\*A) dOg, \*B) k\ae{}t, \*C) maUs}       \par
+   \texttt{*\|c{k}\r*mt\'om *bhr\'=at\=er}          \end{IPA}
+\end{document}

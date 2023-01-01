@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-10 on page I-263 in "enumitem --- Extended list environments".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+%StartShownPreambleCommands
+\usepackage{enumitem}
+\newlist{steps}{enumerate}{4}
+%StopShownPreambleCommands
+
+\begin{document}
+\noindent An example of a new list is \texttt{steps}:
+\begin{steps}[label=\arabic*:]
+\item Lists are declared with \verb=\newlist=.
+\item But this is not enough:
+  \begin{steps}[label=\alph*)]
+  \item as a minimum we need to define a \texttt{label}.
+  \item this is done here locally on each environment.
+  \end{steps}
+\item Usually, \verb=\setlist= is used for this.
+\end{steps}
+\end{document}

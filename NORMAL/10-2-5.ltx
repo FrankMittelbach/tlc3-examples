@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 10-2-5 on page II-24 in "Lucida fonts".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+
+  % use lualatex
+
+%StartShownPreambleCommands
+\usepackage{fontspec}
+%StopShownPreambleCommands
+
+\begin{document}
+  \LARGE
+\fontspec{Lucida Console DK}[]                    Q OIl 011 \par
+\fontspec{Lucida Console DK}[RawFeature=ss01]     Q OIl 011 \par
+\fontspec{Lucida Console DK}[Numbers=SlashedZero] Q OIl 011
+\end{document}

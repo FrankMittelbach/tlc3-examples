@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-3-30 on page II-501 in "biblatex's approach to author-date references".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+% Use biber program
+\setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage[style=authoryear,
+            maxcitenames=1]{biblatex}
+\addbibresource{tlc.bib}
+%StopShownPreambleCommands
+
+\begin{document}
+\textcite{LGC97}                                      \\
+\AtNextCite{\setcounter{minnames}{2}%
+            \setcounter{maxnames}{2}}\textcite{LGC97} \\
+\textcite{LGC97}                                      \\
+\AtNextCite{\setcounter{maxnames}{99}}\textcite{LGC97}
+\end{document}

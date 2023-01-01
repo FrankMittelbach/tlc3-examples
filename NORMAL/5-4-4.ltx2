@@ -1,0 +1,37 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 5-4-4 on page I-400 in "fancyhdr --- Customizing page styles".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{109.80112pt}
+\setlength\textheight{6\baselineskip}
+\addtolength\headsep{-12pt}  % shortened for the book
+\addtolength\footskip{-12pt} % shortened for the book
+\sloppy                      % as these examples are so small
+
+%StartShownPreambleCommands
+\usepackage{kantlipsum,fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} \fancyfoot{}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[LO,RE]{Memo}
+\fancyfoot[L]{Author: Frank}
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+%StopShownPreambleCommands
+
+\begin{document}
+\kant[8]
+\end{document}

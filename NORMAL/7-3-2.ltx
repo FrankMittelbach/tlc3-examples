@@ -1,0 +1,64 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-3-2 on page I-531 in "float --- Creating new float types".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+\setcounter{page}{1}
+\setlength\textheight{11.2\baselineskip}
+\addtolength\textwidth{-7pt}               % account for boxed float sticking out into margin
+\setlength\textfloatsep{6pt}
+\setlength\intextsep{6pt}
+% for the book examples we shorten the
+% vertical spaces and use a smaller font for
+% the heading
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1ex \@plus-1ex \@minus-.2ex}%
+                                    {.3ex}%
+                                    {\normalfont\large\bfseries}}
+\makeatother
+\usepackage{float}
+\floatstyle{boxed}
+\newfloat{Series}{b}{los}[section]
+\floatstyle{ruled}
+\newfloat{XML}{H}{lox}
+\floatname{XML}{XML Listing}
+\newcommand\xmlcode[1]{\texttt{#1}}
+
+%StartShownPreambleCommands
+\usepackage{lipsum,float}
+% Float types Series and XML and command
+% \xmlcode as defined in previous example
+%StopShownPreambleCommands
+
+\begin{document}
+\listof{XML}{XML Listings}
+\listof{Series}{List of Series}
+\section{New float environments}
+\lipsum[1][1]
+ \begin{Series} \caption{Euler's constant}
+  \[ \mathrm{e}
+     = 1 + \sum^\infty_{k=1} \frac{1}{k!}\]
+\end{Series}
+\empty
+\begin{XML} \caption{A simple XML file}
+ \xmlcode{<XMLphrase>Great fun!</XMLphrase>}
+\end{XML}
+\lipsum[1][2]
+\begin{XML} \caption{Processing instruction}
+ \xmlcode{<?xml version=''1.0''?>} \end{XML}
+\lipsum[2]
+\end{document}

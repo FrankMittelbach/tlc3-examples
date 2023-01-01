@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-3-12 on page I-341 in "paracol --- Several text streams aligned".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{141.0pt}
+\sloppy
+%StartShownPreambleCommands
+\usepackage{paracol}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{paracol}{4}   \setlength\parindent{0pt}
+ Same \switchcolumn line \switchcolumn here \switchcolumn[0]
+ But \switchcolumn*[\tiny sync after first column]
+                    no \switchcolumn longer \switchcolumn*
+ Why \switchcolumn[1] back? \switchcolumn* Explain!
+\end{paracol}
+\end{document}

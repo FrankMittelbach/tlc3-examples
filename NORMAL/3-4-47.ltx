@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-4-47 on page I-204 in "uri --- Typesetting various types of \acsp {uri}".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{153.0pt}
+
+  \setlength\parindent{0pt}
+  \sloppy
+
+  \usepackage{color} % for the book we need to load this explicitly because of
+                     % the spotcolors we use (otherwise the blue will not be in
+                     % the spotcolor but a ``real blue'' and thus gray)
+
+%StartShownPreambleCommands
+\usepackage[colorlinks,urlcolor=blue]{hyperref}
+\usepackage{uri}  \urlstyle{same}
+%StopShownPreambleCommands
+
+\begin{document}
+Website:          \citeurl{https://latex-project.org}.
+Report errors to: \mailto[Website error]
+                         {webmaster@latex-project.org}
+\end{document}

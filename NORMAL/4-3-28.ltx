@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-3-28 on page I-353 in "Manually breaking columns".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+
+   \setlength\parskip{3pt plus 4pt} % allow for enough stretch so that \columnbreak[3] would work
+
+%StartShownPreambleCommands
+\usepackage{multicol,ragged2e}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{multicols}{2}  \RaggedRight
+  A short first para.\par    Here is some text to
+  be distributed over several \columnbreak columns.
+  With the help of \verb=\columnbreak= you can
+  force a column break at a specific point.\par
+  Another short first para.
+\end{multicols}
+\end{document}

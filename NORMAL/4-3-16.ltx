@@ -1,0 +1,41 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-3-16 on page I-344 in "paracol --- Several text streams aligned".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+  % We have to repeat the columncolor setting after colorspace  and the stopcolor was loaded
+  % in the book version. We therefore need this slightly odd repeat here:
+
+  \AtBeginDocument{\columncolor{blue}[0]}
+
+%StartShownPreambleCommands
+\usepackage{xcolor,paracol} \columncolor{blue}[0]
+\DeclareDocumentEnvironment{displayparacol}{mO{}}
+        {\begin{paracol}{#1}[\addvspace{\topsep}#2]}
+        {\end{paracol}\addvspace{\topsep}}
+%StopShownPreambleCommands
+
+\begin{document}
+\noindent Some more typesetting terms \ldots
+\begin{displayparacol}{2}
+\begin{leftcolumn}  body text     \end{leftcolumn}
+\begin{rightcolumn} Mengentext    \end{rightcolumn}
+\begin{leftcolumn*} em-dash       \end{leftcolumn*}
+\begin{rightcolumn} Geviertstrich \end{rightcolumn}
+\end{displayparacol}
+\noindent \ldots{} this time only English and German.
+\end{document}

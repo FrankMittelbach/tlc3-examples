@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-6-1 on page I-468 in "Colored table rules".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{87.0pt}
+%StartShownPreambleCommands
+\usepackage{colortbl,hhline} \setlength\arrayrulewidth{1pt}
+\newcolumntype{B}{!{\color{blue}\vline}}
+\newcommand\blueline{\arrayrulecolor{blue}\hline\arrayrulecolor{black}}
+\newcommand\bluecline[1]{\arrayrulecolor{blue}\cline{#1}%
+                                              \arrayrulecolor{black}}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabular}{cBc|c}       \hline
+   A  & B  & C  \\ \cline{1-1}\bluecline{2-3}
+   X  & Y  & Z  \\ \blueline
+  100 & 10 & 1  \\ \hhline{= >{\arrayrulecolor{blue}}:=
+                             >{\doublerulesepcolor{yellow}}=}
+\end{tabular}
+\end{document}

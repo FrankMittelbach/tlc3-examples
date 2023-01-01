@@ -1,0 +1,30 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-4-26 on page I-195 in "microtype \& soul --- Letterspacing or stealing sheep".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+\hyphenation{let-ter-space}
+%StartShownPreambleCommands
+\usepackage{soul,color,microtype}
+%StopShownPreambleCommands
+
+\begin{document}
+With \texttt{microtype} you can \textls{also
+letterspace \hl{words} and \hl{phrases}} while the
+highlighting is done with \texttt{soul}. Capitals
+or small capitals are then \textls{\scshape
+\ul{Letter\-}\st{Spaced}} like this.
+\end{document}

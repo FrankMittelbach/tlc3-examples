@@ -1,0 +1,69 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 12-4-4 on page II-258 in "Adjusting the formula style".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{351.0pt}
+% typeset with lualatex
+%StartShownPreambleCommands
+\usepackage[math-style=ISO,bold-style=ISO]{unicode-math}
+\usepackage{array,booktabs}
+%StopShownPreambleCommands
+
+\begin{document}
+\small
+\begin{tabular}{l@{\enspace$\to$\quad}>$l<$@{\enspace}>$l<$}
+  \toprule
+    \multicolumn{1}{l}{\ttfamily math-style}
+  & \multicolumn{1}{c}{\itshape Latin}
+  & \multicolumn{1}{c}{\itshape Greek}
+  \\
+  \midrule
+  \texttt{TeX}     &       a,       b,       X,       Y
+  &        \alpha,       \beta,\symup \Gamma,\symup \Omega
+  \\
+  \texttt{ISO}     &       a,       b,       X,       Y
+  &        \alpha,       \beta,       \Gamma,       \Omega
+  \\
+  \texttt{french}  &       a,       b,\symup X,\symup Y
+  & \symup \alpha,\symup \beta,\symup \Gamma,\symup \Omega
+  \\
+  \texttt{upright} &\symup a,\symup b,\symup X,\symup Y
+  & \symup \alpha,\symup \beta,\symup \Gamma,\symup \Omega
+  \\
+  \bottomrule
+\end{tabular}
+\hfill
+\begin{tabular}{>{\ttfamily}l@{\enspace$\to$\quad}>$l<$@{\enspace}>$l<$}
+  \toprule
+    \multicolumn{1}{l}{\ttfamily bold-style}
+  & \multicolumn{1}{c}{\itshape Latin}
+  & \multicolumn{1}{c}{\itshape Greek}
+  \\
+  \midrule
+  TeX     &\symbfup a,\symbfup b,\symbfup X,\symbfup Y
+  &\symbf  \alpha,\symbf \beta,\symbfup \Gamma,\symbfup \Omega
+  \\
+  ISO     &\symbf a,\symbf b,\symbf X,\symbf Y
+  &\symbf  \alpha,\symbf \beta,\symbf \Gamma,\symbf \Omega \hspace{-1em}  % hide width
+  \\
+  \multicolumn{3}{c}{}
+  \\
+  upright &\symbfup a,\symbfup b,\symbfup X,\symbfup Y
+  & \symbfup \alpha,\symbfup \beta,\symbfup \Gamma,\symbfup \Omega
+  \\
+  \bottomrule
+\end{tabular}
+\end{document}

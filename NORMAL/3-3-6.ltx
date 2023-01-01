@@ -1,0 +1,29 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-3-6 on page I-158 in "Indefinite forms".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+\setlength\parindent{0pt}
+%StartShownPreambleCommands
+\usepackage{acro}
+\DeclareAcronym{ufo}{short=UFO\@, long=unidentified
+    flying object, long-indefinite = an}
+%StopShownPreambleCommands
+
+\begin{document}
+1 \Iac{ufo}, 2 \iac{ufo}, 3 \iacl{ufo}, 4 \iacs{ufo},
+5 \iacf{ufo}
+\end{document}

@@ -1,0 +1,55 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-53 on page I-294 in "typed-checklist --- Developing and maintaining checklists".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+
+  \usepackage{microtype} % to improve h&j
+
+  \setcounter{page}{1}
+
+  \usepackage{enumitem}
+  \setlist{noitemsep}
+
+  \setlength\marginparwidth{35pt}
+  \addtolength\textwidth{-2\marginparwidth}
+  \addtolength\textwidth{-2\marginparsep}
+
+  \setcounter{page}{1}
+
+%StartShownPreambleCommands
+\usepackage{typed-checklist}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{CheckList}[output-dates=m/d/y]{Goal}
+ \Goal[label=home]{open}
+      {Our home is renovated}
+ \begin{CheckList}{Task}
+  \Task[deadline=1.8.2018]{done}{check rooms}
+  \Task[label=decide,who=Christel,
+        deadline=1.9.2018]{started}
+                      {decide color of paint}
+  \Task[who=Frank]{open}{buy paint}
+  \Task[who=?]{open}{paint the rooms}
+ \end{CheckList}
+ \Goal[who=Frank,deadline=1.1.2025]{open}
+      {I can play bass well}
+\end{CheckList}
+Remember that \ref{decide} is critical for
+achieving \ref{home}.
+\end{document}

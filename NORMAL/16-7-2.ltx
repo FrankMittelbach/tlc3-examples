@@ -1,0 +1,44 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-7-2 on page II-545 in "Citing with biblatex".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{147.0pt}
+
+  %  Use biber program
+
+  \setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage[ngerman,french,english]{babel}
+\usepackage{biblatex}
+\addbibresource{tlc.bib} \addbibresource{tlc-ex.bib}
+%StopShownPreambleCommands
+
+\begin{document}
+\cite[1]{G-G} \cite[1-4]{G-G} \cite[1,3,5]{G-G}\\
+\cite[IV]{G-G} \cite[5\psq]{G-G} \cite[\nopp 25]{G-G}\\
+\cite[\pno~27a]{G-G} \cite[especially \pnfmt{27-34}]{G-G}
+
+\bigskip\selectlanguage{french}     % French typography
+\cite[1]{G-G}\\ \cite[1-4]{G-G}     % rules
+
+\bigskip\selectlanguage{ngerman}    % German typography
+\cite[1-4]{G-G}\\ \cite[5\psq]{G-G} % rules
+
+\bigskip
+\cite[33]{pagination}\\
+\cite[besonders \pnfmt{27-34}]{pagination}
+\end{document}

@@ -1,0 +1,54 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-2-43 on page I-322 in "Extension to inline verbatim by fvextra".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+  \setlength\parindent{0pt}
+
+  \setlength\marginparwidth{28pt}
+  \addtolength\textwidth{-\marginparwidth} % make room on the page
+  \addtolength\textwidth{-\marginparsep}   % in the book example
+
+  % small headings for the example
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}%
+    {.5ex}%
+    {\normalfont\large\bfseries}}
+  \renewcommand\subsection{\@startsection {subsection}{2}{\z@}%
+    {-1.ex \@plus -.5ex \@minus -.2ex}%
+    {.3ex}%
+    {\normalfont\bfseries}}
+  \makeatother
+
+  \usepackage{microtype} % to improve h&j in example
+
+%StartShownPreambleCommands
+\usepackage{fvextra}
+%StopShownPreambleCommands
+
+\begin{document}
+\tableofcontents \medskip
+\section{\EscVerb*{Space  \\danger \ \{\%}}
+\EscVerb{\\EscVerb*{...}} is not dangerous
+and can\marginpar{\EscVerb[fontsize=\tiny]
+                          {No \\danger \#}}
+be used anywhere.
+\subsection{\Verb*{Space   \danger  {}}}
+And this works with limitations in
+\textsf{fvextra}.
+\end{document}

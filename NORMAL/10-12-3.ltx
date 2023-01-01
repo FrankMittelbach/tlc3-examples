@@ -1,0 +1,42 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 10-12-3 on page II-112 in "Monospaced fonts".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{348.0pt}
+
+  % use lualatex
+
+  \usepackage{fontspec,xcolor}
+  \setmonofont{Lucida Grande Mono DK}
+
+  \newcommand\bl{\color{blue}}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+  \begin{quote}
+    \noindent
+     \linepenalty=500
+     \rightskip0pc plus2em
+     \fontsize{9}{12}\ttfamily
+
+   The quote ``Хороший \textbf{композитор} не подражает; он \textit{ворует}''
+   is attributed to Igor Stravinsky (\textsc{\bl Игорь Стравинский}).
+   \textemdash{}~See pages~21--24.
+  \end{quote}
+\end{document}

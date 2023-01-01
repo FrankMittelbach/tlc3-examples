@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-50 on page I-292 in "tasks --- Making horizontally oriented lists".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{177.0pt}
+\sloppy
+
+%StartShownPreambleCommands
+\usepackage{amssymb,tasks}
+\NewTasksEnvironment[label=$\square$,
+    item-format=\raggedright]{multiq}[\quest](2)
+%StopShownPreambleCommands
+
+\begin{document}
+Text before the environment \ldots
+\begin{multiq}[after-skip=2ex]
+  \quest This? \quest Or that? \quest Or this one?
+  \quest Or perhaps that one after all?
+\end{multiq}
+Text after the environment to show the skip.
+\end{document}

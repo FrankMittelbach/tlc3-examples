@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-9-8 on page I-503 in "Spanning cells".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+
+%StartShownPreambleCommands
+\usepackage{keyvaltable,Alegreya,AlegreyaSans}
+\NewKeyValTable[headformat=\sffamily]{MultiCol}
+   { penny: align=c|, format=\bfseries; euro: align=l|; cent: }
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{KeyValTable}{MultiCol}
+  \Row{euro=\multicolumn{1}{r|}{2}, cent=3, penny=1}
+  \Row[format!=\sffamily]{penny=1, cent=3, euro=2}
+  \Row{penny=1, euro=\multicolumn{2}{c}{\color{blue}2+3}}
+  \Row{cent=3, penny=\multicolumn{2}{c|}{1+2}}
+  \Row[format=\itshape]{penny=\multicolumn{3}{c}{1+2+3}}
+  \Row{cent=3, euro=2, penny=1}
+\end{KeyValTable}
+\end{document}

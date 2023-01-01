@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-1-8 on page II-630 in "Defining simple environments".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+%StartShownPreambleCommands
+\newenvironment{Abstract}
+  {\begin{center}\normalfont\bfseries Abstract%
+   \end{center}\begin{quote}}{\end{quote}\par}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{Abstract}
+ This abstract explains the approach used
+ to solve the problems at hand.
+\end{Abstract}
+Some text following the abstract. Some text
+following the abstract. And some more.
+\end{document}

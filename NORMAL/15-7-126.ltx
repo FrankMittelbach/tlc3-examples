@@ -1,0 +1,40 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 15-7-126 on page II-464 in "\protect \hspace  *{-1em}biblatex-software".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{328.0pt}
+
+%%  Use biber program
+
+  \usepackage{xcolor}
+  \setlength\parindent{0pt}
+  \setlength\textheight{6\baselineskip}
+  \usepackage[datamodel=software,style=authoryear]{biblatex}
+  \usepackage{software-biblatex}
+  \addbibresource{tlc-biblatex-special.bib}
+
+% bug fix:
+  \usepackage{hyperref}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\let\normalsize\footnotesize \normalsize
+\textcolor{blue}{\cite{delebecque:hal-02090402-condensed}}
+\printbibliography[heading=none]
+\end{document}

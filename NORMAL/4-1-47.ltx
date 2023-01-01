@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-47 on page I-290 in "tasks --- Making horizontally oriented lists".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+\sloppy
+
+  % we change some defaults for this example, so that it fits
+  % into the available space -- so a bit of a fake really
+  \usepackage{tasks}
+  \settasks{label-width=1.5em,label-offset=0pt,
+    item-indent=1.5em,label-align=center}
+
+%StartShownPreambleCommands
+\usepackage{tasks}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tasks}[style=itemize,after-item-skip=-\parsep](3)
+  \task One \task two  \task[!!] Go
+  \task \dotfill \task* \dotfill
+\end{tasks}
+\begin{tasks}[style=enumerate,after-item-skip=0pt](3)
+  \task Zero \task isn't \task enough
+  \task! to remove the separation!           \end{tasks}
+\end{document}

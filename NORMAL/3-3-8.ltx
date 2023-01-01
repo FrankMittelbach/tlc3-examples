@@ -1,0 +1,41 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-3-8 on page I-159 in "Citations for acronyms".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+% small headings for the example
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.25ex \@plus-1ex \@minus-.2ex}%
+                                    {.5ex}%
+                                    {\normalfont\normalsize\bfseries}}
+\makeatother
+
+\setlength\parindent{0pt}
+
+\bibliographystyle{plain}
+%StartShownPreambleCommands
+\usepackage{acro} \acsetup{cite/display=all}
+\DeclareAcronym{tb}{short = TB-tricks,
+  long = Dirty Tricks in the \TeX{} Book,
+  first-style = long,
+  cite = [App.\,D]{Knuth-CT-a} }
+%StopShownPreambleCommands
+
+\begin{document}
+\Ac{tb} and later refer to \ac{tb}.
+\bibliography{tlc}
+\end{document}

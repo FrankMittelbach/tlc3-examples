@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-2-28 on page I-312 in "Customization keys for typesetting".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+%StartShownPreambleCommands
+\usepackage{xcolor,fvextra}   \fvset{tabcolor=blue}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{Verbatim}
+123456789012345678901234567890
+Two	default	tabs
+\end{Verbatim}
+\begin{Verbatim}[obeytabs,showtabs]
+Three	visible	tab	chars
+\end{Verbatim}
+\begin{Verbatim}[obeytabs,showtabs,tab=$\bullet$]
+Two	new	tabs
+\end{Verbatim}
+\begin{Verbatim}[obeytabs,tabsize=3,showtabs]
+Using	a	special tab	size
+\end{Verbatim}
+\end{document}

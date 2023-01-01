@@ -1,0 +1,29 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-3-21 on page I-169 in "Basic number and unit formatting".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+\setlength\parindent{0pt}
+%StartShownPreambleCommands
+\usepackage{siunitx}
+%StopShownPreambleCommands
+
+\begin{document}
+\numlist{2;3;5;7;11} are prime. \numlist{6;28} are
+perfect numbers, e.g., $6=\numproduct{1x2x3}=1+2+3$.
+There are $25$ prime and $2$ perfect numbers in the
+range from \numrange{2}{100}.
+\end{document}

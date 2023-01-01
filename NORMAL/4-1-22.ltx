@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-22 on page I-273 in "The placement of the item label or item text".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+\sloppy
+%StartShownPreambleCommands
+ \usepackage{enumitem}
+%StopShownPreambleCommands
+
+\begin{document}
+ \begin{description}[leftmargin=*,widest=Short label,nosep]
+   \item[Short label]
+     and some text to fill more than one line.
+   \item[A much longer label]
+     and some text to fill more than one line.
+ \end{description}
+ \begin{itemize}[leftmargin=*,widest=\labelitemi,nosep]
+   \item      Bullet flush left.
+   \item[---] Dash now protruding.
+ \end{itemize}
+\end{document}

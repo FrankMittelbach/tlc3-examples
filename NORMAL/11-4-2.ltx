@@ -1,0 +1,40 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-4-2 on page II-163 in "amsmath, mathtools, extarrows --- Decorated arrows".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{153.0pt}
+
+  % Shorten the vertical size of the example ...
+  \AtBeginDocument{%
+    \setlength\abovedisplayskip{.8\abovedisplayskip}%
+    \setlength\belowdisplayskip{.8\belowdisplayskip}%
+  }
+
+%StartShownPreambleCommands
+\usepackage{mathtools}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{gather}
+  A \xLeftarrow{\ x} B \xRightarrow[y\ ]{}
+                   C \xLeftrightarrow[y]{\ x\ } D    \\
+  A \xhookleftarrow{x} B \xhookrightarrow[bbb]{a} C  \\
+  \xleftharpoondown{} \xleftharpoonup{}
+  \xleftrightharpoons{xxx} \xrightleftharpoons[yy]{}
+  \xrightharpoondown{} \xrightharpoonup{}            \\
+  \xmapsto{x>0} A \xleftrightarrow[\text{letters}]{} Z
+\end{gather}
+\end{document}

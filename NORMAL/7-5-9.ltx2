@@ -1,0 +1,52 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-5-9 on page I-567 in "Double-page floats".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{88.2009pt}
+
+  \setcounter{page}{1}
+  %% drop one page in example
+
+  \usepackage[paperwidth=110pt,paperheight=155pt,margin=20pt,top=18pt,headsep=8pt]{geometry}
+
+  \setlength\textfloatsep{15pt plus 4pt}
+
+  % We add a few additional paragraphs after the figure without showing them
+  % in book output. They will appear on page 1 and 4 if the example is run
+  % separately. To hide them they are inserted with \AtEndDocument.
+
+  \AtEndDocument{
+    Numbers indicating full paragraphs: 1\par
+    2\par 3\par 4\par 5\par 6\par 7\par 8\par
+    9\par 10\par 11\par 12\par 13\par 14
+  }
+
+
+%StartShownPreambleCommands
+\usepackage{hvfloat} \pagestyle{myheadings}
+%StopShownPreambleCommands
+
+\begin{document}
+\markboth{running header}{running header}
+First and last page not shown \ldots
+
+\hvFloat[doublePage,bindCorr=3mm]{figure}
+ {\includegraphics[height=.4\textheight,
+    width=2.3\textwidth]{cat}}{A cat}{fig:1}
+
+Several more paragraphs ending up on pages 1
+(before the figure) and 4 (after it) ...
+\end{document}

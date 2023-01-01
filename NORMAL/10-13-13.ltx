@@ -1,0 +1,30 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 10-13-13 on page II-124 in "fontawesome5 --- Accessing Font Awesome icons".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{51.0pt}
+
+  \setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\newcommand\fasym[3][solid]{{\usefont{U}{fontawesomefree#2}{#1}{n}\symbol{#3}}}
+\newcommand\fabrand[2]{{\usefont{U}{fontawesomebrands#1}{solid}{n}\symbol{#2}}}
+%StopShownPreambleCommands
+
+\begin{document}
+\fasym[regular]{0}{"DA} \fasym{1}{"DD} \fasym{2}{"D6} \fasym[regular]{2}{"D6}
+\fabrand{0}{"21}        \fabrand{0}{"71}   \fabrand{1}{"4A}  \fabrand{1}{"98}
+\end{document}

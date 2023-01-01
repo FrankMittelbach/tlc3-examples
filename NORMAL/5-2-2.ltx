@@ -1,0 +1,50 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 5-2-2 on page I-373 in "layouts --- Displaying your layout".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{255.0pt}
+
+%StartShownPreambleCommands
+\usepackage{calc,layouts}
+%StopShownPreambleCommands
+
+\begin{document}
+\setlayoutscale{0.3}
+\currentpage
+\oddpagelayoutfalse
+\twocolumnlayouttrue
+
+\trypaperwidth{11in}
+\trypaperheight{8.5in}
+\trytextwidth{500pt}
+\trytextheight{\topskip
+      + 30\baselineskip}
+\trycolumnsep{120pt}
+\trycolumnseprule{3pt}
+
+\tryheadheight{12pt}
+\tryheadsep{18pt}
+\tryfootskip{40pt}
+
+\tryevensidemargin{120pt}
+
+\setfootbox{12pt}{24pt}
+
+\setlabelfont{\tiny}
+\drawdimensionsfalse
+\printheadingsfalse
+\pagedesign
+\end{document}

@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-3-34 on page I-358 in "Balancing control".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+
+  \addtolength\columnsep{-2pt}
+
+  \tolerance=3000
+
+%StartShownPreambleCommands
+\usepackage{multicol,ragged2e}
+\setcounter{minrows}{1}  % this is the default!
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{multicols}{3}
+  \RaggedRight
+  \ldots\ that's not enough for balancing!
+\end{multicols}
+The above looks like a line with gaps and not
+like three balanced columns. However, whatever
+value you use for \texttt{minrows}, it will
+look ugly with this input.
+\end{document}

@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-3-34 on page I-175 in "Customizing units and quantities".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+\setlength\parindent{0pt}
+%StartShownPreambleCommands
+\usepackage{siunitx,xfrac}
+\newcommand\sample[1]{#1: \unit{\joule\per\mega\mole\per\K}
+   \hfill \qty{5.3}{\kilo\ampere\per\mole\deci\s} \\[5pt]}
+%StopShownPreambleCommands
+
+\begin{document}
+                                        \sample{A}
+\sisetup{per-mode=power-positive-first} \sample{B}
+\sisetup{per-mode=fraction}             \sample{C}
+\sisetup{fraction-command=\sfrac}       \sample{D}
+\sisetup{inter-unit-product=\cdot}      \sample{E}
+\sisetup{per-mode=symbol}               \sample{F}
+\sisetup{per-mode=repeated-symbol}      \sample{G}
+\sisetup{prefix-mode=extract-exponent}  \sample{H}
+\end{document}

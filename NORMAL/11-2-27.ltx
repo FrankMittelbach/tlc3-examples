@@ -1,0 +1,41 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-2-27 on page II-145 in "Vertical space in and around displays".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+  % Shorten the vertical size of the example ...
+  \AtBeginDocument{%
+    \setlength\abovedisplayskip{.7\abovedisplayskip}%
+    \setlength\belowdisplayskip{.7\belowdisplayskip}%
+  }
+
+%StartShownPreambleCommands
+\usepackage{mathtools}
+%StopShownPreambleCommands
+
+\begin{document}
+A \texttt{gather} with normal spacing:
+\begin{gather}
+  A=\sum_{i=1}^n x_i \\ B = x_1 + x_2 + x_3
+\end{gather}
+And now spread farther apart:
+\begin{spreadlines}{15pt}
+  \begin{gather}
+    A=\sum_{i=1}^n x_i \\ B = x_1 + x_2 + x_3
+  \end{gather}
+\end{spreadlines}
+\end{document}

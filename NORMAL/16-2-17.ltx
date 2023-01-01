@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-2-17 on page II-483 in "Citations with superscript numbers".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+%% Some settings for the look of the example in the book:
+\sloppy
+\setlength\parindent{0pt}
+%% Do not show the bibliography itself in the example,
+%% so put it on a separate page:
+\AtEndDocument{\newpage\bibliography{tlc}}
+
+%StartShownPreambleCommands
+\usepackage[super]{cite}    \bibliographystyle{plain}
+%StopShownPreambleCommands
+
+\begin{document}
+For details see ``The \TeX book'' \cite{Knuth-CT-a}.
+But wanted is ``The \TeX book.'' \cite{Knuth-CT-a}
+\end{document}

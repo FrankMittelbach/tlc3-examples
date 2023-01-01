@@ -1,0 +1,29 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-2-5 on page I-440 in "Examples of preamble specifiers".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+%StartShownPreambleCommands
+\usepackage{array}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabular}{|b{1pc}|m{1pc}|p{1pc}|l|}
+\hline  \vspace{0pt} a a a a a a  & b b b b &
+        c c c c c c c c  & d\llap{\rule{80pt}{0.4pt}} \\
+\hline
+\end{tabular}
+\end{document}

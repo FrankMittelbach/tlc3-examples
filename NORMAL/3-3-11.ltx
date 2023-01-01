@@ -1,0 +1,42 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-3-11 on page I-161 in "Formatting acronym texts".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+\setlength\parindent{0pt}
+\setlength\textheight{4.5\baselineskip}
+\usepackage[english,ngerman]{babel}
+\newcommand\textlsc[1]{\textsc{\MakeLowercase{#1}}}
+%
+% The acro package is loaded here to set up the declarations
+%
+% It is (unnecessarily) loaded again in the section that is shown
+% in the book
+%
+\usepackage{acro}  \acsetup{format/short=\textlsc, format/foreign=\itshape}
+\DeclareAcronym{cd}{short=CD, long=Compact Disc}
+\DeclareAcronym{lp}{short=LP, long=Langspielplatte,
+ foreign=Long Playing Vinyl Record, foreign-babel=english}
+%StartShownPreambleCommands
+\usepackage{acro} \acsetup{first-style=short-long}
+%  Acronym declarations as in previous example except ...
+\DeclareAcronym{etc}{short = etc.\@, long=et cetera,
+                     short-format=, first-style=short}
+%StopShownPreambleCommands
+
+\begin{document}
+\ac{cd}, \ac{lp}, \ac{etc}
+\end{document}

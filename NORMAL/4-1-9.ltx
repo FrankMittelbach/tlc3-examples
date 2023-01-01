@@ -1,0 +1,40 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-9 on page I-262 in "enumitem --- Extended list environments".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{129.0pt}
+
+  \usepackage{microtype} % to improve h&j
+
+  \sloppy % but we still need sloppy in such a narrow measure
+
+%StartShownPreambleCommands
+\usepackage[inline]{enumitem}
+%StopShownPreambleCommands
+
+\begin{document}
+We may want to enumerate items within a paragraph to
+\begin{enumerate*}[label=(\alph*)]
+  \item save space  \item make a less prominent statement,
+  or \item for some other reason.  \end{enumerate*}
+
+As before we can continue the list
+\begin{enumerate*}[resume*]
+ \item with the key \texttt{resume} \item or with
+ \texttt{resume*} \item or apply some other  \par  change.
+\end{enumerate*}
+\textbf{Paragraph breaks are ignored in such lists!}
+\end{document}

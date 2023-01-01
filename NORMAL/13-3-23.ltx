@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 13-3-23 on page II-318 in "Numbering".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+
+  \setlength\parskip{1pt}   % example looks a bit odd otherwise in short measure
+
+%StartShownPreambleCommands
+\usepackage{garamondlibre} \linespread{1.1}
+\usepackage[english,greek]{babel}
+\newcommand\eng[1]{\foreignlanguage{english}{#1}}
+%StopShownPreambleCommands
+
+\begin{document}
+123456 \eng{in Greek notation:} \greeknumeral{123456} \par
+987654 \eng{in Greek notation:} \Greeknumeral{987654}
+\end{document}

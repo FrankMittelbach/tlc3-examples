@@ -1,0 +1,44 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-5-6 on page II-183 in "Horizontal extensions in standard \LaTeX {}".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{171.0pt}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\[ \widehat   {\psi_\delta(t) E_t h} \neq
+   \widetilde {\psi_\Delta(t) E_t h}
+\]
+\[ \overline  {\psi_\delta(t) E_t h} \approx
+   \underline {\psi_\Delta(t) E_t h}
+\]
+\[ \overrightarrow {\psi_\delta(t) E_t h} \cong
+   \overleftarrow  {\psi_\Delta(t) E_t h}
+\]
+Combinations are possible too:
+\[ \overline  {\overline {\psi_\delta(t) E_t h}}
+   \leq
+   \underline {\overrightarrow
+                         {\psi_\Delta(t) E_t h}}
+   \]
+Braces have extra possibilities as explained below.
+\[ \overbrace  {\psi_\delta(t) E_t h} \doteq
+   \underbrace {\psi_\Delta(t) E_t h}
+\]
+\end{document}

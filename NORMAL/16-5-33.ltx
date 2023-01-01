@@ -1,0 +1,46 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-5-33 on page II-524 in "Author-date citation support".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+\setlength\parindent{0pt}
+
+%% Apply the jurabib defaults we use in the book (documented at the beginning of the section)
+\AddToHook{package/jurabib/after}{\jurabibsetup{titleformat=colonsep,commabeforerest=true}}
+
+%% Do not show the bibliography itself in the example,
+%% so put it on a separate page:
+\AtEndDocument{\newpage\bibliography{tlc}}
+
+%StartShownPreambleCommands
+\usepackage{jurabib}
+\bibliographystyle{jurabib}
+%StopShownPreambleCommands
+
+\begin{document}
+\citet{LWC99}                       \\
+\citet[chap.~2]{LWC99}              \\
+\citet[see][chap.~2]{LWC99}         \\
+pre-note only: \citet[see][]{LWC99} \\[5pt]
+\citep{LWC99}                       \\
+\citep[chap.~2]{LWC99}              \\
+\citep[see][chap.~2]{LWC99}         \\
+pre-note only: \citep[see][]{LWC99} \\[5pt]
+\citealp{Knuth-CT-a}                \\
+\citeauthor{Knuth-CT-a}             \\
+\citeyearpar{Knuth-CT-a}
+\end{document}

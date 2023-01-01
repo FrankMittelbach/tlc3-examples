@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-4-43 on page I-202 in "Linking \acsp {url} to external resources".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{177.0pt}
+
+  \usepackage{color} % for the book we need to load this explicitly because of
+                     % the spotcolors we use (otherwise the blue will not be in
+                     % the spotcolor but a ``real blue'' and thus gray)
+
+
+%StartShownPreambleCommands
+\usepackage[colorlinks,urlcolor=blue]{hyperref}
+%StopShownPreambleCommands
+
+\begin{document}
+The \LaTeX\ project web site is: \url{https://
+   www . latex-project . org}. However, writing
+\urlstyle{sf}\url{latex-project.org} would produce
+a link to the local file \path{./latex-project.org}
+which may or may not be right.
+\end{document}

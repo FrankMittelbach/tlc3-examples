@@ -1,0 +1,41 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-4-5 on page I-82 in "Providing your own reference commands".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{88.2009pt}
+\setlength\textheight{10\baselineskip}
+\sloppy
+\pagestyle{origplain}
+
+%StartShownPreambleCommands
+\usepackage[nospace]{varioref}
+\newcommand\veqns[2]{the equation%
+  \vpagerefcompare{#1}{#2}%
+    {s (\ref{#1})}%
+    {  (\ref{#1}) \vpageref{#1}}%
+  \space and (\ref{#2}) \vpageref{#2}}
+%StopShownPreambleCommands
+
+\begin{document}
+Test: \veqns{A}{B}. \par Test: \veqns{A}{C}.
+\begin{equation} a=b \label{A}\end{equation}
+\begin{equation} b=c \label{B}\end{equation}
+\newpage
+Test: \veqns{A}{B}. \par Test: \veqns{A}{C}.
+\par  We force eq.~\ref{C} to the next page!
+\newpage % for eq. to next page
+\begin{equation} c=a \label{C}\end{equation}
+\end{document}

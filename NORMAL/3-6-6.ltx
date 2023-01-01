@@ -1,0 +1,41 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-6-6 on page I-243 in "fixme --- A slightly different approach to todos".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{255.0pt}
+
+  \setlength\marginparwidth{60pt}
+  \addtolength\textwidth{-\marginparwidth}   % make room on the page
+  \addtolength\textwidth{-2\marginparsep}    % in the book example
+% small headings for the example
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.25ex \@plus-1ex \@minus-.2ex}%
+                                    {.5ex}%
+                                    {\normalfont\large\bfseries}}
+\makeatother
+
+%StartShownPreambleCommands
+\usepackage[draft]{fixme}
+%StopShownPreambleCommands
+
+\begin{document}
+These\fxnote{Make nicer example}
+are real notes from early drafts of
+this section.\fxwarning{Discuss the
+  available keys}
+\listoffixmes
+\end{document}

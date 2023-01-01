@@ -1,0 +1,50 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-2-10 on page II-655 in "Vertical space".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+\setlength\textheight{16\baselineskip}
+\addtolength\textwidth{-25pt}
+% Next definitions are only to squeeze example
+% into the book, so this is all faked
+\renewcommand\normalsize{\fontsize{6}{8}\selectfont}
+\renewcommand\LARGE{\fontsize{10}{12}\selectfont}
+\setlength\topsep{.2\topsep}
+\newsavebox\titlebox
+\renewenvironment{titlepage}{\begin{lrbox}{\titlebox}%
+ \begin{minipage}[c][.98\textheight][s]{.9\linewidth}}
+ {\end{minipage}\end{lrbox}\noindent\fbox{\usebox{\titlebox}}}
+
+%StartShownPreambleCommands
+\newcommand\HR{\noindent\rule{\linewidth}{1.5pt}}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{titlepage}
+  \vspace*{\stretch{1}}
+  \HR
+  \begin{flushright}
+    \LARGE   Geoffrey Chaucer  \\
+            The Canterbury Tales
+  \end{flushright}
+  \HR
+  \vspace*{\stretch{2}}
+  \begin{center}
+    \textsc{London 1400}
+  \end{center}
+\end{titlepage}
+
+\end{document}

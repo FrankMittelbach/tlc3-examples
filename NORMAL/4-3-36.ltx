@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-3-36 on page I-361 in "multicolrule --- Custom rules for multicolumned pages".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{255.0pt}
+
+%StartShownPreambleCommands
+\usepackage[tikz]{multicolrule}
+\usepackage{pgfornament}
+\SetMCRule{color=blue,width=1pt,
+  custom-line={\path (TOP) to
+    [ornament=83] (BOT);},
+  extend-top=-12pt,
+  extend-bot=-6pt}
+\setlength{\columnsep}{24pt}
+\usepackage{kantlipsum}
+
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{multicols}{2}
+  \kant[1][1-3]  \kant[1][4]
+  \kant[1][5]
+\end{multicols}
+\end{document}

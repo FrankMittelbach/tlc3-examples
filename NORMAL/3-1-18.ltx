@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-1-18 on page I-143 in "lettrine --- Dropping your capital".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+\sloppy % to fit in small book columns
+%StartShownPreambleCommands
+\usepackage{tgpagella,lettrine}
+\usepackage[french]{babel}
+%StopShownPreambleCommands
+
+\begin{document}
+\noindent \ldots paragraphe précédent \ldots
+\lettrine[ante={\makebox[0pt][l]{\hspace{5pt}\og}},
+  lines=4,slope=0.6em,findent=-1em,nindent=0.6em]{À}
+         { peine ont-ils mis} le pied dans la ville
+en pleurant la mort de leur bienfaiteur, qu'ils
+sentent la terre trembler sous leurs pas; \ldots \fg
+\end{document}

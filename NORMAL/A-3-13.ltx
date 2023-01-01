@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-3-13 on page II-666 in "Paragraph boxes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+%StartShownPreambleCommands
+\newcommand\HR{\rule{.5em}{0.4pt}}
+%StopShownPreambleCommands
+
+\begin{document}
+\HR\begin{minipage}[b]{12mm}
+      A A A A A A A A A A A A A A A \end{minipage}\HR
+\begin{minipage}[b]{30mm}
+  \begin{minipage}[t]{12mm}
+     B B B B B B B B B B B B B B B B B B B B B B B B gg jj
+     \par\vspace{-\prevdepth}
+  \end{minipage} xx
+  \begin{minipage}[t]{12mm}  C C C C C C C  \end{minipage}
+  \par\vspace{0pt}
+\end{minipage}\HR
+\end{document}

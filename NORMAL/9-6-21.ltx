@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 9-6-21 on page I-724 in "Stylistic features".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{87.0pt}
+
+  %!TEX program = lualatex
+
+  \setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage{fontspec} \setmainfont{EB Garamond}
+%StopShownPreambleCommands
+
+\begin{document}
+\textsc{Gruß} ß   {\addfontfeature{StylisticSet=5}\textsc{Gruß} ß} \\
+Query \textsc{Qq} {\addfontfeature{StylisticSet=6}Query \textsc{Qq}}
+\end{document}

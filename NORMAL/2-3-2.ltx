@@ -1,0 +1,50 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-3-2 on page I-57 in "tocdata --- Providing extra data for the TOC".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+
+  % small headings for the example
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}%
+    {.5ex}%
+    {\normalfont\large\bfseries}}
+  \renewcommand\subsection{\@startsection {subsection}{2}{\z@}%
+    {-1.ex \@plus -.5ex \@minus -.2ex}%
+    {.3ex}%
+    {\normalfont\bfseries}}
+  \makeatother
+
+%StartShownPreambleCommands
+\usepackage{color,tocdata}
+\renewcommand\tocdataformat[1]{\textnormal{%
+    \textcolor{blue}{--- \small\itshape#1}}}
+%StopShownPreambleCommands
+
+\begin{document}
+\tableofcontents
+
+\section{On Cookies}
+\tocdata{toc}{Ben User}
+\subsection{Preparing cookies}
+Text of his recipes \ldots
+
+\tocdata{toc}{Cookie Monster}
+\subsection{Eating cookies}
+How to do it \ldots
+\end{document}

@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-7-11 on page I-483 in "dcolumn --- Decimal column alignments".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+%StartShownPreambleCommands
+\usepackage{dcolumn}
+\newcolumntype{d}[1]{D{.}{\cdot}{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\newcolumntype{,}{D{.}{,}{2}}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabular}{|d{-1}|d{2}|.|,|}
+   1.2    & 1.2    & 1.2     & 1.2      \\
+   1.23   & 1.23   & 12.34   & 12.34    \\
+   1121.2 & 1121.2 & 0.3333  & 0.3333   \\
+   184    & 184    & \pm 100  & \pm 100 \\
+   .4     & .4     & ok?     & no!      \\
+   -0.55  & -0.55  & -0.55   & -0.55    \\
+   0.0    & 0.0    & 0.0     & 0.0
+\end{tabular}
+\end{document}

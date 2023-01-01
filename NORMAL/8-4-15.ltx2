@@ -1,0 +1,41 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-4-15 on page I-621 in "Breakable and unbreakable boxes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{109.80112pt}
+
+
+  \hyphenation{nou-mena} % break fake Kantian English
+
+  \tolerance=4000
+
+  \setlength\textheight{11\baselineskip}
+
+%StartShownPreambleCommands
+\usepackage{kantlipsum,tcolorbox}
+\tcbuselibrary{breakable,skins}
+%StopShownPreambleCommands
+
+\begin{document}
+\footnotesize
+\kant[2][1]
+\begin{tcolorbox}[beamer,breakable,
+     size=title, halign=left,
+     title=My breakable box ]
+  \kant[2][2-3]
+\end{tcolorbox}
+\kant[2][4-5]
+\end{document}

@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-15 on page I-268 in "Defining the item label (or title) and its design".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+\sloppy %as the column in the book is so small
+
+%StartShownPreambleCommands
+\usepackage{enumitem}
+\newlist{steps}{enumerate}{2}
+\setlist[steps,1]{label=\arabic{stepsi}.}
+\setlist[steps,2]{label=(\alph{stepsii})}
+%StopShownPreambleCommands
+
+\begin{document}
+Slowly cooked shiitake mushrooms:
+\begin{steps}
+ \item Soak 20--30 dried mushrooms in hot water
+   \begin{steps}
+     \item minimum 2 hours
+     \item keep water for later
+   \end{steps}
+ \item Slice shiitake in 5--7\,mm slices
+ \item \ldots
+\end{steps}
+\end{document}

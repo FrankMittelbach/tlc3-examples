@@ -1,0 +1,56 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example B-4-2 on page II-775 in "showhyphenation, lua-check-hyphen --- Display hyphenation points with \hologoRobust {LuaTeX}".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+%Next line to access new features, see Chapter 2:
+\DocumentMetadata {uncompress}
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{189.0pt}
+
+  % use lualatex for processing
+
+  % Special processing for the book (which uses spotcolor)
+  % it requires an adjusted .lua file and should be removed
+  % for normal processing!
+
+  \ExplSyntaxOn
+    \color_model_new:nnn { ink-pantone } { Separation }
+      {
+        name = PANTONE~3005~U , %ink
+        alternative-model = cmyk ,
+        alternative-values = {1, 0.56, 0, 0} %fallback
+      }
+    \color_set:nnn{spot}{ink-pantone}{1}
+  \ExplSyntaxOff
+
+
+%StartShownPreambleCommands
+\usepackage{showhyphenation}
+\usepackage{lua-check-hyphen}
+%StopShownPreambleCommands
+
+\begin{document}
+This short paragraph demonstrates the usefulness
+of the  packages \textsf{showhyphenation} and
+\textsf{check-lua-hyphens}. The first
+automatically marks all hyphenation points found
+by the engine with a small triangular mark. The
+second package writes out all hyphenations that
+happened in the document into a file with the
+extension \texttt{.uhy}. You can then examine
+that file to find any issues with the
+hyphenation and correct them as necessary.
+\end{document}

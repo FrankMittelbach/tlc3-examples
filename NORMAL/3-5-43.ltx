@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-43 on page I-233 in "Marginal notes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+\sloppy
+\setcounter{page}{1}
+\addtolength\textwidth{-70pt}
+\setlength\marginparwidth{58pt}
+%StartShownPreambleCommands
+ \newcommand\marginlabel[1]{\mbox{}\marginpar
+    {\raggedright\hspace{0pt}#1}}
+%StopShownPreambleCommands
+
+\begin{document}
+ Some\marginpar{ASuperLongFirstWord with problems}
+ text with a marginal note. Some more text.
+ Another text with a marginal note coming up
+ next\marginlabel{ASuperLongFirstword without
+   problems}. A lot of additional text here to fill
+ up the space in the example on the left.
+\end{document}

@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-1-21 on page I-146 in "magaz --- Special handling of the first line".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+%StartShownPreambleCommands
+\usepackage{magaz}
+\renewcommand\FirstLineFont{\bfseries}
+%StopShownPreambleCommands
+
+\begin{document}
+\FirstLine{The first line of this paragraph is
+           typeset in boldface.}
+The remainder is set in the normal body font.
+
+\FirstLine{\noindent Less material} in the argument
+will be fully typeset in the special font. Note the
+placement and result of the \verb=\noindent= command.
+
+\noindent\FirstLine{If placed in front it will get
+lost} as you can see here.
+\end{document}

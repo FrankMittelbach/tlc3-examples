@@ -1,0 +1,45 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-26 on page I-275 in "Controlling the list numbering".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{144.0pt}
+
+
+  \usepackage{microtype}  % improve the line breaking in short measure
+  \tolerance=2000
+
+
+%StartShownPreambleCommands
+\usepackage{enumitem}
+%StopShownPreambleCommands
+
+\begin{document}
+\noindent Set up a list in a series \ldots
+\begin{enumerate}[series=xyz,nosep,listparindent=1em,
+                  label=\arabic*\textsuperscript{*}]
+  \item A first item.
+  \item An item with two paragraphs.                 \par
+      This is the second paragraph with indentation.
+\end{enumerate}
+\ldots and a list outside the series:
+\begin{enumerate} \item Different formatting\end{enumerate}
+\ldots Now resume the series:
+\begin{enumerate}[resume*=xyz,listparindent=3em]
+  \item Formatting is restored.                      \par
+    Do you see the updated \texttt{listparindent}?
+\end{enumerate}
+More text after the list.
+\end{document}

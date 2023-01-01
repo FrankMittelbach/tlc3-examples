@@ -1,0 +1,27 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-3-28 on page I-173 in "Customizing numerical data representation".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+\setlength\parindent{0pt}
+%StartShownPreambleCommands
+\usepackage{siunitx}
+%StopShownPreambleCommands
+
+\begin{document}
+\unit{\raiseto{4}{\metre}} \quad
+\unit{\per\henry\tothe{5}} \quad  \unit{\mole\of{cat}}
+\end{document}

@@ -1,0 +1,42 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-4-3 on page I-543 in "Standard customization possibilities for \protect \nxLcs  {caption}".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{123.0pt}
+%
+  \setlength\intextsep{6pt}
+  \addtolength\textwidth{-4pt}
+
+% Not shown here since explained later in the
+% book:
+  \AtBeginDocument{\captionsetup{skip=8pt}}
+
+%StartShownPreambleCommands
+\usepackage{graphicx,float}
+\floatstyle{boxed} \restylefloat{table}
+\usepackage[font={sf,bf,footnotesize},
+            textfont={md,smaller}]{caption}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{figure}[ht] \centering
+  \includegraphics[width=10mm]{Escher}
+  \caption{Short caption}
+\end{figure}
+\begin{table}[ht]  \centering Let there be a table
+  \caption{A caption that runs over more than one line}
+\end{table}
+\end{document}

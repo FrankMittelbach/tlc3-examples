@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-5-25 on page I-645 in "Transformations and other operations".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+%StartShownPreambleCommands
+\usepackage{tikzlings,tikzducks}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tikzpicture}[scale=2]
+\draw[black] (0,0) circle (1.25);
+\foreach \x in {0,40,...,360}
+ {\mouse[rotate=\x,scale=0.18,yshift=120,body=blue]}
+\selectcolormodel{gray} % monochrome for the book
+\foreach \x in {0,40,...,360}
+ {
+  \sloth[rotate=\x+20,scale=0.25,yshift=70]
+  \bear [rotate=\x,   scale=0.15,yshift=80]
+  \rhino[rotate=\x+20,scale=0.15,yshift=47]
+ }
+\duck[scale=0.2,xshift=-30,yshift=-30]
+\end{tikzpicture}
+\end{document}

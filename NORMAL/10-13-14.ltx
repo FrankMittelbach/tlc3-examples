@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 10-13-14 on page II-126 in "tipa --- International Phonetic Alphabet symbols".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{108.0pt}
+
+  % improve typesetting in small columns
+  \usepackage{microtype}
+  \tolerance=3000
+
+%StartShownPreambleCommands
+\usepackage{tgtermes,tgheros,tipa}
+\DeclareFontFamilySubstitution{T3}{qtm}{ptm}
+\DeclareFontFamilySubstitution{T3}{qhv}{phv}
+%StopShownPreambleCommands
+
+\begin{document}
+In linguistics, f\textschwa\textupsilon\textprimstress
+n\textepsilon t\i k transcriptions are usually shown in square
+brackets, e.g., \textsf{phonetics \textipa{[f@U"nEtIks]}}.
+\end{document}

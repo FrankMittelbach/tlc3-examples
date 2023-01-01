@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-4-1 on page I-614 in "tcolorbox --- The basic usage".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+
+  \addtolength\textwidth{-4pt}
+
+
+%StartShownPreambleCommands
+\usepackage{tcolorbox}
+%StopShownPreambleCommands
+
+\begin{document}
+A paragraph before with two lines of text
+to show the indentation and the measure.
+\begin{tcolorbox}
+ A \texttt{tcolorbox} can be subdivided
+ into two parts.
+\tcblower
+ If \verb|\tcblower| is given then anything
+ below forms the lower part of the box.
+\end{tcolorbox}
+And a paragraph after the box.
+\end{document}

@@ -1,0 +1,77 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-8-1 on page II-572 in "chapterbib --- Bibliographies per included file".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exareport}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{109.80112pt}
+
+% Small headings for the example
+\makeatletter
+\renewcommand\@makechapterhead[1]{%
+  \vspace*{20pt}%
+  {\setlength\parindent{0pt}\raggedright\normalfont
+   \large\bfseries \@chapapp\space \thechapter
+    \par\nobreak
+    \vspace{5pt}%
+    \interlinepenalty\@M
+    \LARGE \bfseries #1\par\nobreak
+    \vspace{20pt}%
+  }}
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.25ex \@plus-1ex \@minus-.2ex}%
+                                    {.8ex}%
+                                    {\large\bfseries}}
+\makeatother
+
+% We force rewriting these files, because other examples use
+% the same name:
+
+\begin{filecontents}[force]{article-1.tex}
+ \stepcounter{chapter}
+ \ldots\ see \cite{Knuth-CT-a} \ldots
+ \bibliographystyle{alpha}
+ \bibliography{tlc}
+\end{filecontents}
+\begin{filecontents}[force]{article-2.tex}
+ \stepcounter{chapter}
+ \ldots see \cite{Knuth-CT-a}
+  and \cite{bschur} \ldots
+ \bibliographystyle{plain}
+ \bibliography{tlc}
+\end{filecontents}
+
+% Process article-1 and article-2 with BibTeX
+
+%StartShownPreambleCommands
+\begin{filecontents}{article-1.tex}
+ \stepcounter{chapter}
+ \ldots\ see \cite{Knuth-CT-a} \ldots
+ \bibliographystyle{alpha}
+ \bibliography{tlc}
+\end{filecontents}
+\begin{filecontents}{article-2.tex}
+ \stepcounter{chapter}
+ \ldots see \cite{Knuth-CT-a}
+  and \cite{bschur} \ldots
+ \bibliographystyle{plain}
+ \bibliography{tlc}
+\end{filecontents}
+\usepackage[sectionbib]{chapterbib}
+%StopShownPreambleCommands
+
+\begin{document}
+\include{article-1}
+\include{article-2}
+\end{document}

@@ -1,0 +1,46 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-4-22 on page I-625 in "Formatting and text changes based on verso/recto pages".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{81.00082pt}
+
+  \pagestyle{origplain} %plain in this class
+  \setlength\footskip{20pt}
+  \setlength\textheight{10\baselineskip}
+
+  \tolerance=4000
+
+% manually adjust size as example is set in small type
+  \renewcommand\thepage{{\footnotesize\arabic{page}}}
+
+%StartShownPreambleCommands
+\usepackage{kantlipsum,tcolorbox}
+\tcbuselibrary{skins}
+\newtcolorbox{exa}[1]{beamer,bottom=0mm,title=#1,%
+   if odd page={attach boxed title to top right
+      ={xshift=-2mm,yshift=-3mm,yshifttext=-1mm}}%
+               {attach boxed title to top left
+      ={xshift=2mm,yshift=-3mm,yshifttext=-1mm}}}
+%StopShownPreambleCommands
+
+\begin{document}
+\footnotesize
+\kant[2][1] \begin{exa}{Example}
+  \tcbifoddpage{odd}{even} example \end{exa}
+\kant[6][1] \begin{exa}{Another}
+  \tcbifoddpage{odd}{even} example \end{exa}
+\kant[10]
+\end{document}

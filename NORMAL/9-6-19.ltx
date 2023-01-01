@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 9-6-19 on page I-723 in "Stylistic features".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{87.0pt}
+
+  %!TEX program = lualatex
+
+  \setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage{fontspec}  \setmainfont{XCharter}[Numbers=OldStyle]
+%StopShownPreambleCommands
+
+\begin{document}
+123             \addfontfeature{RawFeature = +cv01} 123
+                \addfontfeature{RawFeature = -cv01} 123            \\
+\textsc{Gruß} ß \addfontfeature{RawFeature =  ss01} \textsc{Gruß} ß
+\end{document}

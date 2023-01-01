@@ -1,0 +1,41 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-48 on page I-237 in "snotez --- Numbered or otherwise marked side notes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{147.0pt}
+
+
+\setcounter{page}{1}  % marginnote does not like documents starting on even numbered pages!
+
+\addtolength\textwidth{-60pt}
+\setlength\marginparwidth{50pt}
+
+\setlength\textheight{7\baselineskip}
+
+  \sloppy % as the columns are so small
+
+%StartShownPreambleCommands
+\usepackage{fnpct}  \usepackage[footnote]{snotez}
+\setsidenotes{text-format=\tiny,note-mark-format=#1)}
+\renewcommand\thesidenote{\alph{sidenote}}
+%StopShownPreambleCommands
+
+\begin{document}
+\ldots\ of straw\footnote*{not to be confused with hay},
+sticks\footnote{or lumber according to some sources}
+and bricks\footnote{probably fired clay bricks}%
+          \footnote{Several in a row?}.
+\end{document}

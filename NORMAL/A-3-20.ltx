@@ -1,0 +1,30 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-3-20 on page II-669 in "Manipulating boxed material".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+%StartShownPreambleCommands
+\newsavebox{\myboxa}\newsavebox{\myboxb}
+%StopShownPreambleCommands
+
+\begin{document}
+\sbox{\myboxa}{inside box a}
+\savebox{\myboxb}[2cm][l]{inside box b}
+  x1x \usebox{\myboxa} x2x \usebox{\myboxb} x3x
+\savebox{\myboxb}[2cm][r]{inside box b}
+  \par
+  x1x \usebox{\myboxa} x2x \usebox{\myboxb} x3x
+\end{document}

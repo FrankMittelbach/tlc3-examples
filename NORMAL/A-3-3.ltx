@@ -1,0 +1,27 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-3-3 on page II-661 in "LR boxes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+%StartShownPreambleCommands
+\usepackage{calc}
+%StopShownPreambleCommands
+
+\begin{document}
+\framebox{ A few words of advice }             \par
+\framebox[\width + 8mm][s]{ A few words of advice }
+\par  \framebox[1.5\width]{ A few words of advice }
+\end{document}

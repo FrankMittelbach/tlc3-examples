@@ -1,0 +1,37 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-2-4 on page II-134 in "A single equation on one line".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+  % Shorten the vertical size of the example ...
+  \AtBeginDocument{%
+    \setlength\abovedisplayskip{.5\abovedisplayskip}%
+    \setlength\belowdisplayskip{.5\belowdisplayskip}%
+  }
+
+%StartShownPreambleCommands
+\usepackage[leqno]{amsmath}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{equation*}
+  n^2 + m^2 = k^2
+\end{equation*}
+\begin{equation}
+  n^p +m^p \neq k^p  \qquad p > 2
+\end{equation}
+\end{document}

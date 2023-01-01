@@ -1,0 +1,42 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-5-16 on page I-641 in "Basic objects".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+\usepackage{tikz,siunitx}  \usetikzlibrary{arrows.meta}
+\usetikzlibrary{shapes,shapes.arrows,shapes.symbols}
+%StopShownPreambleCommands
+
+\begin{document}
+ \begin{tikzpicture}
+  \node[shape=single arrow,fill=blue!40] (myarrow)
+                                   at (0,2){right};
+  \node[shape=single arrow,draw,shape border rotate=90]
+                                   at (2,2){up};
+  \node[shape=star, draw]  (mystar)  at (0,0){Star};
+  \node[shape=cloud, draw] (mycloud) at (2,0){Cloud};
+  \draw[Latex-] (myarrow.tip) -- ++(0,1)
+                   node[draw,above]{the arrow tip};
+  \draw[<-,double] (mystar.south) -- ++(0,-0.5)
+                   node[draw,below]{at the south side};
+  \draw[->,thick] (mycloud.puff 5) -- ++(0.3,-1)
+                  node[below]{puff 5 (counterclockwise)};
+  \draw[->,thick] (mycloud.45) -- ++(0.3,0.3)
+                    node[above]{\ang{45}};
+  \end{tikzpicture}
+\end{document}

@@ -1,0 +1,65 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 13-4-1 on page II-330 in "The Greek alphabet".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{351.0pt}
+%StartShownPreambleCommands
+%
+  \usepackage{gfsartemisia,tabularx,booktabs}
+  \usepackage[english,greek]{babel}
+  \def\glyph#1{\makebox[12pt][c]{#1}}
+  \setlength\parindent{0pt}
+  \renewcommand\familydefault{cmr}
+
+%StopShownPreambleCommands
+
+\begin{document}
+      \centering
+      \begin{tabularx}{\linewidth}{lX}
+        \toprule
+      \textit{\selectlanguage{english}Input} &
+      \ttfamily
+        \leavevmode\selectlanguage{english}%
+        \glyph{a}\glyph{b}\glyph{c}\glyph{d}\glyph{e}\glyph{f}%
+        \glyph{g}\glyph{h}\glyph{i}\glyph{j}\glyph{k}\glyph{l}%
+        \glyph{m}\glyph{n}\glyph{o}\glyph{p}\glyph{q}\glyph{r}%
+        \glyph{s}\glyph{t}\glyph{u}\glyph{v}\glyph{w}\glyph{x}%
+        \glyph{y}\glyph{z}\\[2pt]
+      &
+        \leavevmode\selectlanguage{greek}%
+        \glyph{a}\glyph{b}\glyph{c}\glyph{d}\glyph{e}\glyph{f}%
+        \glyph{g}\glyph{h}\glyph{i}\glyph{j}\glyph{k}\glyph{l}%
+        \glyph{m}\glyph{n}\glyph{o}\glyph{p}\glyph{q}\glyph{r}%
+        \glyph{s}\glyph{t}\glyph{u}\glyph{ }\glyph{w}\glyph{x}%
+        \glyph{y}\glyph{z}\\[5pt]
+      \textit{\selectlanguage{english}Input} &
+        \leavevmode\selectlanguage{english}%
+      \ttfamily
+        \glyph{A}\glyph{B}\glyph{C}\glyph{D}\glyph{E}\glyph{F}%
+        \glyph{G}\glyph{H}\glyph{I}\glyph{J}\glyph{K}\glyph{L}%
+        \glyph{M}\glyph{N}\glyph{O}\glyph{P}\glyph{Q}\glyph{R}%
+        \glyph{S}\glyph{T}\glyph{U}\glyph{V}\glyph{W}\glyph{X}%
+        \glyph{Y}\glyph{Z}\\[2pt]
+      &
+        \leavevmode\selectlanguage{greek}%
+        \glyph{A}\glyph{B}\glyph{C}\glyph{D}\glyph{E}\glyph{F}%
+        \glyph{G}\glyph{H}\glyph{I}\glyph{J}\glyph{K}\glyph{L}%
+        \glyph{M}\glyph{N}\glyph{O}\glyph{P}\glyph{Q}\glyph{R}%
+        \glyph{S}\glyph{T}\glyph{U}\glyph{ }\glyph{W}\glyph{X}%
+        \glyph{Y}\glyph{Z}\\
+      \bottomrule
+        \end{tabularx}
+\end{document}

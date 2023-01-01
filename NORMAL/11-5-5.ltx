@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-5-5 on page II-182 in "Ellipsis and other kinds of \protect \ldots  ".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+ \usepackage{array,amsmath,mathdots}
+%StopShownPreambleCommands
+
+\begin{document}
+ \begin{tabular}{l@{}>{\large$}c<{$}>{\scriptsize$}c<{$}
+                 >{\tiny$}c<{$}}
+   command    &   \multicolumn{1}{c}{large}
+                  &   \multicolumn{1}{c}{script}
+                     &   \multicolumn{1}{c}{tiny}   \\[3pt]
+  \verb=\ddots=     & \ddots     & \ddots    & \ddots   \\
+  \verb=\iddots=    & \iddots    & \iddots   & \iddots  \\
+  \verb=\vdots=     & \vdots     & \vdots    & \vdots   \\
+  \verb=\dddot{Z}=  & \dddot{Z}  & \dddot{Z} & \dddot{Z}\\
+  \verb=\ddddot{Z}= & \ddddot{Z} & \ddddot{Z} & \ddddot{Z}
+ \end{tabular}
+\end{document}

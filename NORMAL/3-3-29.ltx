@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-3-29 on page I-173 in "Customizing numerical data representation".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+\setlength\parindent{0pt}
+%StartShownPreambleCommands
+  \usepackage{siunitx}
+%StopShownPreambleCommands
+
+\begin{document}
+  German:     \hfill \num{4 276 928 295,32}     \\[8pt]
+  \sisetup{input-ignore=. ,input-decimal-markers={,}}
+  Spanish:    \hfill \num{4.276.928.295,32}     \\[8pt]
+  \sisetup{input-ignore={,} ,input-decimal-markers=.}
+  English:    \hfill \num{4,276,928,295.32}     \\[8pt]
+  \sisetup{parse-numbers=false}
+  Not parsed: \hfill \num{4,276,928,295.32}     \\[8pt]
+  Not parsed: \hfill \qty{\sqrt{2+\text{offset}}}{\metre}
+\end{document}

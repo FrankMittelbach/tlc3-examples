@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-3 on page I-206 in "Using standard footnotes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+\setlength\textheight{10\baselineskip}
+%StartShownPreambleCommands
+\usepackage{footmisc}
+%StopShownPreambleCommands
+
+\begin{document}
+\noindent Main text \ldots
+\begin{center}
+ \begin{minipage}{.8\linewidth}
+ Footnotes in a minipage are numbered using
+ lowercase letters.\footnote{Inside minipage}
+ \par This text references the previous
+ footnote.\addtocounter{mpfootnote}{-1}%
+          \mpfootnotemark{}
+ And another\footnote{Inside as well} note.
+ \end{minipage}
+\end{center} \ldots{} main text \ldots
+\end{document}

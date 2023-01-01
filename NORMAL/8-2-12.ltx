@@ -1,0 +1,100 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-2-12 on page I-593 in "rotating --- Revisited".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+%StartShownPreambleCommands
+\usepackage{bxeepic,graphicx}
+\usepackage{array}
+%StopShownPreambleCommands
+
+\begin{document}
+  % this is a poor man's reimplementation of pspicture's \Vector command
+  % it is only enough to make the TLC code work that used this package in
+  % the previous edition
+\def\Vector(#1,#2){%
+  \ifdim #1pt=0pt
+    \ifdim #2pt <0pt
+    \vector(0,-1){-#2}%
+    \else
+    \vector(0,1){#2}%
+    \fi
+  \else
+    \ifdim #1pt <0pt
+      \vector(#1,#2){-#1}%
+    \else
+      \vector(#1,#2){#1}%
+    \fi
+  \fi
+}
+\small
+\setlength{\unitlength}{0.8mm}         %FMi was 1mm
+       \begin{picture}(100,100)
+%\graphpaper[5](0,0)(100,100)
+       \thicklines
+        \put(20,10){\framebox(50,80){}}
+%%    label points in bounding box
+        \put(20,10){\makebox(-1,-1)[tr]{\texttt{[lb]}}}
+        \put(20,35){\makebox(-1,-1)[tr]{\texttt{[lB]}}}
+        \put(20,35){\makebox(0,0){{\Large$\bullet$}}}
+        \put(20,51){\makebox(-1,+2)[br]{\texttt{[lc]} or \texttt{[l]}}}
+        \put(20,91){\makebox(-1,+2)[br]{\texttt{[lt]}}}
+        \put(45,10){\makebox(0,-1)[tc]{\texttt{[cb]} or \texttt{[b]}}}
+        \put(45,35){\makebox(0,-1)[tl]{\texttt{[cB]} or \texttt{[B]}}}
+        \put(45,51){\makebox(0,+3)[bl]{\texttt{[c]}}}
+        \put(45,50){\makebox(0,0){{\Large$\diamond$}}}
+        \put(45,91){\makebox(0,+9)[bc]{\texttt{[ct]} or \texttt{[t]}}}
+        \put(70,10){\makebox(1,-1)[tl]{\texttt{[rb]}}}
+        \put(70,35){\makebox(1,-1)[tl]{\texttt{[rB]}}}
+        \put(70,51){\makebox(1,+2)[bl]{\texttt{[rc]} or \texttt{[r]}}}
+        \put(70,91){\makebox(1,+2)[bl]{\texttt{[rt]}}}
+       \thinlines
+%%    centerlines
+        \dashline[+30]{3}(20,50)(70,50)
+        \dashline[+30]{3}(45,10)(45,90)
+%%    baseline
+        \dottedline{1}(20,35)(85,35)
+%%    material for vertical dimensions
+        \dottedline{1}(70,10)(92,10) % bottom extension to right
+        \dottedline{1}(70,90)(92,90) % top    extension to right
+        \put(79,60){\Vector(0,-25)}
+        \put(79,65){\Vector(0,25)}
+        \put(79,62.5){\makebox(0,0){\texttt{height}}}
+        \put(79,20){\Vector(0,-10)}
+        \put(79,25){\Vector(0,10)}
+        \put(79,22.5){\makebox(0,0){\texttt{depth}}}
+        \put(91,44){\Vector(0,-34)}
+        \put(91,48){\Vector(0,42)}
+        \put(91,46){\makebox(0,0){\texttt{ totalheight}}}
+%%    material for horizontal dimension
+        \dottedline{1}(20,10)(20,2)
+        \dottedline{1}(70,10)(70,2)
+        \put(35,4){\Vector(-15,0)}
+        \put(55,4){\Vector(15,0)}
+        \put(45,4){\makebox(0,0){\texttt{width}}}
+%%    material for labeling center and reference points
+        \put(52.5,46){\Vector(-6,3.5)}
+        \put(52.5,45){\makebox(0,0)[tc]{\shortstack{center\\point}}}
+        \put(10,40){\Vector(9,-4)}
+        \put(10,40){\makebox(0,0)[bc]{\shortstack{reference\\point}}}
+%%    material for labels of axes and baseline
+        \put(32.5,60){\Vector(5,-9)}
+        \put(32.5,65){\Vector(12.,9)}
+        \put(32.5,61){\makebox(0,0)[bc]{centerline}}
+        \put(32.5,25){\Vector(5,9)}
+        \put(32.5,24){\makebox(0,0)[tc]{baseline}}
+       \end{picture}
+\end{document}

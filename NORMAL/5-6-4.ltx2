@@ -1,0 +1,45 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 5-6-4 on page I-418 in "addlines --- Adjusting whole double spreads".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{126.00128pt}
+
+  \setlength\textheight{10.3\baselineskip}
+  \addtolength\footskip{-6pt}
+
+  \tolerance=4000
+
+  \pagestyle{origplain}
+  \flushbottom
+
+%StartShownPreambleCommands
+\usepackage{lipsum,addlines}
+\flushbottom
+%StopShownPreambleCommands
+
+\begin{document}
+\lipsum[1][1] \[ \sum x_i \]
+\squeezepage[1]
+\lipsum[1][2] \[ \sum y_i \]
+Now will this final paragraph
+still fit in its entirety on
+the page? \par
+\lipsum[1][1] \[ \sum x_i \]
+\lipsum[1][2] \[ \sum y_i \]
+Now will this final paragraph
+still fit in its entirety on
+the page?
+\end{document}

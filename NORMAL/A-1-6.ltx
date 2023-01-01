@@ -1,0 +1,27 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-1-6 on page II-626 in "Commands with one optional argument".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+%StartShownPreambleCommands
+\newcommand\lvec[2][n]
+    {\ensuremath{#2_1+\cdots + #2_{#1}}}
+%StopShownPreambleCommands
+
+\begin{document}
+For the series \lvec{x}  we have
+\[ \lvec{x} = \sum_{k=1}^{n} G_{\lvec[k]{y}} \]
+\end{document}

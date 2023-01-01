@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-3-5 on page I-63 in "More complicated layouts".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+%StartShownPreambleCommands
+\usepackage{titletoc}
+\titlecontents{section}[0pt]{\addvspace{2pt}\filright}
+              {\contentspush{\thecontentslabel\enspace }}
+              {}{~\hrulefill\contentspage}
+%StopShownPreambleCommands
+
+\begin{document}
+\contentsline{section}{\numberline{12.8}Some section that
+                       is wrapped in the TOC}{87}{}%
+\contentsline{section}{\numberline{12.9}Another section}{88}{}%
+\contentsline{section}{\numberline{12.10}And yet another
+                       wrapping section}{90}{}%
+\contentsline{section}{\numberline{12.11}Final section}{92}{}%
+\contentsfinish
+\end{document}

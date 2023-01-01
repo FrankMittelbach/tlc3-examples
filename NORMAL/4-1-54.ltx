@@ -1,0 +1,48 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-54 on page I-295 in "typed-checklist --- Developing and maintaining checklists".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{195.0pt}
+
+
+  \sloppy
+
+  \usepackage{enumitem}
+  \setlist{nosep}
+
+  \setlength\marginparwidth{30pt}
+  \addtolength\textwidth{-2\marginparwidth}
+  \addtolength\textwidth{-2\marginparsep}
+
+  \setcounter{page}{1}
+
+%StartShownPreambleCommands
+ \usepackage[withAsciilist]{typed-checklist}
+ \CheckListSet{input-dates=y-m-d,
+               output-dates=m/d/y}
+%StopShownPreambleCommands
+
+\begin{document}
+ \begin{AsciiList}[GoalList,TaskList]{-,*}
+ - unclear[deadline=2019-1-1]: Packages missing?
+ - achieved[deadline=2017-8-1]: Chapter 2 done
+ - open[who=Frank,deadline=2019-1-1]:%
+   Chapter 3 done
+ * done[who=Frank,label=task]: Report issues
+ * started[who=Richard,deadline=yesterday]: %
+   Correct issues from \ref{task}
+ \end{AsciiList}
+\end{document}

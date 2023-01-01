@@ -274,3 +274,22 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# repository files to be ignored
+build
+Knuth-CT-a.tex
+article-1.tex
+article-2.tex
+cities.kvt
+8-4-26.logos
+7-3-2.los
+trial1.tex
+trial2.tex
+*.loc
+*.url
+*.pdf
+*.zip
+TMP/*
+
+!support/partial.toc
+!BOOK-PDFS/*pdf

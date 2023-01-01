@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-2-2 on page I-298 in "Simple verbatim extensions".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+%StartShownPreambleCommands
+\usepackage{alltt}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{alltt}
+ One can have font changes, like
+ \emph{emphasized text} or \textsf{other
+   font     faces}.  Line breaks     and
+   spaces are honored, but space only
+   on top level and not always in
+   arguments (see above)!
+
+ Some special characters: # $ % ^ & ~ _
+\end{alltt}
+\end{document}

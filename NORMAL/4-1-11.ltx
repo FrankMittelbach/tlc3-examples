@@ -1,0 +1,37 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-1-11 on page I-265 in "Vertical spacing and page breaks".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+\sloppy %as the column in the book is so small
+%StartShownPreambleCommands
+\usepackage{enumitem}
+\setlist{noitemsep,listparindent=1em,partopsep=0pt,
+         topsep=4pt plus 1pt minus 1pt}
+%StopShownPreambleCommands
+
+\begin{document}
+On the other hand we may want all lists to
+\begin{enumerate}
+ \item use less space around them;
+ \item and no space between items and paragraphs.
+  \par Instead paragraphs should have some
+       indentation inside the list.
+\end{enumerate}
+Do these setting also apply
+\begin{center}  here? \end{center}
+Clearly no! See discussion below.
+\end{document}

@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-3-26 on page II-498 in "Publications without author or year information".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+%% Do not show the bibliography itself in the example,
+%% so put it on a separate page:
+\AtEndDocument{\newpage\bibliography{tlc,tlc-ex}}
+\setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage{natbib} \bibliographystyle{chicago}
+%StopShownPreambleCommands
+
+\begin{document}
+\citet{G-G} / \citet{oddity} / \citet{GNUMake} \\
+\citep{G-G} / \citep{oddity} / \citep{GNUMake}
+\end{document}

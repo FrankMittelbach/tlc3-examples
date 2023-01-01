@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-1-9 on page I-129 in "Package options".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{324.0pt}
+
+%StartShownPreambleCommands
+
+\usepackage[protrusion=false,stretch=500,verbose,selected]{microtype}
+\usepackage{calc}
+\newcommand\samplet{Stretching or shrinking text too much is a bad idea!}
+\newcommand\sample[2]{\parbox{\widthof{\samplet}+#1}
+  {\setlength\parfillskip{0pt}\samplet}\hfill \textit{#2}\par}
+
+%StopShownPreambleCommands
+
+\begin{document}
+%  \sample{-7pt} {-5\%}
+  \sample{-4.2pt}{-3\%}
+  \sample{-2.8pt} {-2\%}
+  \sample{0pt}  {(natural)}
+  \sample{2.8pt}  {2\%}
+  \sample{4.2pt}{3\%}
+  \sample{7pt}  {5\%}
+  \sample{21.2pt}  {15\%}
+\end{document}

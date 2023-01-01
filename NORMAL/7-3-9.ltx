@@ -1,0 +1,45 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-3-9 on page I-538 in "wrapfig --- Inline floats, wrapping text around a figure".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{201.0pt}
+\setcounter{page}{1}
+\addtolength\textwidth{-30pt} % to cover the margin in example
+\newcommand\sample{Some text for our page
+  that is reused over and over again. }
+
+\usepackage{microtype}  % for better line breaking
+
+%StartShownPreambleCommands
+\usepackage{wrapfig}
+\usepackage[labelfont={sf,bf},
+  justification=centerlast]{caption}
+%StopShownPreambleCommands
+
+\begin{document}
+The starting place for the \texttt{wrapfigure}
+environment was manually determined in
+\begin{wrapfigure}[7]{l}[0.2\width]{0pt}
+  \centering  \fbox{This is a ``wrapfigure''.}
+  \caption{An example of the
+    \texttt{wrapfigure} environment}
+\end{wrapfigure}
+the current example by first setting the text
+without the figure to find the natural
+line breaks. \par
+The figure was then inserted after the second
+line giving the results that you see here.
+\end{document}

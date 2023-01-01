@@ -1,0 +1,38 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-3-6 on page I-337 in "lineno --- Numbering lines of text".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+  \addtolength\textwidth{-30pt}
+  \newcommand\sample{ Some text to experiment
+    with line numbering.}
+  \tolerance=3000
+
+%StartShownPreambleCommands
+\usepackage{lipsum,lineno}
+\linenumbers
+
+%StopShownPreambleCommands
+
+\begin{document}
+\lipsum[2][1-2]
+
+\modulolinenumbers[2]
+\textbf{And now a paragraph with
+  numbers on every second line.}
+\lipsum[2][3-5]
+\end{document}

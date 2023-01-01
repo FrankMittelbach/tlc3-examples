@@ -1,0 +1,28 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-1-2 on page I-434 in "Using the \protect \nxLenv  {tabbing} environment".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+%StartShownPreambleCommands
+\newcommand\badcafe{caf\'e (bad)}
+\newcommand\goodcafe{caf\a'e}       \newcommand\greatcafe{café}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabbing} Tab one \= Tab two \= Tab three   \\
+                7-bit \> \badcafe   \> \goodcafe  \\
+                UTF-8 \> \greatcafe \> or café    \end{tabbing}
+\end{document}

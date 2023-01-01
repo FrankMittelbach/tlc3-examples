@@ -1,0 +1,37 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-4-9 on page I-183 in "Changes, insertions, and deletions".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+%StartShownPreambleCommands
+\usepackage[threshold=4]{csquotes}
+%StopShownPreambleCommands
+
+\begin{document}
+He started his talk with the quotes
+\blockquote[Umberto Eco][.]{Our life is full
+  of empty  space}  and
+\blockquote[Douglas Adams]{Space is big. You
+  just  won't believe how vastly, hugely,
+  mind-bogglingly big it is. I mean, you may
+  think it's a long way down the road to the
+  \textelp*{drug store}, but that's just peanuts
+  to space \textelp{}}. Later on he finished with
+\SetBlockThreshold{0}% -- force block quote
+\blockquote[Albert  Einstein]{God does
+  not play \textelp{}}.
+\end{document}

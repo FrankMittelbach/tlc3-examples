@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-3-18 on page II-668 in "Rule boxes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+\newcommand\sample{ Some text for our page
+ that might get reused over and over again.}
+%StartShownPreambleCommands
+% \sample as before
+%StopShownPreambleCommands
+
+\begin{document}
+\ldots \sample
+
+\vspace{6pt}\hrule\relax\vspace{6pt}
+A following paragraph.
+\vrule height 12pt width 2pt\relax \
+\sample
+\end{document}

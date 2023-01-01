@@ -1,0 +1,47 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-1-1 on page I-27 in "Front matter elements".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{255.0pt}
+
+  \setlength\textheight{24\baselineskip}
+
+%StartShownPreambleCommands
+\usepackage[auth-sc,affil-it]
+           {authblk}
+\usepackage{kantlipsum}
+
+\title{Author Management}
+
+\author{Immanuel Kant}
+  \affil{Königsberg}
+\author{Moses Mendelssohn}
+  \affil{Berlin}
+\author{Friedrich Schiller}
+  \affil{Jena}
+\author{Leonhard Euler}
+  \affil{St.\ Petersburg}
+\author[2]{Friedrich der
+           Große\thanks{Sponsor}}
+
+\date{June, 1770}
+
+%StopShownPreambleCommands
+
+\begin{document}
+\maketitle
+\kant[1]   % only partly shown
+\end{document}

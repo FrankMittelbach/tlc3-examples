@@ -1,0 +1,37 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 6-7-21 on page I-489 in "fcolumn --- Managing financial tables".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+
+%StartShownPreambleCommands
+\usepackage[strict]{fcolumn}
+\newcolumntype{f}{F{.}{,}{3,2}{,\mathbf}}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tabular}{ffff}
+ \checkfcolumns{1}{4}\checkfcolumns{2}{3}
+     126,5  &  2    & 3,   &  4,25   \\
+   1.101    &  -,55 &      & 577,15  \\
+       4    &  3,00 & 1,45 & 650,1   \\[2pt]
+ \sumline[4pt][6pt]
+  -1000,00  & 150,2  & 230  & -997,1 \\
+      2,95  &  79,8  &      &    0,05\\[2pt]
+ \sumline[4pt]
+\end{tabular}
+\end{document}

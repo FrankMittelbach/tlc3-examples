@@ -1,0 +1,41 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-41 on page I-232 in "enotez --- Endnotes, an alternative to footnotes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{138.0pt}
+
+  % for the book examples we shorten the vertical spaces
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}{.5ex}%
+    {\normalfont\large\bfseries}}
+  \makeatother
+
+%StartShownPreambleCommands
+\usepackage{enotez}
+\setenotez{reset,counter-format=alph}
+\renewcommand\enotezwritemark[1]{\textsuperscript{#1)}}
+\renewcommand\enmark[1]{#1)}
+%StopShownPreambleCommands
+
+\begin{document}
+This is simple text.\endnote{The first endnote.}
+This is simple text.\endnote{The second endnote with
+  more than one line of text to show the formatting
+  in the note section.}  Some more text with a
+mark.\endnote[\textdagger]{A note with custom mark}
+\printendnotes[description]
+\end{document}

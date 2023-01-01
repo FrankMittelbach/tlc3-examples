@@ -1,0 +1,83 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-8-8 on page II-579 in "bibtopic --- Combining references by topic".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+
+% Use a special naming convention for aux files (for the book):
+%
+\AtBeginDocument{\renewcommand\thebtauxfile{\jobname+\arabic{btauxfile}}}
+% Small headings for the example
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.25ex \@plus-1ex \@minus-.2ex}%
+                                    {.8ex}%
+                                    {\normalsize\bfseries}}
+\makeatother
+
+
+% the two databases we use ...
+
+\begin{filecontents*}[force]{tlc-tex.bib}
+@Book{Knuth-CT-a,
+  Author         = "Donald E. Knuth",
+  Title          = "The {\TeX}book",
+  Publisher      = "Ad{\-d}i{\-s}on-Wes{\-l}ey",
+  Address        = "Reading, MA, USA",
+  Volume         = "A",
+  Series         = "Computers and Typesetting",
+  pages          = "ix + 483",
+  year           = 1986,
+  isbn           = "0-201-13447-0",
+}
+\end{filecontents*}
+
+
+\begin{filecontents*}[force]{tlc-jura.bib}
+@BOOK{aschur,
+  author     = {Hans Brox and Wolf-Dietrich Walker},
+  title      = {Allgemeines Schuldrecht},
+  language   = {ngerman},
+  edition    = {29.},
+  year       = 2003,
+  address    = {M\"unchen}}
+
+@BOOK{bschur,
+  author     = {Hans Brox and Wolf-Dietrich Walker},
+  title      = {Besonderes Schuldrecht},
+  shorttitle = {BSchuR},
+  language   = {ngerman},
+  edition    = {27.},
+  year       = 2002,
+  address    = {M\"unchen}}
+\end{filecontents*}
+
+%StartShownPreambleCommands
+\usepackage{bibtopic}
+%StopShownPreambleCommands
+
+\begin{document}
+We saw the citations \cite{Knuth-CT-a},
+\cite{aschur}, and \cite{bschur}.
+\begin{btSect}{tlc-jura}
+  \section*{Juridical literature}
+  \btPrintCited
+\end{btSect}
+\begin{btSect}[abbrv]{tlc-tex}
+  \section*{\TeX{} literature}
+  \btPrintCited
+\end{btSect}
+\end{document}

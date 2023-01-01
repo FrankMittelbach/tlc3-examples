@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 10-10-1 on page II-100 in "The Fell Types".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+%!TEX program = lualatex
+  
+%StartShownPreambleCommands
+\usepackage{imfellEnglish}
+\newfontfamily\Fellflower{IMFeFlow1.otf}
+\newfontfamily\Fellflowerii{IMFeFlow2.otf}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{center}\Fellflower
+      KLM ACBCD OPQ         \end{center}
+Dr.\ Fell collected a larger number of ornamental
+flower types, some of which are shown in this example.
+\begin{center}\Fellflowerii
+      1 Aa 2                \end{center}
+  Which letters produce which \textsc{Flowers} was
+  found by looking at the fonts with the
+  \emph{unicodefonttable} package.
+\begin{center}\Fellflowerii
+      N m O F o M  n        \end{center}
+\end{document}

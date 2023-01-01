@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-1-11 on page I-138 in "parskip --- Adjusting the look and feel of paragraphs".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{255.0pt}
+\usepackage{microtype}
+%StartShownPreambleCommands
+\usepackage{kantlipsum}
+\usepackage{multicol}
+  \raggedcolumns
+\usepackage{parskip}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{multicols}{2}
+  \kant[1][1] % one sentence
+  \kant[1][2] % paragraphs
+  \kant[1][3]
+\end{multicols}
+\end{document}

@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-2-9 on page I-153 in "xspace --- Gentle spacing after a macro".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+  \usepackage{xspace}
+  \newcommand\marker{\textsuperscript{*}\xspace}
+  \newcommand\GB {Great Britain\xspace}
+  \newcommand\EU {European Union\xspace}
+%StopShownPreambleCommands
+
+\begin{document}
+  In 2017 \GB\marker voted for leaving the \EU\marker.
+  \par \xspaceaddexceptions{\marker}
+  In 2017 \GB\marker voted for leaving the \EU\marker.
+\end{document}

@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-3-4 on page I-336 in "lineno --- Numbering lines of text".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+  \addtolength\textwidth{-30pt}
+  \addtolength\parindent{-6pt}      % fudge the example a bit for the box size
+
+%StartShownPreambleCommands
+\usepackage{amsmath}
+\usepackage[mathlines]{lineno}
+\linenumbers
+
+%StopShownPreambleCommands
+
+\begin{document}
+All math displays now show line numbers
+  \[ x \neq y \]
+and the paragraph texts like this one
+ \begin{align} x \neq y \end{align}
+correctly show line numbers as well.
+\end{document}

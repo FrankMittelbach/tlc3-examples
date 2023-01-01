@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-2-35 on page II-150 in "Equation numbering and tags".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+%StartShownPreambleCommands
+\usepackage{amsmath}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{align}
+      A_1 &= N_0 (\lambda ; \Omega')
+             - \phi ( \lambda ; \Omega') \\
+      A_2 &= \phi (\lambda ; \Omega')
+             \, \phi (\lambda ; \Omega)
+             \tag*{ALSO (\theequation)}  \\
+      A_3 &= \mathcal{N} (\lambda ; \omega)
+\end{align}
+\end{document}

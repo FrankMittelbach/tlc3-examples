@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example A-2-1 on page II-648 in "Defining and changing counters".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+%StartShownPreambleCommands
+\newcounter{ex} \renewcommand\theex{\thesection.\alph{ex}}
+\newenvironment{EX}{\begin{flushleft}%
+    \textbf{\refstepcounter{ex}Exercise~\theex:}}
+   {\end{flushleft}}
+\setcounter{section}{4} % for testing
+%StopShownPreambleCommands
+
+\begin{document}
+\section{A Failure}
+\begin{EX} \label{A} A test.       \end{EX}
+\begin{EX} \label{B} Another test. \end{EX}
+Referencing exercises: \ref{A} and \ref{B}.
+\end{document}

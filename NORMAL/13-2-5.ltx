@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 13-2-5 on page II-307 in "Document-level commands for shorthands".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+\usepackage{xy}
+\usepackage[french]{babel}
+%StopShownPreambleCommands
+
+\begin{document}
+Voici un exemple avec \emph{xypic}:
+\[ \shorthandoff{;?}
+\begin{xy}  (0,0)*{\bullet}, (0,0) ; (10,0),
+   **\dir {-} ?>* \dir {>}, (12,0)*{x},  \end{xy}
+ \]
+Quelle belle flèche !
+\end{document}

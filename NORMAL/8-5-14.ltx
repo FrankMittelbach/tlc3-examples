@@ -1,0 +1,35 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-5-14 on page I-640 in "Basic objects".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{99.0pt}
+
+  \setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage{tikz}  \usetikzlibrary{arrows.meta,bending}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tikzpicture}
+\path[tips,<<->](0,2)--(1,2);   \path[draw,<->>](0,1.5)--(1,1.5);
+\path[draw,-{Latex[length=10pt]}](0,1)--(1,1);
+\path[draw,{Bracket[sep] Bracket[]}-](0,0.5)--(1,0.5);
+\draw[-{Latex[open,length=10pt,bend]}] (0,0) to[bend left] (1,0);
+\filldraw[<<->>](1.5,0)--++(0,1.5)--++(0.5,1);
+\filldraw[<<->>](2,0)--++(0.5,1)circle[radius=4pt]--++(0,1.5);
+\end{tikzpicture}
+\end{document}

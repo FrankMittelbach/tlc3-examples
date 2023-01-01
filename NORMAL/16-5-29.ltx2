@@ -1,0 +1,49 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-5-29 on page II-522 in "Ibidem --- In the same place".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{124.20126pt}
+
+\setlength\textheight{12\baselineskip}
+\addtolength\textwidth{-0pt}
+
+%% Apply the jurabib defaults we use in the book (documented at the beginning of the section)
+\AddToHook{package/jurabib/after}{\jurabibsetup{titleformat=colonsep,commabeforerest=true}}
+
+%% Do not show the bibliography itself in the example,
+%% so put it on a separate page:
+\AtEndDocument{\newpage\bibliography{tlc}}
+
+%StartShownPreambleCommands
+\usepackage[flushmargin,%
+            multiple]{footmisc}
+\usepackage[super,idem=strict,%
+            ibidem=name]{jurabib}
+\bibliographystyle{jurabib}
+%StopShownPreambleCommands
+
+\begin{document}
+\ldots some \cite{Knuth-CT-a}
+text \cite[p.~22]{Knuth-CT-a}
+and \cite{vLeunen:92}
+\cite{vLeunen:92}\ldots
+\newpage % <--
+\ldots a \cite{vLeunen:92}
+bit \cite[p.~16]{vLeunen:92}
+more \cite[p.~308]{Knuth-CT-a}
+text \cite{Knuth:TB10-1-31}
+\cite[p.~80]{Knuth-CT-a}\ldots
+\end{document}

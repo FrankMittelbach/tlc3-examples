@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-5-12 on page II-186 in "abraces --- Customizable over and under braces".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{111.0pt}
+
+  % Shorten the vertical size of the example ...
+  \AtBeginDocument{%
+    \setlength\abovedisplayskip{0.4\abovedisplayskip}%
+    \setlength\belowdisplayskip{0.4\belowdisplayskip}%
+  }
+
+%StartShownPreambleCommands
+\usepackage{abraces,amsmath,color}
+\newbracespec{s}{l1D2@{\,\ldots}0@{\color{blue}\ldots\,}2D1r}
+%StopShownPreambleCommands
+
+\begin{document}
+\[ \aunderbrace[s]{x_1,x_2,x_3,x_4,\dots,x_n} \]
+\end{document}

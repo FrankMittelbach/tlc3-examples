@@ -1,0 +1,43 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 4-3-2 on page I-335 in "lineno --- Numbering lines of text".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{231.0pt}
+\sloppy
+\setlength\marginparwidth{65pt}
+\setlength\marginparsep{25pt}
+\addtolength\textwidth{-100pt}
+\newcommand\sample{ Some text to experiment
+                 with line numbering.\par}
+%StartShownPreambleCommands
+\usepackage{lineno}
+% \sample defined as before
+%StopShownPreambleCommands
+
+\begin{document}
+\linenumbers
+Some text on the main vertical list!
+\marginpar{\footnotesize
+     \internallinenumbers* \sample}
+\sample\sample
+In this paragraph we use a second
+\marginpar{\footnotesize
+     \internallinenumbers  This note
+         continues the numbering in
+         the main galley.}
+marginal note; this time affecting
+the line numbers as shown.
+\end{document}

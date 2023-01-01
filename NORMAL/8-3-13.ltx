@@ -1,0 +1,33 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-3-13 on page I-611 in "High-level line commands (originating from epic or eepic)".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+%StartShownPreambleCommands
+\usepackage{bxeepic} \setlength{\unitlength}{2mm}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{picture}(27,16)(-1,-1)
+  \path(-1,-1)(-1,15)(26,15)(26,-1)(-1,-1)
+  \linethickness{2pt}
+  \drawline[-10](0,0)(10,7)(5,11)
+       (0,7)(10,0)(10,7)(0,7)(0,0)(10,0)
+  \linethickness{3pt} \roundcap \beveljoin
+  \polyline(15.1,0.1)(25,7)(20,11)
+       (15,7)(25,0)(25,7)(15,7)(15,0)(25,0)
+\end{picture}
+\end{document}

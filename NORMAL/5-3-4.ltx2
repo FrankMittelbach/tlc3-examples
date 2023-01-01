@@ -1,0 +1,50 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 5-3-4 on page I-394 in "\LaTeX {}'s new mark mechanism".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{95.40097pt}
+
+  \setlength\textheight{8\baselineskip}
+
+  % for the book examples we shorten the vertical spaces
+  \addtolength\headsep{-12pt} % shortened for the book
+  \addtolength\footskip{-12pt} % shortened for the book
+  \raggedright % as these examples are so small
+
+%StartShownPreambleCommands
+\NewMarkClass{idxmark}
+\usepackage{fancyhdr}
+\pagestyle{fancy} \fancyhf{}
+\newcommand\combinemarks{%
+  \IfMarksEqualTF{idxmark}{first}{last}
+    {\FirstMark{idxmark}}% equal values
+    {\FirstMark{idxmark}---%
+               \LastMark{idxmark}}}
+\chead{\combinemarks} \cfoot{\thepage}
+\newcommand\idxitem[1]{\par\vspace{8pt}%
+  \textbf{#1}\InsertMark{idxmark}{#1}%
+  \quad\ignorespaces}
+%StopShownPreambleCommands
+
+\begin{document}
+\idxitem{galley} Text formatted but not
+  cut into pages.
+\idxitem{OR} Output routine.
+\idxitem{mark} An object in the galley
+ used to communicate with the OR.
+\idxitem{running header} page title
+ changing with page contents.
+\end{document}

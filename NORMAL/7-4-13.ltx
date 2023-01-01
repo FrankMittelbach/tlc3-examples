@@ -1,0 +1,40 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-4-13 on page I-554 in "Customizing the subcaptions".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+
+  \setlength\intextsep{8pt}  % less space between here floats in the example
+
+%StartShownPreambleCommands
+\usepackage[font=sf]{caption}  \usepackage{subcaption}
+\newcommand\FIG{\fbox{\parbox{.4\textwidth}{\strut}}}
+\newcommand\samplefig[1]{\begin{figure}[ht]
+ \centering
+ \subcaptionbox{Short caption}{\FIG}
+ \subcaptionbox{A longer caption with more text}{\FIG}
+ \caption{#1}\end{figure}}
+%StopShownPreambleCommands
+
+\begin{document}
+\samplefig{Default subfigures}
+\captionsetup[sub]{font=footnotesize,textfont={rm,it},
+  labelfont={rm,bf},labelformat=simple,
+  labelsep=period,format=hang,margin=5pt,
+  justification=raggedright,position=top}
+\samplefig{Customized subfigures}
+\end{document}

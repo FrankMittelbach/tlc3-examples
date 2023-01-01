@@ -1,0 +1,30 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-4-35 on page II-177 in "amsmath, accents, mathdots --- Various accents".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{147.0pt}
+
+  \setlength\parindent{0pt}
+
+%StartShownPreambleCommands
+\usepackage{accents}
+%StopShownPreambleCommands
+
+\begin{document}
+$\mathbf{\hat{\accentset{\star}{\tilde h}}}$ (ok) but
+$\mathcal{\hat{\accentset{\star}{\tilde X}}}$ (bad)
+$\hat{\accentset{\star}{\tilde{\mathcal{X}}}}$ (ok again)
+\end{document}

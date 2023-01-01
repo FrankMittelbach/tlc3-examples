@@ -1,0 +1,43 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 9-3-16 on page I-675 in "relsize, scalefnt --- Relative changes to the font size".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{159.0pt}
+
+% To show real and faked capitals we use
+% the commercial Lucida fonts in the example:
+
+  \typeout {***^^JThis example requires commercial fonts that are not provided
+    with a free LaTeX installation but must be obtained separately.^^J***}
+  \usepackage [T1]{fontenc}
+  \IfFileExists {lucidabr.sty}
+                {\usepackage [T1,expert]{lucidabr}}
+                {\typeout {The lucidabr package is not available}\stop } 
+  \usepackage[lucidasmallscale]{lucidabr}
+
+%StartShownPreambleCommands
+\usepackage{relsize}
+%StopShownPreambleCommands
+
+\begin{document}
+\Large Some large text with  a few
+    {\relsize{-2}small words} inside.
+\par\medskip
+\normalsize\noindent
+S\textsmaller[1]{MALL} C\textsmaller[1]{APS} (faked)\\
+\textsc{Small Caps} (real; compare the running length
+     and stem thickness to previous line).
+\end{document}

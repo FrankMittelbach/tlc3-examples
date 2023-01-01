@@ -1,0 +1,34 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-5-8 on page I-637 in "Basic objects".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+
+%StartShownPreambleCommands
+\usepackage{tikz}
+%StopShownPreambleCommands
+
+\begin{document}
+\tikz\path [draw=blue,line width=1pt,->]
+   (-2,-0.5) sin  (-1.5,-1) cos (-1,-0.5)
+   node[right]{a sinus curve} sin (-0.5,0)
+   -- (0,0)
+   arc[x radius=1cm, y radius=0.5cm,
+       start angle=180, end angle=70]
+   node[midway,above,sloped]{the arc} -- (1,1)
+   parabola [parabola height=2cm]
+   +(1,0) node at (1.5,3.2){a parabola};
+\end{document}

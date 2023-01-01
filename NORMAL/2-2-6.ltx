@@ -1,0 +1,39 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 2-2-6 on page I-39 in "quotchap, epigraph --- Mottos on chapters and sections".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exareport}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+%StartShownPreambleCommands
+\usepackage[avantgarde]{quotchap}
+\renewcommand\chapterheadstartvskip
+             {\vspace*{-5\baselineskip}}
+% select TeX Gyre Heros for title and quote:
+\usepackage{tgheros}
+\renewcommand\sectfont{\sffamily\bfseries}
+\renewcommand\quotefont{\sffamily\slshape}
+\renewcommand\qauthorfont{\scshape}
+
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{savequote}[10pc]
+ Cookies! Give me some cookies!
+ \qauthor{Cookie Monster}
+\end{savequote}
+\chapter{A Package Test}
+Adding this package changes the chapter
+heading dramatically.
+\end{document}

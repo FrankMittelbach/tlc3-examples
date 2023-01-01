@@ -1,0 +1,52 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-6-5 on page I-241 in "Customizing todos".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+  \setlength\marginparwidth{70pt}
+  \addtolength\textwidth{-\marginparwidth} % make room on the page
+  \addtolength\textwidth{-2\marginparsep}  % in the book example
+
+  % smaller heading for the example
+  \makeatletter
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-1.25ex \@plus-1ex \@minus-.2ex}%
+    {.5ex}%
+    {\normalfont\large\bfseries}}
+  \makeatother
+
+  \usepackage{microtype} % improve h&j in example
+
+%StartShownPreambleCommands
+\usepackage[loadshadowlibrary]{todonotes}
+\setuptodonotes{shadow,size=scriptsize}
+%StopShownPreambleCommands
+
+\begin{document}
+\todo{A normal entry}
+\todo[caption=Alert,prepend]{Correct this}
+\todo[nolist]{Hide it}
+\todo[author=Frank]{An authored todo}
+\todo[caption=Cases]{Covered all cases?}
+
+We use a wide margin here to save space
+in the example. The todos are summarized
+in the list below (omitting the one
+labeled \texttt{nolist}).
+
+\listoftodos[Sample todos]
+\end{document}

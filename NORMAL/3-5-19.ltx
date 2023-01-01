@@ -1,0 +1,31 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-5-19 on page I-216 in "footnoterange --- Referencing footnote ranges".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{129.0pt}
+\setlength\textheight{5\baselineskip}
+
+%StartShownPreambleCommands
+\usepackage[para,multiple]{footmisc} \usepackage{footnoterange}
+%StopShownPreambleCommands
+
+\begin{document}
+Some text.\begin{footnoterange}
+           \footnote{A first.}\footnote{Second.}%
+           \footnote{Third.}        \end{footnoterange}
+with three footnotes. Even more
+text.\footnote{One more.}\footnote{Another one.}
+\end{document}

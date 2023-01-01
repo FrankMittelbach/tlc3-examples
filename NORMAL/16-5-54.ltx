@@ -1,0 +1,40 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 16-5-54 on page II-537 in "biblatex's approach to author-title references".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{207.0pt}
+
+% Use biber program
+\setlength\parindent{0pt}
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                       {-2.5ex \@plus -1ex \@minus -.2ex}%
+                       {1.3ex}%
+                       {\normalfont\large\bfseries}}
+\makeatother
+
+%StartShownPreambleCommands
+\usepackage[ngerman]{babel}
+\usepackage[style=oscola]{biblatex}
+\addbibresource{tlc.bib}
+%StopShownPreambleCommands
+
+\begin{document}
+\ldots\ \cite[Ellenberger][119]{palandt}\\
+\ldots\ \parencite[Heinrichs][50]{palandt}
+
+\printbibliography
+\end{document}

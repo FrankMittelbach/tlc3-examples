@@ -1,0 +1,32 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 8-4-10 on page I-620 in "Skins and styles --- altering the look and feel".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{135.0pt}
+\usepackage[skins]{tcolorbox}
+  \tcbset{top=0pt,middle=0pt,bottom=0pt} % shorten the example
+
+  \AtBeginDocument{\scriptsize}
+
+%StartShownPreambleCommands
+
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{tcolorbox}[beamer,title=The beamer skin]
+  Beamer style boxes \tcblower with shading.
+\end{tcolorbox}
+\end{document}

@@ -1,0 +1,52 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 7-3-3 on page I-531 in "float --- Creating new float types".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+\setcounter{page}{1}
+\setlength\textheight{13.5\baselineskip}
+\setlength\textfloatsep{12pt plus 4pt minus 4pt}
+% for the book examples we shorten the
+% vertical spaces and use a smaller font for
+% the heading
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.35ex \@plus-1ex \@minus-.2ex}%
+                                    {.3ex}%
+                                    {\normalfont\large\bfseries}}
+\makeatother
+\addtolength\textwidth{-10pt}      % account for boxed float sticking out into margin
+
+%StartShownPreambleCommands
+  \usepackage{lipsum,graphicx,float}
+  \floatstyle{boxed} \restylefloat{figure}
+  \floatstyle{ruled} \restylefloat{table}
+  \floatplacement{table}{b}
+%StopShownPreambleCommands
+
+\begin{document}
+  \section{Customizing standard floats}
+  \lipsum[1][1]
+  \begin{table}  \begin{tabular}{@{}llr}
+    AA & BBB & 123\\ CCC & DDDD & 45\end{tabular}
+   \caption{Sample table}
+  \end{table}%
+  \begin{figure} \centering
+   \includegraphics[width=12mm]{rosette}
+   \caption{Sample figure}
+  \end{figure}
+  \lipsum[1][2]
+\end{document}

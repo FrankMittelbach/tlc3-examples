@@ -1,0 +1,36 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 11-2-18 on page II-141 in "Display environments as mini-pages".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3examargin}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{255.0pt}
+
+%StartShownPreambleCommands
+\usepackage{amsmath}
+%StopShownPreambleCommands
+
+\begin{document}
+\begin{equation}
+\begin{aligned}[b]
+  x^2 + y^2  &= 1               \\
+  x          &= \sqrt{1-y^2}    \\
+ \text{and also }y &= \sqrt{1-x^2}
+\end{aligned}               \qquad
+\begin{gathered}[t]
+ (a + b)^2 = a^2 + 2ab + b^2    \\
+ (a + b) \cdot (a - b) = a^2 - b^2
+\end{gathered}
+\end{equation}
+\end{document}

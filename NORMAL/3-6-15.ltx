@@ -1,0 +1,49 @@
+%%
+%% The LaTeX Companion, 3ed
+%%
+%% Example 3-6-15 on page I-247 in "Customizing the list of changes".
+%%
+%% Copyright (C) 2022 Frank Mittelbach
+%%
+%% It may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%%
+%% See https://www.latex-project.org/lppl.txt for details.
+%%
+
+\documentclass{tlc3exa}
+\pagestyle{empty}
+\setcounter{page}{6}
+\setlength\textwidth{183.0pt}
+
+  \setlength\parindent{0pt}
+
+% small headings for the example
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {-1.25ex \@plus-1ex \@minus-.2ex}%
+                                    {.5ex}%
+                                    {\normalfont\large\bfseries}}
+\makeatother
+
+\sloppy
+
+%StartShownPreambleCommands
+\usepackage[ngerman]{babel}
+\usepackage[commentmarkup=uwave]{changes}
+\definechangesauthor[color=red,name=Frank M.]{FMi}
+
+%StopShownPreambleCommands
+
+\begin{document}
+Sample text, something \added{added}, a
+\replaced[id=FMi,comment=really?]{word}{blob}
+replaced and \deleted[id=FMi]{some}
+\highlight[comment=bad word]{stuff}
+removed.\comment[id=FMi]{Grumble!!!}
+
+\listofchanges[show=added|deleted|replaced]
+\listofchanges[show=comment|highlight,
+               title=Kommentare und Markierungen]
+\end{document}
