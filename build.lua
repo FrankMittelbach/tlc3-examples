@@ -3,16 +3,15 @@
 --[[
      For documentation and usage of the l3build system
      see l3build.pdf
+
+     It is not used to upload to CTAN, instead make-ctan-zip.sh  builds that
 --]]
 
 module = "tlc3-examples"
 
-
 sourcefiles  = {"NORMAL/*", "SPECIAL/*", "*.bib", "SUPPORT/*", "BOOK-PDFS/*"}
 
--- we don't weant typeset docs on CTAN so this variable is disabled by default
-
-XXtypesetfiles = { "1-3-1.ltx", "1-3-2.ltx2", "1-3-3.ltx", "1-3-4.ltx",
+typesetfiles = { "1-3-1.ltx", "1-3-2.ltx2", "1-3-3.ltx", "1-3-4.ltx",
   "1-3-5.ltx", "1-3-6.ltx", "10-1-1.ltx", "10-1-2.ltx", "10-10-2.ltx",
   "10-10-3.ltx", "10-10-4.ltx", "10-10-5.ltx", "10-10-6.ltx",
   "10-12-2.ltx", "10-12-3.ltx", "10-13-1.ltx", "10-13-10.ltx",
@@ -454,11 +453,12 @@ bibtexopts = ""
 indexstyle = ""
 
 
--- Upload meta data (don't forget to run l3build ctan first!)
+-- Upload meta data
+-- Don't use l3build ctan for the preparation but sh make-ctan-zip.sh  instead
 
 uploadconfig = {
  pkg = module,
- version = "v1.0a 2023-01-01",
+ version = "v1.0a",
  author = "Frank Mittelbach",
  license = "lppl1.3c",
  summary = "All examples from ``The LaTeX Companion'', third edition",
