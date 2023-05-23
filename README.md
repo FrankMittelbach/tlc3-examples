@@ -10,6 +10,9 @@ This repository contains all examples from *The LaTeX Companion, third edition*:
  - support files, such as images or a specially prepared .toc file used in the examples
  - the class files used (but with the spotcolor support placed after `\endinput`, thus not active by default)
 
+If you look into the sub-directories you will find that github truncates the display (because there are more than 1000 files inside). 
+However, if you clone the repository or download the .zip file you get all of them.
+
 ## Processing the examples
 
 If you reprocess the examples yourself, the result will look slightly
